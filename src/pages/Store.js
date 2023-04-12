@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import data from "../products/data";
-import Item from "./Item";
+import Item from "../components/Item";
 
 const Store = () => {
   const [products, setProducts] = useState(data);
