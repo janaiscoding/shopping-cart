@@ -1,6 +1,6 @@
 import React from "react";
 
-const Homepage = () => {
+const Home = () => {
   const handleClick = () => {
     console.log("button works");
   };
@@ -13,4 +13,4 @@ const Homepage = () => {
   );
 };
 
-export default Homepage;
+export default Home;

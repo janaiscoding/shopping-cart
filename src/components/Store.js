@@ -1,20 +1,9 @@
 import React, { useState } from "react";
 import data from "../products/data";
-import CardItem from "./CardItem";
-import ShopCart from "./ShopCart";
+import Item from "./Item";
 
-const ShopPage = () => {
-  // all my products for Add events
+const Store = () => {
   const [products, setProducts] = useState(data);
-
-  const sumTotal = () => {
-    return products
-      .reduce(
-        (total, cartItem) => total + cartItem.price * cartItem.quantity,
-        0
-      )
-      .toFixed(2);
-  };
 
   const handleAddEvent = (id) => {
     setProducts((prevState) => {
@@ -32,23 +21,23 @@ const ShopPage = () => {
   };
 
   const allProducts = products.map((product) => (
-    <CardItem
+    <Item
+      name={product.name}
+      img={product.img}
+      price={product.price}
+      quantity={product.quantity}
       key={product.id}
       id={product.id}
-      img={product.img}
-      quantity={product.quantity}
-      product={product}
       onAdd={handleAddEvent}
     />
   ));
 
   return (
     <>
-      <ShopCart handleTotal={sumTotal()} handleItem={selectItem} />
       <h1>Display all products here</h1>
       <div className="all-products-wrap">{allProducts}</div>
     </>
   );
 };
 
-export default ShopPage;
+export default Store;
