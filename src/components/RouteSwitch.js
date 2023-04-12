@@ -1,8 +1,8 @@
 import React from "react";
 import { Link, Route, Routes, BrowserRouter } from "react-router-dom";
-import Homepage from "./Homepage";
-import Shop from "./Shop";
-import "../styles/styles.css"
+import Homepage from "./HomePage";
+import ShopPage from "./ShopPage";
+import "../styles/styles.css";
 
 const RouteSwitch = () => {
   return (
@@ -14,7 +14,7 @@ const RouteSwitch = () => {
         </nav>
         <Routes>
           <Route exact path="/" element={<Homepage />} />
-          <Route path="/shop" element={<Shop />} />
+          <Route path="/shop" element={<ShopPage />} />
         </Routes>
       </BrowserRouter>
     </>
