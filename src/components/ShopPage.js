@@ -1,9 +1,20 @@
 import React, { useState } from "react";
 import data from "../products/data";
 import CardItem from "./CardItem";
+import ShopCart from "./ShopCart";
 
 const ShopPage = () => {
+  // all my products for Add events
   const [products, setProducts] = useState(data);
+
+  const sumTotal = () => {
+    return products
+      .reduce(
+        (total, cartItem) => total + cartItem.price * cartItem.quantity,
+        0
+      )
+      .toFixed(2);
+  };
 
   const handleAddEvent = (id) => {
     setProducts((prevState) => {
@@ -18,13 +29,14 @@ const ShopPage = () => {
       });
       return newProducts;
     });
-    console.log(products);
   };
 
   const allProducts = products.map((product) => (
     <CardItem
       key={product.id}
       id={product.id}
+      img={product.img}
+      quantity={product.quantity}
       product={product}
       onAdd={handleAddEvent}
     />
@@ -32,11 +44,8 @@ const ShopPage = () => {
 
   return (
     <>
-      <h1>Here is my Shop page</h1>
-      <p>
-        Here is where I will display all the shop products and their event
-        handlers ?
-      </p>
+      <ShopCart handleTotal={sumTotal()} handleItem={selectItem} />
+      <h1>Display all products here</h1>
       <div className="all-products-wrap">{allProducts}</div>
     </>
   );

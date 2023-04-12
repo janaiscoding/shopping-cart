@@ -1,11 +1,7 @@
 import React from "react";
 
-const ShopCart = () => {
-  return (
-    <>
-      <h1>Here is my ShopCart</h1>
-    </>
-  );
+const ShopCart = ({ handleTotal, selectItem }) => {
+  return <>Total: ${handleTotal} Meow: {selectItem}</>;
 };
 
 export default ShopCart;
