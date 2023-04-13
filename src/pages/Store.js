@@ -5,7 +5,7 @@ import Cart from "../components/Cart";
 
 const Store = () => {
   const [products, setProducts] = useState(data);
-  const [bag, setBag] = useState([]);
+  const [bag, setBag] = useState(data);
 
   const handleAddEvent = (id) => {
     setProducts((prevState) => {
@@ -17,11 +17,21 @@ const Store = () => {
           };
         }
         //kinda on the right path ?
-        setBag((prevBag) => [...prevBag, product]);
         return product;
       });
       return newProducts;
     });
+    
+    // setBag((prevBag) => {
+    //   const allBag = bag.map((bagItem) => {
+    //     if (bagItem.id === id && bagItem.quantity > 0) {
+    //       return [...prevBag, bagItem];
+    //     }
+    //     console.log(bagItem);
+    //     return bagItem;
+    //   });
+    //   return allBag;
+    // });
   };
 
   const handleRemoveEvent = (id) => {
