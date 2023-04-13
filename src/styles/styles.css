@@ -28,7 +28,11 @@
   justify-content: center;
   align-items: center;
 }
-
+.buttons-control {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
 /* GLOBAL SETTINGS */
 button {
   padding: 10px;

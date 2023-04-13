@@ -19,7 +19,20 @@ const Store = () => {
       return newProducts;
     });
   };
-
+  const handleRemoveEvent = (id) => {
+    setProducts((prevState) => {
+      const newProducts = prevState.map((product) => {
+        if (product.id === id && product.quantity > 0) {
+          return {
+            ...product,
+            quantity: product.quantity--,
+          };
+        }
+        return product;
+      });
+      return newProducts;
+    });
+  };
   const allProducts = products.map((product) => (
     <Item
       name={product.name}
@@ -29,6 +42,7 @@ const Store = () => {
       key={product.id}
       id={product.id}
       onAdd={handleAddEvent}
+      onRemove={handleRemoveEvent}
     />
   ));
 

@@ -1,6 +1,6 @@
 import React from "react";
 
-const Item = ({ id, name, img, price, quantity, onAdd }) => {
+const Item = ({ id, name, img, price, quantity, onAdd, onRemove }) => {
   return (
     <>
       <div className="card-wrap" key={id}>
@@ -9,9 +9,12 @@ const Item = ({ id, name, img, price, quantity, onAdd }) => {
         </div>
         <div>Name: {name}</div>
         <div>Price per item: {price}</div>
-        <div>Bag Quantity: {quantity}</div>
         <div> Total price: {price * quantity} </div>
-        <button onClick={() => onAdd(id)}>+1</button>
+        <div className="buttons-control">
+          <button onClick={() => onRemove(id)}>-</button>
+          <div>In cart: {quantity}</div>
+          <button onClick={() => onAdd(id)}>+</button>
+        </div>
       </div>
     </>
   );
