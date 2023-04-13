@@ -6,7 +6,7 @@ const Item = ({ id, name, img, price, quantity, onAdd, onRemove }) => {
       <div className="card-wrap" key={id}>
        
         <div className="container">
-          <img src={img} width={150} height={150} alt={name}></img>
+          <img src={img} width={150} height={150} alt={name} className="item-image"></img>
         </div>
         <div className="item-name">{name}</div>
         <div className="item-price">${price}</div>

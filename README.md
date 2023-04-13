@@ -27,6 +27,7 @@ npm start
 - Click and remember which ones you've clicked before
 - This project works thanks for the lifecycle methods and state inside of React.
 - This project is part of The Odin Project's [curriculum](https://www.theodinproject.com/lessons/node-path-javascript-shopping-cart).
+- The background image [source](https://unsplash.com/photos/3EzCJozHHL0) from Unsplash profile: [Gia Tu Tran](https://unsplash.com/@danielgia)
 
 # Built with
 
@@ -44,5 +45,3 @@ npm start
 - Git and Github
 
 ### Future plans for this project
-
--
