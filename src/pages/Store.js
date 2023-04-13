@@ -19,6 +19,7 @@ const Store = () => {
       return newProducts;
     });
   };
+
   const handleRemoveEvent = (id) => {
     setProducts((prevState) => {
       const newProducts = prevState.map((product) => {

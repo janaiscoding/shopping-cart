@@ -16,7 +16,7 @@
 }
 .all-products-wrap {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .card-wrap {
@@ -28,23 +28,46 @@
   justify-content: center;
   align-items: center;
 }
+.item-name {
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+.item-price{
+  font-size: 1.3rem;
+}
+
 .buttons-control {
   display:flex;
   justify-content: center;
   align-items: center;
 }
+.in-cart { 
+  display: flex;
+  color: purple;
+}
+.add-button {
+  background-color: green;
+}
+.remove-button {
+  background-color: red;
+}
+
 /* GLOBAL SETTINGS */
 button {
-  padding: 10px;
-  margin: 5px;
+  display: flex;
+  height: 50px;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  font-size: 1.3rem;
   background-color: azure;
   border: 1px solid black;
-  border-radius: 5px;
+  border-radius: 3px;
 }
 button:hover {
   cursor: pointer;
-  transform: scale(1.05);
-  transition: 0.1s ease all;
 }
 button:active {
   border: 2px solid black;
