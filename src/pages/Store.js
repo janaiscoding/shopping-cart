@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import data from "../products/data";
 import Item from "../components/Item";
+import Cart from "../components/Cart";
 
 const Store = () => {
   const [products, setProducts] = useState(data);
+  const [bag, setBag] = useState([]);
 
   const handleAddEvent = (id) => {
     setProducts((prevState) => {
@@ -14,6 +16,8 @@ const Store = () => {
             quantity: product.quantity++,
           };
         }
+        //kinda on the right path ?
+        setBag((prevBag) => [...prevBag, product]);
         return product;
       });
       return newProducts;
@@ -34,6 +38,7 @@ const Store = () => {
       return newProducts;
     });
   };
+
   const allProducts = products.map((product) => (
     <Item
       name={product.name}
@@ -51,6 +56,7 @@ const Store = () => {
     <>
       <h1>Display all products here</h1>
       <div className="all-products-wrap">{allProducts}</div>
+      <Cart bag={bag} onAdd={handleAddEvent} onRemove={handleRemoveEvent} />
     </>
   );
 };
