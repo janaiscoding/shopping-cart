@@ -1,25 +1,37 @@
-import React from "react";
-import Item from "./Item";
+import React, { useState, useEffect } from "react";
+import CartItem from "./CartItem";
 
-const Cart = ({ cart, onAdd, onRemove, visibility }) => {
-  const allProducts = cart.map((product) => (
-    <Item
-      name={product.name}
-      img={product.img}
-      price={product.price}
-      quantity={product.quantity}
-      key={product.id}
-      id={product.id}
-      onAdd={onAdd}
-      onRemove={onRemove}
+const Cart = (props) => {
+  const [sum, setSum] = useState(0);
+
+  const addTotal = () => {
+    props.cart.map((cartItem) => {
+      if (cartItem.quantity > 0) {
+        let currentSum = cartItem.quantity * cartItem.product.price;
+        console.log(`Price on item`, cartItem.product.name, sum);
+        setSum(sum + currentSum);
+      }
+    });
+  };
+  useEffect(() => {
+    addTotal();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [props.product]);
+
+  const allProducts = props.cart.map((cartItem) => (
+    <CartItem
+      cartItem={cartItem.product}
+      key={cartItem.product.id}
+      img={cartItem.product.img}
+      quantity={cartItem.quantity}
     />
   ));
   return (
     <>
-      <div className={visibility}>
-        {cart.length === 0 && <div>nothing in the bag</div>}
-        {allProducts}
-      </div>
+      {props.cart.length === 0 && <div>nothing in the bag</div>}
+      {allProducts}
+      <div>your total: {sum}</div>
+      <button className="checkout">Checkout</button>
     </>
   );
 };
