@@ -1,6 +1,6 @@
 import React from "react";
 
-const Item = ({ id, name, img, price, quantity, onAdd, onRemove }) => {
+const Item = ({id, name, img, price, quantity, onAdd, onRemove }) => {
   return (
     <>
       <div className="card-wrap" key={id}>

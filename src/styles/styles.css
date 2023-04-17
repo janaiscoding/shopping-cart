@@ -63,6 +63,9 @@
 .remove-button {
   background-color: red;
 }
+.hide-cart{
+  display: none;
+}
 .store-button{
   opacity: 0.7;
   margin-bottom: 10vh;
