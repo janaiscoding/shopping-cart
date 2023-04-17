@@ -1,12 +1,18 @@
 import React, { useState } from "react";
 import data from "../products/data";
 import Item from "../components/Item";
-import uniqid from "uniqid";
-import { createMemoryRouter } from "react-router-dom";
+import Cart from "../components/Cart";
 
 const Store = () => {
   const [products, setProducts] = useState(data);
   const [cart, setCart] = useState([]);
+  const [visibility, setVisibility] = useState("hide-class");
+
+  const changeVisibility = () => {
+    if (visibility === "hide-cart") {
+      setVisibility("show-cart");
+    } else setVisibility("hide-cart");
+  };
 
   const handleAddEvent = (id) => {
     setProducts((prevState) => {
@@ -75,7 +81,12 @@ const Store = () => {
   return (
     <>
       <h1>Display all products here</h1>
+      <button onClick={changeVisibility}>Show Cart</button>
       <div className="all-products-wrap">{allProducts}</div>
+      <Cart cart={cart} 
+      onAdd={handleAddEvent} 
+      onRemove={handleRemoveEvent} 
+      visibility={visibility} />
     </>
   );
 };
