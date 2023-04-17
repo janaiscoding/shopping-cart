@@ -10,6 +10,19 @@ const App = () => {
 
   const handleCartAdd = (product, quantity) => {
     setCart([...cart, { product: product, quantity: quantity }]);
+    // if (cart.length === 0) {
+    //   setCart([{ product: product, quantity: quantity }]);
+    // } else
+    //   cart.forEach((item) => {
+    //     console.log(item.product)
+    //     console.log(product)
+    //     if (item.product.name === product) {
+    //       setCart([...cart, { product: item, quantity: quantity }]);
+    //       console.log("checked that its the same item");
+    //     }
+    //   });
+
+    // console.log(cart);
   };
 
   return (

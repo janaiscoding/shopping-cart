@@ -10,7 +10,9 @@ const CartItem = (props) => {
 
   const handleQuantityChange = (e) => {
     setQuantity(e.target.value);
+    console.log(e.target);
   };
+
   return (
     <div className="cart-item">
       <div className="cart-item-name">{props.cartItem.name} </div>
@@ -28,7 +30,10 @@ const CartItem = (props) => {
         min={"0"}
         max={"100"}
         value={quantity}
-        onChange={handleQuantityChange}
+        onChange={(e) => {
+          handleQuantityChange(e);
+        //   props.handleCartAdd(props.cartItem, quantity)
+        }}
       />
       <div className="cart-item-info">
         {" "}
