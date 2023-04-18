@@ -25,15 +25,25 @@ const Cart = (props) => {
       key={cartItem.product.id}
       img={cartItem.product.img}
       quantity={cartItem.quantity}
+      handleCartAdd={props.handleCartAdd}
       // handleCartAdd = {props.handleCartAdd}
     />
   ));
+  let total = 0;
+  props.cart.map((cartItem) => {
+    let sum = cartItem.quantity * cartItem.product.price;
+    console.log(sum);
+    total = total + sum;
+    return total;
+  });
+
   return (
     <>
       {props.cart.length === 0 && <div>nothing in the bag</div>}
       {allProducts}
       {/* <div>your total: {sum}</div> */}
       <button className="checkout">Checkout</button>
+      <div> Total: {total}</div>
     </>
   );
 };

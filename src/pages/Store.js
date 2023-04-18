@@ -1,9 +1,7 @@
-import React, { useState } from "react";
-import data from "../products/data"
+import React from "react";
 import StoreItem from "../components/StoreItem";
 
-const Store = ({handleCartAdd }) => {
-  const [products] = useState(data);
+const Store = ({ products, handleCartAdd }) => {
 
   const allProducts = products.map((product) => (
     <StoreItem

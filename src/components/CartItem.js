@@ -10,7 +10,8 @@ const CartItem = (props) => {
 
   const handleQuantityChange = (e) => {
     setQuantity(e.target.value);
-    console.log(e.target);
+    props.handleCartAdd(props, e.target.value);
+    console.log(props.quantity)
   };
 
   return (

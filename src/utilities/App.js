@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Route, Routes, BrowserRouter } from "react-router-dom";
+import data from "../products/data";
 import Navbar from "./Navbar";
 import Home from "../pages/Home";
 import Store from "../pages/Store";
@@ -7,9 +8,27 @@ import Cart from "../components/Cart";
 
 const App = () => {
   const [cart, setCart] = useState([]);
+  const [products] = useState(data);
 
   const handleCartAdd = (product, quantity) => {
-    setCart([...cart, { product: product, quantity: quantity }]);
+    // setCart([...cart, { product: product, quantity: quantity }]);
+    if (cart.length !== 0) {
+      console.log("cart is bigger than 0");
+      cart.map((cartItem) => {
+        console.log(`one cart item that im mapping`, cartItem);
+        console.log(`the product in question`, product);
+        if (product === cartItem.product) {
+          console.log(`we got the same product here`);
+          let newQuant = Number(cartItem.quantity) + Number(quantity);
+          return (cartItem.quantity = newQuant);
+        }
+        setCart([...cart, { 
+
+        }])
+      });
+      setCart([...cart, { product: product, quantity: quantity }]);
+    } else setCart([{ product: product, quantity: quantity }]);
+    console.log(`cart after changes`, cart);
     // if (cart.length === 0) {
     //   setCart([{ product: product, quantity: quantity }]);
     // } else
@@ -32,7 +51,7 @@ const App = () => {
         <Route exact path="/" element={<Home />} />
         <Route
           path="/store"
-          element={<Store handleCartAdd={handleCartAdd} />}
+          element={<Store handleCartAdd={handleCartAdd} products={products} />}
         />
         <Route
           path="/cart"
