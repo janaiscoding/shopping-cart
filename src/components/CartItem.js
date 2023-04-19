@@ -1,12 +1,7 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
-const CartItem = ({ cart, product, handleCartRemove, handleCartUpdate }) => {
+const CartItem = ({ product, handleCartRemove, handleCartUpdate }) => {
   const [quantity, setQuantity] = useState(product.quantity);
-
-  useEffect(() => {
-    setQuantity(product.quantity);
-  }, []);
 
   const handleQuantityChange = (e) => {
     let quantityNum = Number(e.target.value);
@@ -33,7 +28,7 @@ const CartItem = ({ cart, product, handleCartRemove, handleCartUpdate }) => {
         onChange={(e) => {
           handleQuantityChange(e);
           handleCartUpdate(product, quantity);
-          console.log(product)
+          console.log(product);
         }}
       />
       <button onClick={handleCartRemove}>Remove </button>

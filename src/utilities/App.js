@@ -26,13 +26,14 @@ const App = () => {
       console.log(`adding new product`);
       console.log(`cart before`, cart);
       console.log(`new product to be added`, product);
+      product.quantity = quantity;
       setCart([...cart, product]);
       console.log(`cart after`, cart);
     }
     console.log(`cart after adding stuff to it`, cart);
   };
 
-  //only used on individual cart items
+  //only used on individual products inside the Cart page
   const handleCartUpdate = (product, quantity) => {
     const productIndex = cart.findIndex((i) => i.id === product.id);
     const newCart = cart.slice();
@@ -40,6 +41,7 @@ const App = () => {
     setCart(newCart);
   };
 
+  // remove when you decrement from Store page or Remove from Cart page
   const handleCartRemove = (product) => {
     const productIndex = cart.findIndex((i) => i.id === product.id);
     const newCart = cart.slice();
@@ -47,6 +49,7 @@ const App = () => {
     setCart(newCart);
   };
 
+  // update total price and total items in cart
   const addTotal = () => {
     let sumQuantity = cart.reduce((accumulator, current) => {
       return accumulator + Number(current.quantity);
