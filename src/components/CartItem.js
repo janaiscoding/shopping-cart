@@ -6,7 +6,6 @@ const CartItem = ({
   handleCartUpdate,
   handleCartAdd,
 }) => {
-  console.log(cartItem.quantity);
   const [quantity, setQuantity] = useState(cartItem.quantity);
 
   const handleQuantityChange = (e) => {
@@ -30,6 +29,7 @@ const CartItem = ({
       handleCartAdd(cartItem, -1);
       //remove from cart
       // maybe add a popup with "item was removed from bag"
+      alert(`${cartItem.name} was removed from bag`);
       handleCartRemove(cartItem);
     }
   };

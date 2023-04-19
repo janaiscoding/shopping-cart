@@ -1,6 +1,7 @@
 import React from "react";
 import CartItem from "../components/CartItem";
 import "../styles/cart.css";
+import { Link } from "react-router-dom";
 
 const Cart = ({
   cart,
@@ -21,10 +22,15 @@ const Cart = ({
 
   return (
     <div className="cart-main">
-      {cart.length === 0 && <div className="bag-empty">nothing in the bag</div>}
-      <div className="all-cart-wrap">{allCartItems}</div>
-      <button className="checkout">Checkout</button>
+      {cart.length === 0 && (
+        <div className="bag-empty">
+          Your cart is currently empty ... go buy some sushi
+          <Link to="/store"> Store </Link>
+        </div>
+      )}
       <div className="total"> Total: ${totalPrice}</div>
+      <button className="checkout"> Order</button>
+      <div className="all-cart-wrap">{allCartItems}</div>
     </div>
   );
 };

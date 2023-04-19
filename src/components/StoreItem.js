@@ -38,6 +38,7 @@ const StoreItem = ({ product, handleCartAdd, handleCartRemove }) => {
       handleCartAdd(product, -1);
       //remove from cart
       // maybe add a popup with "item was removed from bag"
+      alert(`${product.name} was removed from bag`);
       handleCartRemove(product);
     }
   };
