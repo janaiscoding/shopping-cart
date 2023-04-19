@@ -59,10 +59,6 @@ input {
 .minus-one {
   background-color: #6c0f0f;
 }
-.in-cart {
-  display: flex;
-  color: purple;
-}
 .add-button {
   background-color: #051e05;
   color: #fddcc1;

@@ -6,9 +6,9 @@ const StoreItem = ({ product, handleCartAdd, handleCartRemove }) => {
 
   const handleQuantityChange = (e) => {
     let quantityNum = Number(e.target.value);
-    console.log(quantityNum);
     setQuantity(quantityNum);
   };
+
   const handleAdd = (product, quantity) => {
     // product.quantity = quantity;
     if (quantity > 0) {

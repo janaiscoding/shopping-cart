@@ -22,7 +22,7 @@ const Cart = ({
   return (
     <div className="cart-main">
       {cart.length === 0 && <div className="bag-empty">nothing in the bag</div>}
-      {allCartItems}
+      <div className="all-cart-wrap">{allCartItems}</div>
       <button className="checkout">Checkout</button>
       <div className="total"> Total: ${totalPrice}</div>
     </div>

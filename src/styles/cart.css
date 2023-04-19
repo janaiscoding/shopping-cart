@@ -1,8 +1,17 @@
-.cart-main{
-    color: #fddcc1;
-    gap: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.cart-main {
+  color: #fddcc1;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  background-image: linear-gradient(#0d0900, #0b0907);
+}
+
+.card-wrap {
+  margin: 20px;
+}
+.remove-button {
+  background-color: #6c0f0f;
 }
