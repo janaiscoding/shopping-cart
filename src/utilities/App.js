@@ -48,6 +48,7 @@ const App = () => {
     const newCart = cart.slice();
     newCart.splice(productIndex, 1);
     setCart(newCart);
+    product.quantity = 0;
   };
 
   // Update total price and total items in cart (for Navbar and Cart page)
@@ -86,9 +87,9 @@ const App = () => {
           path="/cart"
           element={
             <Cart
+              cart={cart}
               handleCartAdd={handleCartAdd}
               handleCartUpdate={handleCartUpdate}
-              cart={cart}
               handleCartRemove={handleCartRemove}
               totalPrice={totalPrice}
             />
