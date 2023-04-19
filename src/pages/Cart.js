@@ -22,14 +22,17 @@ const Cart = ({
 
   return (
     <div className="cart-main">
-      {cart.length === 0 && (
-        <div className="bag-empty">
-          Your cart is currently empty ... go buy some sushi
-          <Link to="/store"> Store </Link>
-        </div>
-      )}
-      <div className="total"> Total: ${totalPrice}</div>
-      <button className="checkout"> Order</button>
+      <div className="cart-info">
+        {cart.length === 0 && (
+          <div className="bag-empty">
+            Your cart is currently empty ... go buy some sushi
+            <Link to="/store"> Store </Link>
+          </div>
+        )}
+        <div className="total"> Total: ${(totalPrice).toFixed(2)}</div>
+        <button className="checkout"> Order</button>
+      </div>
+
       <div className="all-cart-wrap">{allCartItems}</div>
     </div>
   );
