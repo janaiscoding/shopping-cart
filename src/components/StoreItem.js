@@ -10,7 +10,7 @@ const StoreItem = ({ product, handleCartAdd, handleCartRemove }) => {
     setQuantity(quantityNum);
   };
   const handleAdd = (product, quantity) => {
-   // product.quantity = quantity;
+    // product.quantity = quantity;
     if (quantity > 0) {
       console.log(`the quantity passed to be added`, quantity);
       handleCartAdd(product, quantity);
@@ -43,22 +43,27 @@ const StoreItem = ({ product, handleCartAdd, handleCartRemove }) => {
   return (
     <>
       <div className="card-wrap">
-        <div className="item-name">{product.name}</div>
-
+        <div className="card-info">
+          <div className="item-name">{product.name}</div>
+          <div className="item-price">
+            Price: $
+            {product.quantity === 0
+              ? product.price
+              : product.price * product.quantity}
+          </div>
+          {product.quantity === 0 ? `` : <div>In bag: {product.quantity}</div>}
+        </div>
         <div className="container">
           <img
             src={product.img}
-            width={150}
-            height={150}
+            width={300}
+            height={250}
             alt={product.name}
             className="item-image"
           ></img>
         </div>
-        <div className="item-price">${product.price}</div>
         <div className="buttons-control">
-          <div className="in-cart"></div>
           <button onClick={handleRemoveSingular}>-1</button>
-          <div>In bag: {product.quantity}</div>
           <input
             type="number"
             min={"1"}
