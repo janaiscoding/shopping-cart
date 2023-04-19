@@ -1,5 +1,5 @@
 import React from "react";
-import CartItem from "./CartItem";
+import CartItem from "../components/CartItem";
 
 const Cart = ({
   cart,
@@ -8,10 +8,11 @@ const Cart = ({
   totalPrice,
   handleCartUpdate,
 }) => {
-  const allProducts = cart.map((cartItem) => (
+
+  const allCartItems = cart.map((cartItem) => (
     <CartItem
       key={cartItem.id}
-      product={cartItem}
+      cartItem={cartItem}
       handleCartAdd={handleCartAdd}
       handleCartUpdate={handleCartUpdate}
       handleCartRemove={handleCartRemove}
@@ -21,7 +22,7 @@ const Cart = ({
   return (
     <>
       {cart.length === 0 && <div>nothing in the bag</div>}
-      {allProducts}
+      {allCartItems}
       <button className="checkout">Checkout</button>
       <div> Total: ${totalPrice}</div>
     </>

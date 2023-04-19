@@ -1,6 +1,6 @@
 import uniqid from "uniqid";
 import Akita from "../products/imgs/akita.jpg";
-
+// to fix data next
 let data = [
   {
     name: "Akita",

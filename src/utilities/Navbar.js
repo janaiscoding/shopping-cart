@@ -14,5 +14,5 @@ const Navbar = ({ totalQuant }) => {
     </>
   );
 };
-
+// change cart icon to display cuter stuff ? icons maybe ?  
 export default Navbar;

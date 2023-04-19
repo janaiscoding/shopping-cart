@@ -1,22 +1,22 @@
 import React, { useState } from "react";
 
-const CartItem = ({ product, handleCartRemove, handleCartUpdate }) => {
-  const [quantity, setQuantity] = useState(product.quantity);
+const CartItem = ({ cartItem, handleCartRemove, handleCartUpdate }) => {
+  const [quantity, setQuantity] = useState(cartItem.quantity);
 
   const handleQuantityChange = (e) => {
-    let quantityNum = Number(e.target.value);
-    setQuantity(quantityNum);
+    let quantNum = Number(e.target.value);
+    setQuantity(quantNum);
   };
 
   return (
     <div className="cart-item">
-      <div className="cart-item-name">{product.name} </div>
+      <div className="cart-item-name">{cartItem.name} </div>
       <div className="container">
         <img
-          src={product.img}
+          src={cartItem.img}
           width={150}
           height={150}
-          alt={product.name}
+          alt={cartItem.name}
           className="item-image"
         ></img>
       </div>
@@ -27,12 +27,11 @@ const CartItem = ({ product, handleCartRemove, handleCartUpdate }) => {
         value={quantity}
         onChange={(e) => {
           handleQuantityChange(e);
-          handleCartUpdate(product, quantity);
-          console.log(product);
+          handleCartUpdate(cartItem, quantity);
         }}
       />
-      <button onClick={handleCartRemove}>Remove </button>
-      <div className="cart-item-info"> Price: ${product.price * quantity} </div>
+      <button onClick={handleCartRemove}>Remove</button>
+      <div className="cart-item-info"> Price: ${cartItem.price * quantity} </div>
     </div>
   );
 };
