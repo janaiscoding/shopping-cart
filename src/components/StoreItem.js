@@ -18,6 +18,7 @@ const StoreItem = ({ product, handleCartAdd, handleCartRemove }) => {
     if (quantity === 0) {
       console.log("cant add 0 items");
       //create an alert or modal div here which specifies that you cant add 0 items
+      alert("Add more than 0 items");
     }
     //reset quant
     setQuantity(0);
@@ -49,7 +50,7 @@ const StoreItem = ({ product, handleCartAdd, handleCartRemove }) => {
             Price: $
             {product.quantity === 0
               ? product.price
-              : product.price * product.quantity}
+              : (product.price * product.quantity).toFixed(2)}
           </div>
           {product.quantity === 0 ? `` : <div>In bag: {product.quantity}</div>}
         </div>
@@ -57,27 +58,35 @@ const StoreItem = ({ product, handleCartAdd, handleCartRemove }) => {
           <img
             src={product.img}
             width={300}
-            height={250}
+            height={200}
             alt={product.name}
             className="item-image"
           ></img>
         </div>
         <div className="buttons-control">
-          <button onClick={handleRemoveSingular}>-1</button>
-          <input
-            type="number"
-            min={"1"}
-            max={"99"}
-            value={quantity}
-            onChange={handleQuantityChange}
-          />
-          <button onClick={handleAddSingular}>+1</button>
-          <button
-            onClick={() => handleAdd(product, quantity)}
-            className="add-button"
-          >
-            add
-          </button>
+          <div className="increment-decrement">
+            <button onClick={handleRemoveSingular} className="minus-one">
+              -1
+            </button>
+            <button onClick={handleAddSingular} className="plus-one">
+              +1
+            </button>
+          </div>
+          <div className="custom-input">
+            <input
+              type="number"
+              min={"0"}
+              max={"99"}
+              value={quantity}
+              onChange={handleQuantityChange}
+            />
+            <button
+              onClick={() => handleAdd(product, quantity)}
+              className="add-button"
+            >
+              Add Custom
+            </button>
+          </div>
         </div>
       </div>
     </>

@@ -10,11 +10,8 @@
 
 /* GLOBAL SETTINGS */
 button {
-  display: flex;
+  text-align: center;
   height: 50px;
-  justify-content: center;
-  align-items: center;
-  margin: 10px;
   font-size: 1.3rem;
 }
 button:hover {
