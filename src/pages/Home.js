@@ -1,13 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "../styles/home.css";
 
 const Home = () => {
   return (
     <>
       <div className="home-main">
-        <Link to="/store">
-          <button className="store-button">Order delicious sushi</button>
-        </Link>
+        <div className="button-wrapper">
+          <Link to="/store">
+            <button className="store-button">Order Online</button>
+          </Link>
+          <Link to="/contact">
+          <button className="reserve-button">Reservations</button>
+          </Link>
+        </div>
       </div>
     </>
   );

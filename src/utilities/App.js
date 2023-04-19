@@ -6,6 +6,7 @@ import Navbar from "./Navbar";
 import Home from "../pages/Home";
 import Store from "../pages/Store";
 import Cart from "../pages/Cart";
+import Contact from "../pages/Contact";
 
 const App = () => {
   const [cart, setCart] = useState([]);
@@ -16,15 +17,16 @@ const App = () => {
   // Used on store page and cart
   const handleCartAdd = (product, quantity) => {
     //Check if it exists in current cart
-    const productIndex = cart.findIndex((cartItem) => cartItem.id === product.id);
+    const productIndex = cart.findIndex(
+      (cartItem) => cartItem.id === product.id
+    );
     // if it's > -1 it means it exists
     if (productIndex > -1) {
       const newCart = cart.slice();
       // Support for adding additional
       newCart[productIndex].quantity += quantity;
       setCart(newCart);
-    } 
-    else {
+    } else {
       // Support for setting initial quantity
       product.quantity = quantity;
       // Set after already existing Cart
@@ -92,6 +94,7 @@ const App = () => {
             />
           }
         />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </BrowserRouter>
   );

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "../styles/navbar.css"
 
 const Navbar = ({ totalQuant }) => {
   return (
@@ -10,6 +11,7 @@ const Navbar = ({ totalQuant }) => {
         <Link to="/cart">
           Cart ({totalQuant === 0 ? "empty" : totalQuant}){" "}
         </Link>
+        <Link to="/contact">Contact</Link>
       </nav>
     </>
   );

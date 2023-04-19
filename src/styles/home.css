@@ -1,0 +1,27 @@
+.home-main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 90vh;
+  background-image: url("/src/assets/sushi-restaurant.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  resize: both;
+}
+
+.button-wrapper {
+  display: flex;
+}
+
+button {
+  margin-bottom: 10vh;
+  padding: 0.625em 1.25em;
+  background-color: #0d0900;
+  border-radius: 5px;
+  border: 2px solid #40361d;
+  color: #ecc19e;
+}
+button:hover {
+  transform: scale(1.01);
+}
