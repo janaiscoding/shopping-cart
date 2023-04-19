@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState } from "react";
 
 const StoreItem = (props) => {
@@ -11,6 +12,10 @@ const StoreItem = (props) => {
     if (quantity > 0) {
       props.handleCartAdd(props.product, quantity);
     }
+    if (quantity === 0) {
+      console.log("cant add 0 items");
+      //create an alert or modal div here which specifies that
+    }
     setQuantity(0);
   };
 
@@ -19,16 +24,16 @@ const StoreItem = (props) => {
   };
 
   const handleRemoveSingular = () => {
-    console.log(`i can remove singular boys`);
     if (props.product.quantity > 1) {
-      console.log(`removing 1 by 1`);
       props.handleCartAdd(props.product, -1);
-    } else if (props.product.quantity === 1) {
-      console.log(`removing from basket`);
-      props.handleCartRemove(props.product);
-      return;
     }
-    console.log(props.product);
+    // last item
+    else if (props.product.quantity === 1) {
+      //update prod quant to 0
+      props.handleCartAdd(props.product, -1);
+      //remove from cart
+      props.handleCartRemove(props.product);
+    }
   };
   return (
     <>
@@ -48,6 +53,7 @@ const StoreItem = (props) => {
         <div className="buttons-control">
           <div className="in-cart"></div>
           <button onClick={handleRemoveSingular}>-1</button>
+          <div>In bag: {props.product.quantity}</div>
           <input
             type="number"
             min={"1"}

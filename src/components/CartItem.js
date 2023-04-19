@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react";
 
 const CartItem = ({ cart, product, handleCartRemove, handleCartUpdate }) => {
   const [quantity, setQuantity] = useState(product.quantity);
-  
 
   useEffect(() => {
     setQuantity(product.quantity);
@@ -34,6 +33,7 @@ const CartItem = ({ cart, product, handleCartRemove, handleCartUpdate }) => {
         onChange={(e) => {
           handleQuantityChange(e);
           handleCartUpdate(product, quantity);
+          console.log(product)
         }}
       />
       <button onClick={handleCartRemove}>Remove </button>

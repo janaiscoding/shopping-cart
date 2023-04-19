@@ -6,7 +6,7 @@ const Home = () => {
     <>
       <div className="home-main">
         <Link to="/store">
-          <button className="store-button">Go to store</button>
+          <button className="store-button">Order delicious sushi</button>
         </Link>
       </div>
     </>

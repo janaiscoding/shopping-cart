@@ -13,14 +13,21 @@ const App = () => {
   const [totalQuant, setTotalQuant] = useState(0);
   // usable on store page and cart
   const handleCartAdd = (product, quantity) => {
+    //checking if it exists or not
     const productIndex = cart.findIndex((i) => i.id === product.id);
+
     console.log(`my product index in the cart`, productIndex);
     if (productIndex > -1) {
+      console.log(`updating new cart with product which exists`);
       const newCart = cart.slice();
       newCart[productIndex].quantity += quantity;
       setCart(newCart);
     } else {
+      console.log(`adding new product`);
+      console.log(`cart before`, cart);
+      console.log(`new product to be added`, product);
       setCart([...cart, product]);
+      console.log(`cart after`, cart);
     }
     console.log(`cart after adding stuff to it`, cart);
   };
@@ -34,12 +41,10 @@ const App = () => {
   };
 
   const handleCartRemove = (product) => {
-    console.log(`calling the cart removal`)
     const productIndex = cart.findIndex((i) => i.id === product.id);
     const newCart = cart.slice();
     newCart.splice(productIndex, 1);
     setCart(newCart);
-    console.log(`my cart after removing,`, cart);
   };
 
   const addTotal = () => {
