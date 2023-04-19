@@ -11,37 +11,20 @@ const App = () => {
   const [products] = useState(data);
 
   const handleCartAdd = (product, quantity) => {
-    // setCart([...cart, { product: product, quantity: quantity }]);
-    if (cart.length !== 0) {
-      console.log("cart is bigger than 0");
-      cart.map((cartItem) => {
-        console.log(`one cart item that im mapping`, cartItem);
-        console.log(`the product in question`, product);
-        if (product === cartItem.product) {
-          console.log(`we got the same product here`);
-          let newQuant = Number(cartItem.quantity) + Number(quantity);
-          return (cartItem.quantity = newQuant);
-        }
-        setCart([...cart, { 
+    const productIndex = cart.findIndex((i) => i.id === product.id);
+    console.log(productIndex)
+    if (productIndex > -1) {
+      const newCart = cart.slice();
+      console.log("first item added");
+      
+      newCart[productIndex].quantity += quantity;
 
-        }])
-      });
-      setCart([...cart, { product: product, quantity: quantity }]);
-    } else setCart([{ product: product, quantity: quantity }]);
-    console.log(`cart after changes`, cart);
-    // if (cart.length === 0) {
-    //   setCart([{ product: product, quantity: quantity }]);
-    // } else
-    //   cart.forEach((item) => {
-    //     console.log(item.product)
-    //     console.log(product)
-    //     if (item.product.name === product) {
-    //       setCart([...cart, { product: item, quantity: quantity }]);
-    //       console.log("checked that its the same item");
-    //     }
-    //   });
-
-    // console.log(cart);
+      setCart(newCart);
+    } else {
+      console.log("other items added")
+      setCart([...cart, product]);
+    }
+    console.log(cart)
   };
 
   return (

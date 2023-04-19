@@ -4,12 +4,21 @@ const StoreItem = (props) => {
   const [quantity, setQuantity] = useState(0);
 
   const handleQuantityChange = (e) => {
-    setQuantity(e.target.value);
+    let quantityNum = Number(e.target.value);
+    setQuantity(quantityNum);
   };
   const handleAdd = () => {
     if (quantity > 0) {
       props.handleCartAdd(props.product, quantity);
     }
+    setQuantity(0);
+  };
+  const handleAddSingular = () => {
+    props.handleCartAdd(props.product, 1);
+    setQuantity(0);
+  };
+  const handleRemoveSingular = () => {
+    props.handleCartAdd(props.product, -1);
     setQuantity(0);
   };
   return (
@@ -29,6 +38,7 @@ const StoreItem = (props) => {
         <div className="item-price">${props.product.price}</div>
         <div className="buttons-control">
           <div className="in-cart"></div>
+          <button onClick={handleRemoveSingular}>-1</button>
           <input
             type="number"
             min={"0"}
@@ -36,8 +46,9 @@ const StoreItem = (props) => {
             value={quantity}
             onChange={handleQuantityChange}
           />
+          <button onClick={handleAddSingular}>+1</button>
           <button onClick={handleAdd} className="add-button">
-            Add to cart
+            add
           </button>
         </div>
       </div>
