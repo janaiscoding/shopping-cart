@@ -13,15 +13,22 @@ const StoreItem = (props) => {
     }
     setQuantity(0);
   };
+
   const handleAddSingular = () => {
     props.handleCartAdd(props.product, 1);
-    setQuantity(0);
   };
+
   const handleRemoveSingular = () => {
-    if (quantity > 0) {
+    console.log(`i can remove singular boys`);
+    if (props.product.quantity > 1) {
+      console.log(`removing 1 by 1`);
       props.handleCartAdd(props.product, -1);
+    } else if (props.product.quantity === 1) {
+      console.log(`removing from basket`);
+      props.handleCartRemove(props.product);
+      return;
     }
-    setQuantity(0);
+    console.log(props.product);
   };
   return (
     <>

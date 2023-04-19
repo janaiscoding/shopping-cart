@@ -1,12 +1,14 @@
 import React from "react";
 import CartItem from "./CartItem";
 
-const Cart = ({cart, handleCartAdd, handleCartRemove}) => {
+const Cart = ({cart, handleCartAdd, handleCartRemove, totalPrice, handleCartUpdate}) => {
   const allProducts = cart.map((cartItem) => (
     <CartItem 
     cart={cart}
+    key={cartItem.id}
     product={cartItem} 
     handleCartAdd={handleCartAdd}
+    handleCartUpdate={handleCartUpdate}
     handleCartRemove={handleCartRemove}/>
   ));
   
@@ -16,7 +18,7 @@ const Cart = ({cart, handleCartAdd, handleCartRemove}) => {
       {allProducts}
       {/* <div>your total: {sum}</div> */}
       <button className="checkout">Checkout</button>
-      <div> Total: $0</div>
+      <div> Total: ${totalPrice}</div>
     </>
   );
 };

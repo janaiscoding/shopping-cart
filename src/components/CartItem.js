@@ -1,9 +1,9 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from "react";
 
-const CartItem = ({ cart, product, handleCartRemove }) => {
+const CartItem = ({ cart, product, handleCartRemove, handleCartUpdate }) => {
   const [quantity, setQuantity] = useState(product.quantity);
-  console.log(`current product quant`, quantity);
+  
 
   useEffect(() => {
     setQuantity(product.quantity);
@@ -12,14 +12,6 @@ const CartItem = ({ cart, product, handleCartRemove }) => {
   const handleQuantityChange = (e) => {
     let quantityNum = Number(e.target.value);
     setQuantity(quantityNum);
-  };
-  const handleProductQuantity = () => {
-    if (quantity === 0) {
-      handleCartRemove(product);
-    }
-    product.quantity = quantity;
-    console.log(product);
-    console.log(cart);
   };
 
   return (
@@ -36,12 +28,12 @@ const CartItem = ({ cart, product, handleCartRemove }) => {
       </div>
       <input
         type="number"
-        min={"1"}
+        min={"0"}
         max={"99"}
         value={quantity}
         onChange={(e) => {
           handleQuantityChange(e);
-          handleProductQuantity();
+          handleCartUpdate(product, quantity);
         }}
       />
       <button onClick={handleCartRemove}>Remove </button>
