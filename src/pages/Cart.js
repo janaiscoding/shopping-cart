@@ -1,5 +1,6 @@
 import React from "react";
 import CartItem from "../components/CartItem";
+import "../styles/cart.css";
 
 const Cart = ({
   cart,
@@ -8,7 +9,6 @@ const Cart = ({
   totalPrice,
   handleCartUpdate,
 }) => {
-
   const allCartItems = cart.map((cartItem) => (
     <CartItem
       key={cartItem.id}
@@ -24,7 +24,7 @@ const Cart = ({
       {cart.length === 0 && <div>nothing in the bag</div>}
       {allCartItems}
       <button className="checkout">Checkout</button>
-      <div> Total: ${totalPrice}</div>
+      <div className="total"> Total: ${totalPrice}</div>
     </>
   );
 };
