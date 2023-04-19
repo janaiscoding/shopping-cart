@@ -30,7 +30,7 @@ const CartItem = ({ cartItem, handleCartRemove, handleCartUpdate }) => {
           handleCartUpdate(cartItem, quantity);
         }}
       />
-      <button onClick={handleCartRemove}>Remove</button>
+      <button onClick={() => handleCartRemove(cartItem)}>Remove</button>
       <div className="cart-item-info"> Price: ${cartItem.price * quantity} </div>
     </div>
   );

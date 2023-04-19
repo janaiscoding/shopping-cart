@@ -20,12 +20,12 @@ const Cart = ({
   ));
 
   return (
-    <>
-      {cart.length === 0 && <div>nothing in the bag</div>}
+    <div className="cart-main">
+      {cart.length === 0 && <div className="bag-empty">nothing in the bag</div>}
       {allCartItems}
       <button className="checkout">Checkout</button>
       <div className="total"> Total: ${totalPrice}</div>
-    </>
+    </div>
   );
 };
 
