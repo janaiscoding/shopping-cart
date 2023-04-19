@@ -1,45 +1,51 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from "react";
 
-const CartItem = (props) => {
-  const [quantity, setQuantity] = useState(0);
+const CartItem = ({ cart, product, handleCartRemove }) => {
+  const [quantity, setQuantity] = useState(product.quantity);
+  console.log(`current product quant`, quantity);
 
   useEffect(() => {
-    setQuantity(props.quantity);
+    setQuantity(product.quantity);
   }, []);
 
   const handleQuantityChange = (e) => {
-    setQuantity(e.target.value);
-    props.handleCartAdd(props, e.target.value);
-    console.log(props.quantity)
+    let quantityNum = Number(e.target.value);
+    setQuantity(quantityNum);
+  };
+  const handleProductQuantity = () => {
+    if (quantity === 0) {
+      handleCartRemove(product);
+    }
+    product.quantity = quantity;
+    console.log(product);
+    console.log(cart);
   };
 
   return (
     <div className="cart-item">
-      <div className="cart-item-name">{props.cartItem.name} </div>
+      <div className="cart-item-name">{product.name} </div>
       <div className="container">
         <img
-          src={props.cartItem.img}
+          src={product.img}
           width={150}
           height={150}
-          alt={props.cartItem.name}
+          alt={product.name}
           className="item-image"
         ></img>
       </div>
       <input
         type="number"
-        min={"0"}
-        max={"100"}
+        min={"1"}
+        max={"99"}
         value={quantity}
         onChange={(e) => {
           handleQuantityChange(e);
-        //   props.handleCartAdd(props.cartItem, quantity)
+          handleProductQuantity();
         }}
       />
-      <div className="cart-item-info">
-        {" "}
-        Price: ${props.cartItem.price * quantity}{" "}
-      </div>
+      <button onClick={handleCartRemove}>Remove </button>
+      <div className="cart-item-info"> Price: ${product.price * quantity} </div>
     </div>
   );
 };

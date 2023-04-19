@@ -18,7 +18,9 @@ const StoreItem = (props) => {
     setQuantity(0);
   };
   const handleRemoveSingular = () => {
-    props.handleCartAdd(props.product, -1);
+    if (quantity > 0) {
+      props.handleCartAdd(props.product, -1);
+    }
     setQuantity(0);
   };
   return (
@@ -41,7 +43,7 @@ const StoreItem = (props) => {
           <button onClick={handleRemoveSingular}>-1</button>
           <input
             type="number"
-            min={"0"}
+            min={"1"}
             max={"99"}
             value={quantity}
             onChange={handleQuantityChange}
