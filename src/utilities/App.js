@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from "react";
-import { Route, Routes, BrowserRouter } from "react-router-dom";
+import { Route, Routes, HashRouter } from "react-router-dom";
 import data from "../products/data";
 import Navbar from "./Navbar";
 import Home from "../pages/Home";
@@ -69,7 +69,7 @@ const App = () => {
   }, [cart]);
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Navbar totalQuant={totalQuant} />
       <Routes>
         <Route exact path="/" element={<Home />} />
@@ -100,7 +100,7 @@ const App = () => {
           element={<Contact cart={cart} totalPrice={totalPrice} />}
         />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 

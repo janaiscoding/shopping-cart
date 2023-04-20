@@ -12,18 +12,16 @@ const Contact = ({ cart, totalPrice }) => {
         {cart.length === 0 ? (
           <div className="contact-go-to-store">
             Quick add some stuff to your order and come back here!
-            <button>
-              <Link to="/store"> Store </Link>
-            </button>
+              <Link to="/store" className="store-button"> Store </Link>
           </div>
         ) : (
           "However, just to practice some more props and state and stuff, here is some really cool info (im very sarcastic btw):"
         )}
       </div>
-      <div className="contact-cart-full">
         {cart.length === 0 ? (
           " "
         ) : (
+          <div className="contact-cart-full">
           <div className="contact-order-info">
             Your order costs a total of ${totalPrice} and it consists of:
             <div className="order-list">
@@ -43,8 +41,8 @@ const Contact = ({ cart, totalPrice }) => {
               Hope you enjoy your imaginary meal teehee!<br />
               Oh and yeah, I totally got lazy on the styling... for now.
           </div>
+          </div>
         )}
-      </div>
     </div>
   );
 };
