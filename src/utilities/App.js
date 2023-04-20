@@ -7,6 +7,7 @@ import Home from "../pages/Home";
 import Store from "../pages/Store";
 import Cart from "../pages/Cart";
 import Contact from "../pages/Contact";
+import MyFooter from "./MyFooter";
 
 const App = () => {
   const [cart, setCart] = useState([]);
@@ -100,7 +101,9 @@ const App = () => {
           element={<Contact cart={cart} totalPrice={totalPrice} />}
         />
       </Routes>
+      <MyFooter />
     </HashRouter>
+    
   );
 };
 

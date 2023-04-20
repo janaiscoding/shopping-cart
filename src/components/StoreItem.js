@@ -47,13 +47,6 @@ const StoreItem = ({ product, handleCartAdd, handleCartRemove }) => {
       <div className="product-item">
         <div className="product-info">
           <div className="product-name">{product.name}</div>
-          <div className="product-price">
-            Price: $
-            {product.quantity === 0
-              ? product.price
-              : (product.price * product.quantity).toFixed(2)}
-          </div>
-          {product.quantity === 0 ? `` : <div>In bag: {product.quantity}</div>}
         </div>
         <div className="img-handle">
           <img
@@ -70,11 +63,6 @@ const StoreItem = ({ product, handleCartAdd, handleCartRemove }) => {
             <button onClick={handleRemoveSingular} className="minus-one">
               -1
             </button>
-            <button onClick={handleAddSingular} className="plus-one">
-              +1
-            </button>
-          </div>
-          <div className="custom-input">
             <input
               type="number"
               min={"0"}
@@ -82,12 +70,30 @@ const StoreItem = ({ product, handleCartAdd, handleCartRemove }) => {
               value={quantity}
               onChange={handleQuantityChange}
             />
+            <button onClick={handleAddSingular} className="plus-one">
+              +1
+            </button>
+          </div>
+          <div className="custom-input">
             <button
               onClick={() => handleAdd(product, quantity)}
               className="add-button"
             >
               Add Custom
             </button>
+            <div className="product-bottom-info">
+              <div className="product-price">
+                Price: $
+                {product.quantity === 0
+                  ? product.price
+                  : (product.price * product.quantity).toFixed(2)}
+              </div>
+              {product.quantity === 0 ? (
+                ``
+              ) : (
+                <div className="in-bag">In bag: {product.quantity}</div>
+              )}
+            </div>
           </div>
         </div>
       </div>

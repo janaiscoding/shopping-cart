@@ -11,3 +11,7 @@
   align-items: center;
   position: sticky;
 }
+.nav-bar > a{
+  font-size: 1.6rem;
+  letter-spacing: 2px;
+}

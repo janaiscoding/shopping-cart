@@ -6,7 +6,7 @@
 
 ## Live Demo
 
-![Gif preview of the shopping cart]()
+![Gif preview of the shopping cart](/src/assets/shopping-cart-preview.gif)
 
 - See the full live preview [here](https://janaiscoding.github.io/shopping-cart/)
 
@@ -51,6 +51,7 @@ npm start
 - Better styling and mobile responsiveness
 - Contact form on the Contact page for Reservations
 - Fetch products from an API
+ 
 
 ## Copyright
 

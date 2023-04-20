@@ -17,7 +17,7 @@
   margin: 20px;
   padding: 20px;
   border-radius: 5px;
-  background-color: #515e2a;
+  background-color: #1f201c;
   border: 2px solid #40361d;
 }
 
@@ -26,7 +26,7 @@
   justify-content: center;
   align-items: flex-end;
   gap: 20px;
-  margin: 5px;
+  margin-bottom: 10px;
   border-bottom: 1px solid #585858;
 }
 
@@ -43,6 +43,7 @@ input {
   font-size: 24px;
   font-weight: 700;
   letter-spacing: 1px;
+  margin-bottom: 3px;
 }
 
 .product-price {
@@ -52,15 +53,25 @@ input {
 .buttons-control {
   display: flex;
   flex-direction: column;
-  margin-top: 5px;
+  margin: 5px;
 }
-.increment-decrement,
-.custom-input {
+.increment-decrement {
   display: flex;
   justify-content: space-between;
-  gap: 30px;
-  height: 60px;
+  margin-bottom: 5px;
 }
+.custom-input {
+  display: contents;
+}
+.product-bottom-info{
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+  letter-spacing: 1px;
+  margin-left: 10px;
+  justify-content: space-between;
+}
+
 .plus-one {
   background-color: #051e05;
 }
