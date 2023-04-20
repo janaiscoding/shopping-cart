@@ -38,13 +38,6 @@ const CartItem = ({
     <div className="product-item">
       <div className="product-info">
         <div className="product-name">{cartItem.name}</div>
-        <div className="product-price">
-          Price: $
-          {cartItem.quantity === 0
-            ? cartItem.price
-            : (cartItem.price * cartItem.quantity).toFixed(2)}
-        </div>
-        {cartItem.quantity === 0 ? `` : <div>In bag: {cartItem.quantity}</div>}
       </div>
       <div className="img-handle">
         <img
@@ -61,11 +54,6 @@ const CartItem = ({
           <button onClick={handleRemoveSingular} className="minus-one">
             -1
           </button>
-          <button onClick={handleAddSingular} className="plus-one">
-            +1
-          </button>
-        </div>
-        <div className="custom-input">
           <input
             type="number"
             min={"1"}
@@ -76,12 +64,30 @@ const CartItem = ({
               console.log(quantity);
             }}
           />
+          <button onClick={handleAddSingular} className="plus-one">
+            +1
+          </button>
+        </div>
+        <div className="custom-input">
           <button
             onClick={() => handleCartRemove(cartItem)}
             className="remove-button"
           >
             Remove
           </button>
+          <div className="product-bottom-info">
+            <div className="product-price">
+              Price: $
+              {cartItem.quantity === 0
+                ? cartItem.price
+                : (cartItem.price * cartItem.quantity).toFixed(2)}
+            </div>
+            {cartItem.quantity === 0 ? (
+              ``
+            ) : (
+              <div>In bag: {cartItem.quantity}</div>
+            )}
+          </div>
         </div>
       </div>
     </div>

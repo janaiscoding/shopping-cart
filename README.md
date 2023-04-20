@@ -3,6 +3,7 @@
 ## Project's Scope
 
 - The scope of this project was to build **my third application in React using react-router-dom**.
+- Using Router, I created a SPA Sushi Restaurant (Shopping Cart/Order Online).
 
 ## Live Demo
 
