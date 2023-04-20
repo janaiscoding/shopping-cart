@@ -15,7 +15,7 @@ const Contact = ({ cart, totalPrice }) => {
               <Link to="/menu" className="store-button"> See Our Menu </Link>
           </div>
         ) : (
-          "However, just to practice some more props and state and stuff, here is some really cool info (im very sarcastic btw):"
+          "Well.. Not much changed, but just to practice some more props, state and stuff, here is some really cool info:"
         )}
       </div>
         {cart.length === 0 ? (

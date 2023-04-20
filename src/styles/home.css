@@ -20,6 +20,7 @@
 .reserve-button {
   padding: 0.625em 1.25em;
   font-size: 1.2em;
+  letter-spacing: 2px;
   position: relative;
   display: inline-block;
   background-color: #0d0900;
