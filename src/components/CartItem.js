@@ -53,6 +53,7 @@ const CartItem = ({
           height={150}
           alt={cartItem.name}
           className="product-image"
+          loading="lazy"
         ></img>
       </div>
       <div className="buttons-control">

@@ -62,6 +62,7 @@ const StoreItem = ({ product, handleCartAdd, handleCartRemove }) => {
             height={200}
             alt={product.name}
             className="product-image"
+            loading="lazy"
           ></img>
         </div>
         <div className="buttons-control">

@@ -40,12 +40,13 @@ input {
 }
 
 .product-name {
-  font-size: 1.7rem;
-  font-weight: 500;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
 .product-price {
-  font-size: 1.3rem;
+  font-size: 16px;
 }
 
 .buttons-control {
@@ -74,7 +75,6 @@ input {
 .img-handle {
   position: relative;
   overflow: hidden;
-  max-width: 300px;
   border-radius: 10px;
   z-index: 1;
 }
