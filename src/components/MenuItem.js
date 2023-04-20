@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState } from "react";
 
-const StoreItem = ({ product, handleCartAdd, handleCartRemove }) => {
+const MenuItem = ({ product, handleCartAdd, handleCartRemove }) => {
   const [quantity, setQuantity] = useState(0);
 
   const handleQuantityChange = (e) => {
@@ -101,4 +101,4 @@ const StoreItem = ({ product, handleCartAdd, handleCartRemove }) => {
   );
 };
 
-export default StoreItem;
+export default MenuItem;

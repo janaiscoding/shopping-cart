@@ -24,7 +24,7 @@ const Cart = ({
     <div className="cart-main">
       <div className="cart-info">
         {cart.length === 0 ? (
-          <Link to="/store" className="bag-empty">
+          <Link to="/menu" className="bag-empty">
             Bag empty. Check Store?
           </Link>
         ) : (

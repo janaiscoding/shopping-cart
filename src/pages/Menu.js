@@ -1,10 +1,10 @@
 import React from "react";
-import StoreItem from "../components/StoreItem";
+import MenuItem from "../components/MenuItem";
 import "../styles/store.css";
 
-const Store = ({ products, handleCartAdd, handleCartRemove }) => {
+const Menu = ({ products, handleCartAdd, handleCartRemove }) => {
   const allProducts = products.map((product) => (
-    <StoreItem
+    <MenuItem
       product={product}
       key={product.id}
       handleCartAdd={handleCartAdd}
@@ -19,4 +19,4 @@ const Store = ({ products, handleCartAdd, handleCartRemove }) => {
   );
 };
 
-export default Store;
+export default Menu;

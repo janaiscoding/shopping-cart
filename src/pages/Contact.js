@@ -12,7 +12,7 @@ const Contact = ({ cart, totalPrice }) => {
         {cart.length === 0 ? (
           <div className="contact-go-to-store">
             Quick add some stuff to your order and come back here!
-              <Link to="/store" className="store-button"> Store </Link>
+              <Link to="/menu" className="store-button"> See Our Menu </Link>
           </div>
         ) : (
           "However, just to practice some more props and state and stuff, here is some really cool info (im very sarcastic btw):"

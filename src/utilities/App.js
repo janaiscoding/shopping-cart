@@ -4,7 +4,7 @@ import { Route, Routes, HashRouter } from "react-router-dom";
 import data from "../products/data";
 import Navbar from "./Navbar";
 import Home from "../pages/Home";
-import Store from "../pages/Store";
+import Menu from "../pages/Menu";
 import Cart from "../pages/Cart";
 import Contact from "../pages/Contact";
 import MyFooter from "./MyFooter";
@@ -75,9 +75,9 @@ const App = () => {
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route
-          path="/store"
+          path="/menu"
           element={
-            <Store
+            <Menu
               handleCartAdd={handleCartAdd}
               products={products}
               handleCartRemove={handleCartRemove}
