@@ -44,10 +44,10 @@ const StoreItem = ({ product, handleCartAdd, handleCartRemove }) => {
   };
   return (
     <>
-      <div className="card-wrap">
-        <div className="card-info">
-          <div className="item-name">{product.name}</div>
-          <div className="item-price">
+      <div className="product-item">
+        <div className="product-info">
+          <div className="product-name">{product.name}</div>
+          <div className="product-price">
             Price: $
             {product.quantity === 0
               ? product.price
@@ -55,13 +55,13 @@ const StoreItem = ({ product, handleCartAdd, handleCartRemove }) => {
           </div>
           {product.quantity === 0 ? `` : <div>In bag: {product.quantity}</div>}
         </div>
-        <div className="container">
+        <div className="img-handle">
           <img
             src={product.img}
             width={300}
             height={200}
             alt={product.name}
-            className="item-image"
+            className="product-image"
           ></img>
         </div>
         <div className="buttons-control">

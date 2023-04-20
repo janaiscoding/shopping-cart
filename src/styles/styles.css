@@ -9,11 +9,7 @@
 }
 
 /* GLOBAL SETTINGS */
-button {
-  text-align: center;
-  height: 50px;
-  font-size: 1.3rem;
-}
+
 button:hover {
   cursor: pointer;
 }
@@ -25,6 +21,20 @@ a,
 a:visited,
 a:focus {
   color: #ecc19e;
-  font-size: 1.5rem;
   text-decoration: none;
+}
+
+button {
+  padding: 0.625em 1.25em;
+  font-size: 1.2em;
+  position: relative;
+  display: inline-block;
+  height: 50px;
+  background-color: #0d0900;
+  border-radius: 5px;
+  border: 2px solid #40361d;
+  color: #ecc19e;
+}
+button:hover {
+  transform: scale(1.01);
 }

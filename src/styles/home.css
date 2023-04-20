@@ -16,13 +16,22 @@
   margin-bottom: 10vh;
 }
 
-button {
+.store-button,
+.reserve-button {
   padding: 0.625em 1.25em;
+  font-size: 1.2em;
+  position: relative;
+  display: inline-block;
   background-color: #0d0900;
   border-radius: 5px;
   border: 2px solid #40361d;
   color: #ecc19e;
 }
-button:hover {
+.store-button:hover,
+.reserve-button:hover {
   transform: scale(1.01);
+}
+.store-button:active,
+.reserve-button:active {
+  border: 2px solid #40361d;
 }

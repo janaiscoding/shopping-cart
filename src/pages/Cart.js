@@ -24,11 +24,14 @@ const Cart = ({
     <div className="cart-main">
       <div className="cart-info">
         {cart.length === 0 ? (
-          <button className="bag-empty">
-            <Link to="/store"> Bag empty. Check Store? </Link>
-          </button>
+          <Link to="/store" className="bag-empty">
+            Bag empty. Check Store?
+          </Link>
         ) : (
-            <button className="checkout"> Give Order: ${totalPrice.toFixed(2)} </button>
+          <button className="checkout">
+            {" "}
+            <Link to="/contact"> Order Now: ${totalPrice.toFixed(2)} </Link>
+          </button>
         )}
       </div>
 

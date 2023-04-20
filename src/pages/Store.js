@@ -1,7 +1,6 @@
 import React from "react";
 import StoreItem from "../components/StoreItem";
 import "../styles/store.css";
-// import { Link } from "react-router-dom";
 
 const Store = ({ products, handleCartAdd, handleCartRemove }) => {
   const allProducts = products.map((product) => (

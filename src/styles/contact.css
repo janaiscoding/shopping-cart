@@ -1,0 +1,42 @@
+.contact-main {
+  color: #c84c4c;
+  gap: 20px;
+  background-image: linear-gradient(#0d0900, #0b0907);
+  height: 90vh;
+  padding: 20px 200px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  text-align: center;
+  /* align-items: center; */
+}
+
+.contact-info {
+  font-size: 3rem;
+}
+.contact-go-to-store {
+  font-size: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.contact-cart-check,
+.contact-cart-full {
+  font-size: 1.4rem;
+  color: #ede6e1;
+}
+.contact-cart-full {
+  background-color: #232220;
+  padding: 20px;
+  border-radius: 10px;
+}
+.contact-order-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.order-list {
+  margin-bottom: 40px;
+}

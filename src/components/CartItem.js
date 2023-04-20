@@ -35,10 +35,10 @@ const CartItem = ({
   };
 
   return (
-    <div className="cart-item">
-      <div className="card-info">
-        <div className="item-name">{cartItem.name}</div>
-        <div className="item-price">
+    <div className="product-item">
+      <div className="product-info">
+        <div className="product-name">{cartItem.name}</div>
+        <div className="product-price">
           Price: $
           {cartItem.quantity === 0
             ? cartItem.price
@@ -46,13 +46,13 @@ const CartItem = ({
         </div>
         {cartItem.quantity === 0 ? `` : <div>In bag: {cartItem.quantity}</div>}
       </div>
-      <div className="container">
+      <div className="img-handle">
         <img
           src={cartItem.img}
           width={150}
           height={150}
           alt={cartItem.name}
-          className="item-image"
+          className="product-image"
         ></img>
       </div>
       <div className="buttons-control">
