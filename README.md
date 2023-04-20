@@ -52,7 +52,7 @@ npm start
 - Better styling and mobile responsiveness
 - Contact form on the Contact page for Reservations
 - Fetch products from an API
- 
+- Add localStorage for the products
 
 ## Copyright
 
