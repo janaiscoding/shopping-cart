@@ -1,47 +1,52 @@
 import uniqid from "uniqid";
-import Sushi from "../products/imgs/sushi-1.jpg";
-import Sushi2 from "../products/imgs/sushi-2.jpg";
+import Sushi1 from "../products/imgs/sushi-1.webp";
+import Sushi2 from "../products/imgs/sushi-2.webp";
+import Sushi3 from "../products/imgs/sushi-3.webp";
+import Sushi4 from "../products/imgs/sushi-4.webp";
+import Sushi5 from "../products/imgs/sushi-5.webp";
+import Sushi6 from "../products/imgs/sushi-6.webp";
+
 // to fix data next
 let data = [
   {
-    name: "Sushi image 1",
+    name: "Wooden Sushi Flavours",
     id: uniqid(),
-    img: Sushi,
+    img: Sushi1,
     price: 9.99,
     quantity: 0,
   },
   {
-    name: "Akita1",
+    name: "Sprinkled Sesame Sushi",
     id: uniqid(),
     img: Sushi2,
     price: 9.99,
     quantity: 0,
   },
   {
-    name: "Akita2",
+    name: "Very Adorable Sushi",
     id: uniqid(),
-    img: Sushi,
+    img: Sushi3,
     price: 9.99,
     quantity: 0,
   },
   {
-    name: "Akita3",
+    name: "Close Up Sushi",
     id: uniqid(),
-    img: Sushi,
+    img: Sushi4,
     price: 9.99,
     quantity: 0,
   },
   {
-    name: "Akita4",
+    name: "Various Sushi Plate",
     id: uniqid(),
-    img: Sushi,
+    img: Sushi5,
     price: 9.99,
     quantity: 0,
   },
   {
-    name: "Akita5",
+    name: "Soya-Sushi Plate",
     id: uniqid(),
-    img: Sushi,
+    img: Sushi6,
     price: 9.99,
     quantity: 0,
   },
