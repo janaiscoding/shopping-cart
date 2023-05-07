@@ -28,10 +28,9 @@ const Cart = ({
             Bag empty. Check Store?
           </Link>
         ) : (
-          <button className="checkout">
-            {" "}
-            <Link to="/contact"> Order Now: ${totalPrice.toFixed(2)} </Link>
-          </button>
+          <Link to="/contact" className="checkout">
+            Order Now: ${totalPrice.toFixed(2)}
+          </Link>
         )}
       </div>
 

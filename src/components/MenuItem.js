@@ -12,11 +12,9 @@ const MenuItem = ({ product, handleCartAdd, handleCartRemove }) => {
   const handleAdd = (product, quantity) => {
     // product.quantity = quantity;
     if (quantity > 0) {
-      console.log(`the quantity passed to be added`, quantity);
       handleCartAdd(product, quantity);
     }
     if (quantity === 0) {
-      console.log("cant add 0 items");
       //create an alert or modal div here which specifies that you cant add 0 items
       alert("Add more than 0 items");
     }
@@ -68,6 +66,7 @@ const MenuItem = ({ product, handleCartAdd, handleCartRemove }) => {
               min={"0"}
               max={"99"}
               value={quantity}
+              aria-label="insert custom quantity"
               onChange={handleQuantityChange}
             />
             <button onClick={handleAddSingular} className="plus-one">

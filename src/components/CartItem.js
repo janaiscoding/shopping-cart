@@ -59,6 +59,7 @@ const CartItem = ({
             min={"1"}
             max={"99"}
             value={quantity}
+            aria-label="insert custom quantity"
             onChange={(e) => {
               handleQuantityChange(e);
               console.log(quantity);

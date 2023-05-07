@@ -12,6 +12,7 @@
 
 button:hover {
   cursor: pointer;
+  transform: scale(1.01);
 }
 button:active {
   border: 2px solid black;
@@ -34,7 +35,4 @@ button {
   border-radius: 5px;
   border: 1px solid #40361d;
   color: #ecc19e;
-}
-button:hover {
-  transform: scale(1.01);
 }
