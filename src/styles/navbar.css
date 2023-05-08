@@ -1,17 +1,33 @@
-.nav-bar {
+header {
   background-color: #0d0900;
-  display: flex;
   border-bottom: 1px solid #ecc19e;
-  font-weight: 700;
-  letter-spacing: 2px;
-  justify-content: center;
-  gap: 50px;
-  height: 10vh;
-  font-size: 1.3rem;
-  align-items: center;
   position: sticky;
+  height: 10vh;
 }
-.nav-bar > a{
+.logo{
+  margin: 2rem;
+}
+
+nav {
+  color: white;
+}
+.flex {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: var(--gap, 4rem);
+}
+
+nav > a {
   font-size: 1.6rem;
   letter-spacing: 2px;
+}
+
+.small-nav {
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  .small-nav {
+    display: block;
+  }
 }

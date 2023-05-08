@@ -1,20 +1,21 @@
+@media (min-width: 500px) {
+  .store-main {
+    padding: 40px;
+  }
+}
 .store-main {
-  background-image: linear-gradient(#0d0900, #0b0907);
+  background-color: #b2b4ac;
   color: #fddcc1;
-  gap: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .all-products-wrap,
 .all-cart-wrap {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
 }
 
 .product-item {
-  margin: 20px;
+  margin: 10px;
   padding: 20px;
   border-radius: 5px;
   background-color: #1f201c;
@@ -63,7 +64,7 @@ input {
 .custom-input {
   display: contents;
 }
-.product-bottom-info{
+.product-bottom-info {
   display: flex;
   align-items: center;
   margin-top: 5px;

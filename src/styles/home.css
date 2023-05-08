@@ -19,7 +19,6 @@
 .store-button,
 .reserve-button {
   padding: 0.625em 1.25em;
-  font-size: 1.2em;
   letter-spacing: 2px;
   position: relative;
   display: inline-block;
@@ -35,4 +34,9 @@
 .store-button:active,
 .reserve-button:active {
   border: 2px solid #40361d;
+}
+@media (max-width: 500px) {
+  .home-main {
+    background-position: 25%;
+  }
 }

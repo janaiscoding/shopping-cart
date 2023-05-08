@@ -49,7 +49,7 @@ const MenuItem = ({ product, handleCartAdd, handleCartRemove }) => {
         <div className="img-handle">
           <img
             src={product.img}
-            width={300}
+            // width={300}
             height={200}
             alt={product.name}
             className="product-image"
