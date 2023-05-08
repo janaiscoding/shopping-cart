@@ -12,41 +12,35 @@ const Navbar = ({ totalQuant }) => {
       myButton.className = "nav-bar";
     }
   };
-
   return (
     <>
       <header className="flex">
         <div>
-          <img className="logo" src={logo} alt="sushi logo" width={50} />
+          <Link to="/">
+            <img className="logo" src={logo} alt="sushi logo" width={50} />
+          </Link>
         </div>
         <nav>
           <ul id="primary-navigation" className="primary-navigation flex">
             <li className="active">
-              <Link to="/">
-                <span aria-hidden="true">00</span>Home
-              </Link>
+              <Link to="/">Home</Link>
             </li>
             <li className="active">
-              <Link to="/menu">
-                <span aria-hidden="true">01</span>Menu
-              </Link>
+              <Link to="/menu">Menu</Link>
             </li>
             <li className="active">
-              <Link to="/contact">
-                <span aria-hidden="true">02</span>Contact
-              </Link>
+              <Link to="/contact">Contact</Link>
             </li>
             <li className="active">
               <Link to="/cart">
-                <span aria-hidden="true">03</span>Cart (
-                {totalQuant === 0 ? "empty" : totalQuant})
+                Cart ({totalQuant === 0 ? "empty" : totalQuant})
               </Link>
             </li>
           </ul>
         </nav>
-        <button onClick={toggleNav} className="nav-toggle">
+        {/* <button onClick={toggleNav} className="nav-toggle">
           R
-        </button>
+        </button> */}
       </header>
     </>
   );
