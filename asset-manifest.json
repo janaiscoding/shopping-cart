@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/shopping-cart/static/css/main.842b2db6.css",
-    "main.js": "/shopping-cart/static/js/main.54cf3b9c.js",
+    "main.css": "/shopping-cart/static/css/main.4c2398e3.css",
+    "main.js": "/shopping-cart/static/js/main.1f18597a.js",
     "static/media/sushi-restaurant.webp": "/shopping-cart/static/media/sushi-restaurant.f9ab206bef3befb15d94.webp",
     "static/media/sushi-1.jpg": "/shopping-cart/static/media/sushi-1.c8d22f5b9be0bfc0df13.jpg",
     "static/media/sushi-2.jpg": "/shopping-cart/static/media/sushi-2.a970b331c92854dbf0ce.jpg",
@@ -11,11 +11,11 @@
     "static/media/sushi-4.jpg": "/shopping-cart/static/media/sushi-4.23d1009e528bac1021b2.jpg",
     "static/media/sushi-6.jpg": "/shopping-cart/static/media/sushi-6.0833d0b94817ca9aec50.jpg",
     "index.html": "/shopping-cart/index.html",
-    "main.842b2db6.css.map": "/shopping-cart/static/css/main.842b2db6.css.map",
-    "main.54cf3b9c.js.map": "/shopping-cart/static/js/main.54cf3b9c.js.map"
+    "main.4c2398e3.css.map": "/shopping-cart/static/css/main.4c2398e3.css.map",
+    "main.1f18597a.js.map": "/shopping-cart/static/js/main.1f18597a.js.map"
   },
   "entrypoints": [
-    "static/css/main.842b2db6.css",
-    "static/js/main.54cf3b9c.js"
+    "static/css/main.4c2398e3.css",
+    "static/js/main.1f18597a.js"
   ]
 }
