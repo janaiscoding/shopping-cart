@@ -29,7 +29,6 @@ const CartItem = ({
       handleCartAdd(cartItem, -1);
       //remove from cart
       // maybe add a popup with "item was removed from bag"
-      alert(`${cartItem.name} was removed from bag`);
       handleCartRemove(cartItem);
     }
   };
@@ -39,16 +38,16 @@ const CartItem = ({
       <div className="product-info">
         <div className="product-name">{cartItem.name}</div>
       </div>
-      <div className="img-handle">
-        <img
-          src={cartItem.img}
-          width={150}
-          height={150}
-          alt={cartItem.name}
-          className="product-image"
-          loading="lazy"
-        ></img>
-      </div>
+
+      <img
+        src={cartItem.img}
+        width={150}
+        height={150}
+        alt={cartItem.name}
+        className="product-image"
+        loading="lazy"
+      />
+
       <div className="buttons-control">
         <div className="increment-decrement">
           <button onClick={handleRemoveSingular} className="minus-one">

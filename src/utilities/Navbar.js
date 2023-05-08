@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/navbar.css";
 import logo from "../assets/sushi.png";
+import cartIcon from "../assets/shopping-cart.png";
 
 const Navbar = ({ totalQuant }) => {
   const toggleNav = () => {
@@ -24,7 +25,10 @@ const Navbar = ({ totalQuant }) => {
             <img className="logo" src={logo} alt="sushi logo" width={50} />
           </Link>
         </div>
-
+        <Link to="/cart" className="cart-menu-icon">
+          <img src={cartIcon} />
+          {totalQuant === 0 ? "" : <div> {totalQuant}</div>}
+        </Link>
         <button
           className="mobile-nav-toggle"
           aria-controls="primary-navigation"
@@ -45,11 +49,6 @@ const Navbar = ({ totalQuant }) => {
             </li>
             <li className="active">
               <Link to="/contact">Contact</Link>
-            </li>
-            <li className="active">
-              <Link to="/cart">
-                Cart ({totalQuant === 0 ? "empty" : totalQuant})
-              </Link>
             </li>
           </ul>
         </nav>
