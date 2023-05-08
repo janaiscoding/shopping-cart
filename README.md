@@ -7,7 +7,10 @@
 
 ## Live Demo
 
+### On Browser
 ![Gif preview of the shopping cart](src/assets/shopping-cart-v2-preview.gif)
+
+### On Mobile
 ![Gif preview of the shopping cart on mobile](src/assets/shopping-cart-mobile-preview.gif)
 
 - See the full live preview [here](https://janaiscoding.github.io/shopping-cart/)
@@ -50,7 +53,7 @@ npm start
 
 ### Future plans for this project
 
-- Better styling and mobile responsiveness
+- Better styling and mobile responsiveness (checked)
 - Contact form on the Contact page for Reservations
 - Fetch products from an API
 - Add localStorage for the products
