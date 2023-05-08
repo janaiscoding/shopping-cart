@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../styles/contact.css";
+import "../styles/checkout.css";
 
-const Contact = ({ cart, totalPrice }) => {
+const Checkout = ({ cart, totalPrice }) => {
   return (
     <div className="contact-main">
       <div className="contact-info">
-        You expected a contact page... But it was me, the placeholder text! &gt;:)
+        Checkout Page
       </div>
       <div className="contact-cart-check">
         {cart.length === 0 ? (
@@ -15,7 +15,7 @@ const Contact = ({ cart, totalPrice }) => {
               <Link to="/menu" className="store-button"> See Our Menu </Link>
           </div>
         ) : (
-          "Well.. Not much changed, but just to practice some more props, state and stuff, here is some really cool info:"
+          "Your order information:"
         )}
       </div>
         {cart.length === 0 ? (
@@ -39,7 +39,7 @@ const Contact = ({ cart, totalPrice }) => {
             </div>
               That's about it. Yum Yum!<br />
               Hope you enjoy your imaginary meal teehee!<br />
-              Oh and yeah, I totally got lazy on the styling... for now.
+              Still working on the styling :)
           </div>
           </div>
         )}
@@ -47,4 +47,4 @@ const Contact = ({ cart, totalPrice }) => {
   );
 };
 
-export default Contact;
+export default Checkout;

@@ -10,7 +10,7 @@ const Home = () => {
           <Link to="/menu" className="store-button">
             Order Online
           </Link>
-          <Link to="/contact" className="reserve-button">
+          <Link to="/checkout" className="reserve-button">
             Reservations
           </Link>
         </div>

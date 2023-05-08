@@ -38,16 +38,10 @@ const CartItem = ({
       <div className="product-info">
         <div className="product-name">{cartItem.name}</div>
       </div>
-
-      <img
-        src={cartItem.img}
-        width={150}
-        height={150}
-        alt={cartItem.name}
-        className="product-image"
-        loading="lazy"
-      />
-
+      <div
+        className="product-preview"
+        style={{ backgroundImage: `url(${cartItem.img})` }}
+      ></div>
       <div className="buttons-control">
         <div className="increment-decrement">
           <button onClick={handleRemoveSingular} className="minus-one">

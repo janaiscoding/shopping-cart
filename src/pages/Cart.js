@@ -21,21 +21,22 @@ const Cart = ({
   ));
 
   return (
-    <div className="cart-main">
-      <div className="cart-info">
-        {cart.length === 0 ? (
-          <Link to="/menu" className="bag-empty">
-            Bag empty. Check Store?
-          </Link>
-        ) : (
-          <Link to="/contact" className="checkout">
-            Order Now: ${totalPrice.toFixed(2)}
-          </Link>
-        )}
+    <>
+      <div className="cart-main">
+        <div className="cart-redirect">
+          {cart.length === 0 ? (
+            <Link to="/menu" className="bag-empty">
+              Bag empty. Check Store?
+            </Link>
+          ) : (
+            <Link to="/checkout" className="checkout">
+              Order Now: ${totalPrice.toFixed(2)}
+            </Link>
+          )}
+        </div>
+        <div className="all-cart-wrap">{allCartItems}</div>
       </div>
-
-      <div className="all-cart-wrap">{allCartItems}</div>
-    </div>
+    </>
   );
 };
 

@@ -36,7 +36,7 @@ const MenuItem = ({ product, handleCartAdd, handleCartRemove }) => {
       handleCartAdd(product, -1);
       //remove from cart
       // maybe add a popup with "item was removed from bag"
-      alert(`${product.name} was removed from bag`);
+     // alert(`${product.name} was removed from bag`);
       handleCartRemove(product);
     }
   };
@@ -46,16 +46,7 @@ const MenuItem = ({ product, handleCartAdd, handleCartRemove }) => {
         <div className="product-info">
           <div className="product-name">{product.name}</div>
         </div>
-        <div className="img-handle">
-          <img
-            src={product.img}
-            // width={300}
-            height={200}
-            alt={product.name}
-            className="product-image"
-            loading="lazy"
-          ></img>
-        </div>
+        <div className="product-preview" style={{ backgroundImage: `url(${product.img})` }}></div>
         <div className="buttons-control">
           <div className="increment-decrement">
             <button onClick={handleRemoveSingular} className="minus-one">

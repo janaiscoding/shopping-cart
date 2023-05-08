@@ -6,7 +6,7 @@ import Navbar from "./Navbar";
 import Home from "../pages/Home";
 import Menu from "../pages/Menu";
 import Cart from "../pages/Cart";
-import Contact from "../pages/Contact";
+import Checkout from "../pages/Checkout";
 import MyFooter from "./MyFooter";
 
 const App = () => {
@@ -97,8 +97,8 @@ const App = () => {
           }
         />
         <Route
-          path="/contact"
-          element={<Contact cart={cart} totalPrice={totalPrice} />}
+          path="/checkout"
+          element={<Checkout cart={cart} totalPrice={totalPrice} />}
         />
       </Routes>
       <MyFooter />

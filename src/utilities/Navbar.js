@@ -20,15 +20,16 @@ const Navbar = ({ totalQuant }) => {
   return (
     <>
       <header className="flex">
-        <div>
+        <div className="header-left flex">
           <Link to="/">
             <img className="logo" src={logo} alt="sushi logo" width={50} />
           </Link>
+          <Link to="/cart" className="cart-menu-icon">
+            <img src={cartIcon} alt="cart button" />
+            {totalQuant === 0 ? "" : <div> {totalQuant}</div>}
+          </Link>
         </div>
-        <Link to="/cart" className="cart-menu-icon">
-          <img src={cartIcon} />
-          {totalQuant === 0 ? "" : <div> {totalQuant}</div>}
-        </Link>
+
         <button
           className="mobile-nav-toggle"
           aria-controls="primary-navigation"
@@ -42,13 +43,19 @@ const Navbar = ({ totalQuant }) => {
             data-visible="false"
           >
             <li className="active">
-              <Link to="/">Home</Link>
+              <Link to="/" onClick={toggleNav}>
+                Home
+              </Link>
             </li>
             <li className="active">
-              <Link to="/menu">Menu</Link>
+              <Link to="/menu" onClick={toggleNav}>
+                Menu
+              </Link>
             </li>
             <li className="active">
-              <Link to="/contact">Contact</Link>
+              <Link to="/checkout" onClick={toggleNav}>
+                Checkout
+              </Link>
             </li>
           </ul>
         </nav>

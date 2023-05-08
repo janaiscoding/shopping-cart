@@ -4,6 +4,11 @@ header {
   border-bottom: 1px solid #ecc19e;
   position: sticky;
   height: 10vh;
+  padding: 0px 10px;
+}
+.header-left {
+  justify-content: flex-start;
+  --gap: 20px;
 }
 .logo {
   margin: 2rem;
@@ -14,7 +19,7 @@ header {
   font-size: 20px;
   font-weight: 700;
 }
-.cart-menu-icon>div{
+.cart-menu-icon > div {
   color: white;
 }
 .mobile-nav-toggle {
