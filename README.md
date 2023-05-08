@@ -4,7 +4,7 @@
 
 - The scope of this project was to build **my third application in React using react-router-dom**.
 - Using Router, I created a SPA Sushi Restaurant (Shopping Cart/Order Online).
-- See the full live preview [here](https://janaiscoding.github.io/shopping-cart/)
+- See the full live preview on the GitHub Pages deploy [Jana's Shopping Cart](https://janaiscoding.github.io/shopping-cart/).
 
 ## Live Demo
 
