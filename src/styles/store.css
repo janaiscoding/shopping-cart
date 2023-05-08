@@ -1,7 +1,7 @@
-@media (min-width: 500px) {
-  /* .store-main {
-      padding: 20px;
-    } */
+@media (min-width: 1500px) {
+  .store-main {
+    padding: 20px 300px;
+  }
 }
 .store-main {
   background-color: #b2b4ac;

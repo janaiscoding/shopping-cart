@@ -25,11 +25,11 @@ const Cart = ({
       <div className="cart-main">
         <div className="cart-redirect">
           {cart.length === 0 ? (
-            <Link to="/menu" className="bag-empty">
+            <Link to="/menu" className="cart-redirect bag-empty">
               Bag empty. Check Store?
             </Link>
           ) : (
-            <Link to="/checkout" className="checkout">
+            <Link to="/checkout" className="cart-redirect checkout">
               Order Now: ${totalPrice.toFixed(2)}
             </Link>
           )}
