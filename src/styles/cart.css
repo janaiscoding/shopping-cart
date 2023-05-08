@@ -23,7 +23,6 @@
 .bag-empty {
   padding: 0.625em 1.25em;
   font-size: 1.2em;
-  position: relative;
   display: inline-block;
   background-color: #0d0900;
   border-radius: 5px;

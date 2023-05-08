@@ -14,9 +14,6 @@ button:hover {
   cursor: pointer;
   transform: scale(1.01);
 }
-button:active {
-  border: 2px solid black;
-}
 
 a,
 a:visited,
@@ -28,9 +25,7 @@ a:focus {
 button {
   padding: 0.625em 1.25em;
   font-size: 1.2em;
-  position: relative;
   display: inline-block;
-  height: 50px;
   background-color: #0d09008c;
   border-radius: 5px;
   border: 1px solid #40361d;

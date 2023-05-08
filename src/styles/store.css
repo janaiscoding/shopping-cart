@@ -83,35 +83,3 @@ input {
   background-color: #051e05;
   color: #fddcc1;
 }
-
-.img-handle {
-  position: relative;
-  overflow: hidden;
-  border-radius: 10px;
-  z-index: 1;
-}
-.img-handle::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  border-radius: 10px;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: 0.5s ease all;
-}
-.product-image {
-  transition: 0.5s ease all;
-  width: 100%;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-.img-handle:hover img {
-  transform: scale(1.05);
-}
-
-.img-handle:hover::after {
-  opacity: 0.1;
-}
