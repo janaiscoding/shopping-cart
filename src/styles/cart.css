@@ -1,13 +1,11 @@
 .cart-main {
   color: #fbfbfb;
-  background-image: linear-gradient(#0d0900, #0b0907);
+  background-color: #b2b4ac;
   min-height: 85vh;
   padding: 20px;
   display: flex;
   flex-direction: column;
 }
-
-
 
 .remove-button {
   background-color: #6c0f0f;

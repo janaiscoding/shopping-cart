@@ -1,7 +1,7 @@
 .contact-main {
-  color: #c8c04c;
+  color: #302e1c;
   gap: 20px;
-  background-image: linear-gradient(#0d0900, #0b0907);
+  background-color: #b2b4ac;
   min-height: 85vh;
   padding: 20px;
   display: flex;
@@ -21,15 +21,22 @@
   align-items: center;
   gap: 20px;
 }
-.contact-cart-check,
-.contact-cart-full {
+.contact-cart-check {
   font-size: 1.4rem;
-  color: #ede6e1;
+  color: #302e1c;
 }
 .contact-cart-full {
+  color: #ede6e1;
+  font-size: 1.4rem;
+  display: flex;
+  align-self: center;
   background-color: #232220;
-  padding: 20px;
+  padding: 3em;
   border-radius: 10px;
+  -webkit-box-shadow: 4px 3px 14px -4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 4px 3px 14px -4px rgba(0, 0, 0, 0.75);
+  box-shadow: 4px 3px 14px -4px rgba(0, 0, 0, 0.75);
+  max-width: 600px;
 }
 .contact-order-info {
   display: flex;
