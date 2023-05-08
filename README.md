@@ -7,7 +7,8 @@
 
 ## Live Demo
 
-![Gif preview of the shopping cart](/src/assets/shopping-cart-preview.gif)
+![Gif preview of the shopping cart](src/assets/shopping-cart-v2-preview.gif)
+![Gif preview of the shopping cart on mobile](src/assets/shopping-cart-mobile-preview.gif)
 
 - See the full live preview [here](https://janaiscoding.github.io/shopping-cart/)
 
