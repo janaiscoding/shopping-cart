@@ -160,6 +160,9 @@
   padding: 10px;
   border-radius: 10px;
 }
+.arrow-top[data-visible="true"] {
+  display: block;
+}
 @media (max-width: 600px) {
   .home-main,
   .section {
@@ -188,7 +191,11 @@
   }
 
   .section-three {
+    display: flex;
     align-items: flex-end;
+  }
+  .section-three >img{
+    align-self: flex-end;
   }
   .menu-list-li {
     flex-direction: row;

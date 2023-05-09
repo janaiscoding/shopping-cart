@@ -9,7 +9,7 @@ const About = () => {
   let breadcrumbs = "私たちに関しては / About Us";
   return (
     <section className="section section-two" id="about">
-      <img src={leftSectionTwoImage} alt="animated sushi table" width={400} />
+      <img src={leftSectionTwoImage} alt="animated sushi table" height={500} />
       <div className="content">
         <Link to="/#about">
           <h2 className="section-breadcrumbs">{breadcrumbs}</h2>

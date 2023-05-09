@@ -1,5 +1,5 @@
 import React from "react";
-import menuImage from "../assets/landingpage/right-sushi.png";
+import menuImage from "../assets/landingpage/right-side-tradition.png"
 import flowerIcon from "../assets/icons/flowericon.png";
 import { HashLink as Link } from "react-router-hash-link";
 
@@ -35,7 +35,7 @@ const Tradition = () => {
           </li>
         </ul>
       </div>
-      <img src={menuImage} alt="animated sushi table" width={400} />
+      <img src={menuImage} alt="animated sushi table" height={500} />
     </section>
   );
 };

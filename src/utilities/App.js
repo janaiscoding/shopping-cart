@@ -10,6 +10,7 @@ import Tradition from "../pages/Tradition";
 import Sushi from "../pages/Sushi";
 import Cart from "../pages/Cart";
 import Contact from "../pages/Contact";
+import arrowTopIcon from "../assets/icons/arrowhead-up.png";
 
 const App = () => {
   const [cart, setCart] = useState([]);
@@ -67,13 +68,37 @@ const App = () => {
     setTotalPrice(sumPrice);
     setTotalQuant(sumQuantity);
   };
-
+  //my handler for scrolling 
+  const scrollFunction = () => {
+    let arrowTop = document.querySelector(".arrow-top");
+    if (
+      document.body.scrollTop > 20 ||
+      document.documentElement.scrollTop > 20
+    ) {
+      arrowTop.setAttribute("data-visible", true);
+    } else {
+      arrowTop.setAttribute("data-visible", false);
+    }
+  };
+  const backToTop = () => {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  };
+  window.onscroll = scrollFunction;
   useEffect(() => {
     addTotal();
   }, [cart]);
   return (
     <HashRouter>
       <Navbar totalQuant={totalQuant} />
+      <img
+        src={arrowTopIcon}
+        className="arrow-top"
+        data-visible="false"
+        width={32}
+        alt="scroll back to top arrow"
+        onClick={backToTop}
+      />
       <Routes>
         <Route
           exact
