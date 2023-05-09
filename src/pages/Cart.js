@@ -28,6 +28,7 @@ const Cart = ({
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         className="cart-main"
+        id="cart"
       >
         <div className="cart-info">
           <h1 className="cart-title">Shopping Cart</h1>

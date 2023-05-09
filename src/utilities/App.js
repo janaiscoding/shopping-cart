@@ -20,7 +20,6 @@ const App = () => {
 
   // Used on store page and cart
   const handleCartAdd = (product, quantity) => {
-    console.log(product);
     //Check if it exists in current cart
     const productIndex = cart.findIndex(
       (cartItem) => cartItem.id === product.id
