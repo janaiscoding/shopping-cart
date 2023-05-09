@@ -34,7 +34,7 @@ const MyFooter = () => {
               className="footer-link"
               rel="noopener noreferrer"
             >
-              Made by ©JanaIsCoding
+              Developed by ©JanaIsCoding
             </a>
             <a className="footer-link" href="https://dribbble.com/rizkirmw">
               Design Creator ©Rizki

@@ -29,14 +29,22 @@ const Cart = ({
           <div className="handle-checkout">
             <div className="continue-shopping">
               <Link to="/#sushi">
-                <img src={arrowIcon} alt="icon to return to shopping menu" height={21} />
+                <img
+                  src={arrowIcon}
+                  alt="icon to return to shopping menu"
+                  height={21}
+                />
               </Link>
               <Link to="/#sushi">Continue Shopping</Link>
             </div>
-            <div className="subtotal">
-              <p>Subtotal:</p>
-              <h3>¥ {totalPrice}</h3>
-            </div>
+            {totalPrice > 0 ? (
+              <div className="subtotal">
+                <p>Subtotal:</p>
+                <h3>¥ {totalPrice}</h3>
+              </div>
+            ) : (
+              ""
+            )}
           </div>
         </div>
         <img src={checkoutImg} alt="checkout pic" width={300} />
