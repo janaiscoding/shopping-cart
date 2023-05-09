@@ -1,7 +1,8 @@
 import React from "react";
-import menuImage from "../assets/landingpage/right-side-tradition.png"
+import menuImage from "../assets/landingpage/right-side-tradition.png";
 import flowerIcon from "../assets/icons/flowericon.png";
 import { HashLink as Link } from "react-router-hash-link";
+import { motion } from "framer-motion";
 
 const Tradition = () => {
   let title = "SUSHI SALMON SPECIAL TRADITION OISHī";
@@ -16,7 +17,13 @@ const Tradition = () => {
     "Given the long history of sushi, salmon sushi didn't exist until about 20 years ago. It didn't seem like there were any short cuts or growth hacks of process.";
   return (
     <section className="section section-three">
-      <div className="content" id="tradition">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        className="content"
+        id="tradition"
+      >
         <Link to="/#tradition">
           <h2 className="section-breadcrumbs">{breadcrumbs}</h2>
         </Link>
@@ -34,7 +41,7 @@ const Tradition = () => {
             {listThree}
           </li>
         </ul>
-      </div>
+      </motion.div>
       <img src={menuImage} alt="animated sushi table" height={500} />
     </section>
   );

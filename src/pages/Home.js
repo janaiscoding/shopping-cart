@@ -6,6 +6,7 @@ import About from "./About";
 import Tradition from "./Tradition";
 import Sushi from "./Sushi";
 import BookTable from "./BookTable";
+import { motion } from "framer-motion";
 
 const Home = ({ products, handleCartAdd, backToTop }) => {
   let titleOne = "OISHī JAPANESE CUISINE AND SUSHI AT ITS FINEST";
@@ -13,7 +14,12 @@ const Home = ({ products, handleCartAdd, backToTop }) => {
     "Oishi Japanese cuisine Kaiseki & Sushi Aims to reconceptualise `WASHOKU` by innovating and creating state of art dishes made with a modern twist.";
   return (
     <>
-      <div className="home-main">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        className="home-main"
+      >
         <section className="section section-one" id="home">
           <div className="content">
             <h1 className="section-title">{titleOne}</h1>
@@ -30,7 +36,7 @@ const Home = ({ products, handleCartAdd, backToTop }) => {
         <Tradition />
         <Sushi products={products} handleCartAdd={handleCartAdd} />
         <BookTable />
-      </div>
+      </motion.div>
     </>
   );
 };

@@ -2,6 +2,7 @@ import React from "react";
 import { HashLink as Link } from "react-router-hash-link";
 import bookTableImageLeft from "../assets/landingpage/leftbannerfix.png";
 import bookTableImageRight from "../assets/landingpage/rightbanner.png";
+import { motion } from "framer-motion";
 const BookTable = () => {
   let title = "Book a Table for Dinner";
   let para =
@@ -10,7 +11,12 @@ const BookTable = () => {
   return (
     <section className="section section-five" id="book">
       <img src={bookTableImageLeft} alt="animated sushi table" width={400} />
-      <div className="content">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        className="content"
+      >
         <Link to="/#about">
           <h2 className="section-breadcrumbs">{breadcrumbs}</h2>
         </Link>
@@ -21,8 +27,13 @@ const BookTable = () => {
             Contact Us Now
           </Link>
         </button>
-      </div>
-      <img className="right-img" src={bookTableImageRight} alt="animated sushi table" width={400} />
+      </motion.div>
+      <img
+        className="right-img"
+        src={bookTableImageRight}
+        alt="animated sushi table"
+        width={400}
+      />
     </section>
   );
 };

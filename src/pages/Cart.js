@@ -4,6 +4,7 @@ import { HashLink as Link } from "react-router-hash-link";
 import "../styles/cart.css";
 import checkoutImg from "../assets/landingpage/right-sushi.png";
 import arrowIcon from "../assets/icons/right-arrow.png";
+import { motion } from "framer-motion";
 const Cart = ({
   cart,
   totalPrice,
@@ -22,7 +23,12 @@ const Cart = ({
   ));
   return (
     <section className="cart-section">
-      <div className="cart-main">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        className="cart-main"
+      >
         <div className="cart-info">
           <h1 className="cart-title">Shopping Cart</h1>
           <div className="cart-items-wrapper">{allCartItems}</div>
@@ -48,7 +54,7 @@ const Cart = ({
           </div>
         </div>
         <img src={checkoutImg} alt="checkout pic" width={300} />
-      </div>
+      </motion.div>
     </section>
   );
 };

@@ -1,6 +1,7 @@
 import React from "react";
 import leftSectionTwoImage from "../assets/landingpage/left-side.png";
 import { HashLink as Link } from "react-router-hash-link";
+import { motion } from "framer-motion";
 
 const About = () => {
   let title = "OISHī JAPANESE CUISINE AND SUSHI";
@@ -10,7 +11,12 @@ const About = () => {
   return (
     <section className="section section-two" id="about">
       <img src={leftSectionTwoImage} alt="animated sushi table" height={500} />
-      <div className="content">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        className="content"
+      >
         <Link to="/#about">
           <h2 className="section-breadcrumbs">{breadcrumbs}</h2>
         </Link>
@@ -21,7 +27,7 @@ const About = () => {
             Reservation
           </Link>
         </button>
-      </div>
+      </motion.div>
     </section>
   );
 };

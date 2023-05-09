@@ -3,14 +3,19 @@ import { HashLink as Link } from "react-router-hash-link";
 import bookTableImageLeft from "../assets/landingpage/leftbannerfix.png";
 import bookTableImageRight from "../assets/landingpage/rightbanner.png";
 import "../styles/contact.css";
-
+import { motion } from "framer-motion";
 const Contact = () => {
   let title = "Book a Table for Dinner";
   let breadcrumbs = "席を予約する";
   return (
     <section className="section section-five" id="about">
       <img src={bookTableImageLeft} alt="animated sushi table" height={400} />
-      <div className="content">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        className="content"
+      >
         <Link to="/#about">
           <h2 className="section-breadcrumbs">{breadcrumbs}</h2>
         </Link>
@@ -46,7 +51,7 @@ const Contact = () => {
         <button className="section-button book-button">
           Submit Reservation
         </button>
-      </div>
+      </motion.div>
       <img
         className="right-img"
         src={bookTableImageRight}
