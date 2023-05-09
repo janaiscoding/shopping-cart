@@ -18,9 +18,9 @@
 .section-three {
   margin-right: 5em;
 }
-.section-three > .content {
+/* .section-three > .content {
   margin: 5em 15em 5em 0em;
-}
+} */
 .menu-list {
   display: flex;
   flex-direction: column;
@@ -30,7 +30,32 @@
   display: flex;
   align-items: center;
   color: var(--main-grey);
-  gap:20px;
+  gap: 20px;
+}
+.menu-wrapper {
+  display: flex;
+  margin-top: 5em;
+}
+.menu-list-li {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  color: var(--main-grey);
+  font-size: 1.5rem;
+  margin-right: 10em;
+}
+.menu-list-li > .first-li {
+  margin-bottom: 10px;
+}
+.menu-list-li > li:nth-child(2) {
+  color: var(--main-orange);
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+.products-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .section-breadcrumbs {

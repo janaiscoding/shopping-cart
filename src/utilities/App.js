@@ -1,19 +1,20 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from "react";
 import { Route, Routes, HashRouter } from "react-router-dom";
-import data from "../products/data";
+import dataSecond from "../assets/products/dataSecond";
 import Navbar from "./Navbar";
 import Home from "../pages/Home";
-import Menu from "../pages/Menu";
+// import Menu from "../pages/Menu";
 import Cart from "../pages/Cart";
 import Checkout from "../pages/Checkout";
 import MyFooter from "./MyFooter";
 import MenuMain from "../pages/Menu2";
+import DiscoverMenu from "../pages/DiscoverMenu";
 
 const App = () => {
   const [cart, setCart] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
-  const [products] = useState(data);
+  const [products] = useState(dataSecond);
   const [totalQuant, setTotalQuant] = useState(0);
 
   // Used on store page and cart
@@ -69,14 +70,14 @@ const App = () => {
   useEffect(() => {
     addTotal();
   }, [cart]);
-
   return (
     <HashRouter>
       <Navbar totalQuant={totalQuant} />
       <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route path="/#menumain" element={<MenuMain />} />
-        <Route
+        <Route exact path="/" element={<Home products={products}/>} />
+        <Route path="/#menu" element={<MenuMain />} />
+        <Route path="/#discover" element={<DiscoverMenu />} />
+        {/* <Route
           path="/menu"
           element={
             <Menu
@@ -85,7 +86,7 @@ const App = () => {
               handleCartRemove={handleCartRemove}
             />
           }
-        />
+        /> */}
         <Route
           path="/cart"
           element={
@@ -105,7 +106,6 @@ const App = () => {
       </Routes>
       <MyFooter />
     </HashRouter>
-    
   );
 };
 

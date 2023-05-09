@@ -1,5 +1,5 @@
 import React from "react";
-import { HashLink as Link } from 'react-router-hash-link';
+import { HashLink as Link } from "react-router-hash-link";
 import "../styles/navbar.css";
 import logo from "../assets/icons/logo.png";
 import cartIcon from "../assets/icons/shopping-cart.png";
@@ -44,13 +44,18 @@ const Navbar = ({ totalQuant }) => {
             data-visible="false"
           >
             <li className="active">
-              <Link to="/#menumain" onClick={toggleNav}>
+              <Link to="/#menu" onClick={toggleNav}>
                 Menu
               </Link>
             </li>
             <li className="active">
-              <Link to="/aboutus" onClick={toggleNav}>
-                About us  
+              <Link to="/#discover" onClick={toggleNav}>
+                Foods
+              </Link>
+            </li>
+            <li className="active">
+              <Link to="/#about" onClick={toggleNav}>
+                About us
               </Link>
             </li>
             <li className="active">
