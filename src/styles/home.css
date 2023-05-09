@@ -207,11 +207,13 @@
   .section-four-content {
     flex-direction: column;
   }
-  .section-five > img,
+
   .section-two > img,
-  .section-three > img {
+  .section-three > img,
+  .section-five > img {
     width: 200px;
   }
+
   .section-five > .right-img {
     align-self: flex-end;
   }

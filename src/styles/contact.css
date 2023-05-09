@@ -3,6 +3,9 @@
   flex-direction: column;
   gap: 2em;
 }
+.section-contact {
+  margin-top: 8vh;
+}
 .form-group {
   display: flex;
   gap: 1em;
@@ -44,8 +47,8 @@
   .form-group {
     flex-direction: column;
   }
-  input,
-  #notes {
+  form > input,
+  form > #notes {
     width: 15em;
   }
 }

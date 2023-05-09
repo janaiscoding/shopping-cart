@@ -8,7 +8,7 @@ const Contact = () => {
   let title = "Book a Table for Dinner";
   let breadcrumbs = "席を予約する";
   return (
-    <section className="section section-five" id="about">
+    <section className="section section-five section-contact" id="about">
       <img src={bookTableImageLeft} alt="animated sushi table" height={400} />
       <motion.div
         initial={{ opacity: 0 }}

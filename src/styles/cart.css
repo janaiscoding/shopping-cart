@@ -4,6 +4,7 @@
   padding: 5em;
   border-radius: 10px;
   min-height: 30vh;
+  margin-top: 8vh;
   background-color: var(--main-white);
 }
 .cart-main {
