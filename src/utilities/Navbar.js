@@ -17,11 +17,12 @@ const Navbar = ({ totalQuant }) => {
       navToggle.setAttribute("aria-expanded", false);
     }
   };
+
   return (
     <>
-      <header className="flex">
+      <header className="flex sticky">
         <div className="header-left flex">
-          <Link className="logo-wrapper flex" to="/">
+          <Link className="logo-wrapper flex" to="/#home">
             <img className="logo" src={logo} alt="sushi logo" width={50} />
             <p className="logo-name">Oishī</p>
           </Link>
@@ -43,6 +44,11 @@ const Navbar = ({ totalQuant }) => {
             className="primary-navigation flex"
             data-visible="false"
           >
+            <li className="active">
+              <Link to="/#home" onClick={toggleNav}>
+                Home
+              </Link>
+            </li>
             <li className="active">
               <Link to="/#menu" onClick={toggleNav}>
                 Menu

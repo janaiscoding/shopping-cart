@@ -49,7 +49,7 @@ let dataSecond = [
   },
   {
     name: "Ikura Sushi",
-    japanese: "いくら寿司",
+    japanese: "サーモン寿司",
     id: uniqid(),
     img: IkuraSushi,
     price: 2400,

@@ -19,6 +19,7 @@ const App = () => {
 
   // Used on store page and cart
   const handleCartAdd = (product, quantity) => {
+    console.log(product);
     //Check if it exists in current cart
     const productIndex = cart.findIndex(
       (cartItem) => cartItem.id === product.id
@@ -74,7 +75,11 @@ const App = () => {
     <HashRouter>
       <Navbar totalQuant={totalQuant} />
       <Routes>
-        <Route exact path="/" element={<Home products={products}/>} />
+        <Route
+          exact
+          path="/"
+          element={<Home products={products} handleCartAdd={handleCartAdd} />}
+        />
         <Route path="/#menu" element={<MenuMain />} />
         <Route path="/#discover" element={<DiscoverMenu />} />
         {/* <Route

@@ -1,14 +1,17 @@
 header {
   justify-content: space-between;
+  overflow: hidden;
   background-color: var(--main-white);
-  position: sticky;
+  box-shadow: 4px 9px 7px -6px rgb(156 156 156 / 23%);
   height: 10vh;
   padding: 0px 10px;
-  margin: 0em 5em;
+  z-index: 9999;
 }
+
 .header-left {
   justify-content: flex-start;
   --gap: 20px;
+  margin-left: 5em;
 }
 .logo-wrapper {
   --gap: 0px;
@@ -33,6 +36,13 @@ header {
 }
 
 @media (max-width: 35em) {
+  header {
+    position: sticky;
+    top: 0;
+  }
+  .header-left {
+    margin: 10px;
+  }
   .primary-navigation {
     position: fixed;
     z-index: 1000;
@@ -40,7 +50,7 @@ header {
     --gap: 2.5em;
     flex-direction: column;
     padding: min(30vh, 10rem) 2em !important;
-    background: hsl(0, 0%, 0%, 0.45);
+    background: hsl(8.41deg 67.97% 54.71% / 73%);
     backdrop-filter: blur(1rem);
     align-items: flex-start;
     transform: translateX(100%);
@@ -51,11 +61,22 @@ header {
     position: absolute;
     background-image: url("../assets/icons/hamburger-icon.png");
     background-repeat: no-repeat;
+    background-color: transparent;
     border: 0;
     width: 2rem;
     right: 2rem;
     z-index: 9999;
     aspect-ratio: 1;
+  }
+  .primary-navigation > li > a {
+    font-size: 1.3rem;
+    color: var(--main-blue);
+  }
+  .primary-navigation > li.contact-button {
+    font-size: 1.3rem;
+    border: 1px solid var(--main-blue);
+    background-color: transparent;
+    color: var(--main-blue);
   }
   .cart-menu-icon {
     z-index: 9999;
@@ -74,6 +95,9 @@ header {
   align-items: center;
   gap: var(--gap, 4rem);
 }
+nav {
+  margin-right: 5em;
+}
 .primary-navigation {
   align-items: center;
   list-style: none;
@@ -85,7 +109,7 @@ header {
   font-size: 1.1rem;
   color: var(--main-grey);
 }
-.primary-navigation a:active {
+.primary-navigation a:hover {
   color: var(--main-orange);
   border-bottom: 1px solid var(--main-orange);
 }
@@ -98,6 +122,6 @@ header {
   border: 1px solid var(--main-orange);
   color: var(--main-orange);
 }
-.contact-button > a{
+.contact-button > a {
   color: var(--main-orange);
 }
