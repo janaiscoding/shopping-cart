@@ -1,8 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { HashLink as Link } from 'react-router-hash-link';
 import "../styles/navbar.css";
-import logo from "../assets/sushi.png";
-import cartIcon from "../assets/shopping-cart.png";
+import logo from "../assets/icons/logo.png";
+import cartIcon from "../assets/icons/shopping-cart.png";
 
 const Navbar = ({ totalQuant }) => {
   const toggleNav = () => {
@@ -21,8 +21,9 @@ const Navbar = ({ totalQuant }) => {
     <>
       <header className="flex">
         <div className="header-left flex">
-          <Link to="/">
+          <Link className="logo-wrapper flex" to="/">
             <img className="logo" src={logo} alt="sushi logo" width={50} />
+            <p className="logo-name">Oishī</p>
           </Link>
           <Link to="/cart" className="cart-menu-icon">
             <img src={cartIcon} alt="cart button" />
@@ -43,18 +44,23 @@ const Navbar = ({ totalQuant }) => {
             data-visible="false"
           >
             <li className="active">
-              <Link to="/" onClick={toggleNav}>
-                Home
+              <Link to="/#menumain" onClick={toggleNav}>
+                Menu
               </Link>
             </li>
             <li className="active">
-              <Link to="/menu" onClick={toggleNav}>
-                Menu
+              <Link to="/aboutus" onClick={toggleNav}>
+                About us  
               </Link>
             </li>
             <li className="active">
               <Link to="/checkout" onClick={toggleNav}>
                 Checkout
+              </Link>
+            </li>
+            <li className="active contact-button">
+              <Link to="/contact" onClick={toggleNav}>
+                Contact Us
               </Link>
             </li>
           </ul>

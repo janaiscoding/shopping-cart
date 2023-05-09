@@ -1,41 +1,72 @@
 .home-main {
   display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  height: 85vh;
-  background-image: url("/src/assets/sushi-restaurant.webp");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  resize: both;
+  flex-direction: column;
+  justify-content: space-between;
 }
-
-.button-wrapper {
+.section {
   display: flex;
-  gap: 20px;
-  margin-bottom: 15vh;
+  justify-content: space-between;
+  margin-left: 5em;
+  margin-bottom: 2em;
+}
+.section-one > .content {
+  margin-top: 5em;
+}
+.section-two > .content {
+  margin: 0em 15em;
+}
+.section-three {
+  margin-right: 5em;
+}
+.section-three > .content {
+  margin: 5em 15em 5em 0em;
+}
+.menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.menu-list > li {
+  display: flex;
+  align-items: center;
+  color: var(--main-grey);
+  gap:20px;
 }
 
-.store-button,
-.reserve-button {
-  padding: 0.625em 1.25em;
-  letter-spacing: 2px;
-  display: inline-block;
-  background-color: #0d0900;
+.section-breadcrumbs {
+  color: var(--main-orange);
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1em;
+}
+.section-title {
+  font-size: 3em;
+  color: var(--main-blue);
+}
+.section-paragraph {
+  color: var(--main-grey);
+  line-height: 1.7;
+}
+.store-button {
+  background-color: var(--main-orange);
   border-radius: 5px;
-  border: 2px solid #40361d;
-  color: #ecc19e;
+  border: 1px solid var(--main-orange);
+  color: var(--main-white);
 }
-.store-button:hover,
-.reserve-button:hover {
-  transform: scale(1.01);
-}
-.store-button:active,
-.reserve-button:active {
-  border: 2px solid #40361d;
-}
+
 @media (max-width: 500px) {
-  .home-main {
-    background-position: 25%;
+  .home-main,
+  .section {
+    flex-direction: column;
   }
+  .content {
+    margin: 10px;
+  }
+  /* .section > img{
+    here i need to fix img for mobile
+    transform: translateX(0%);
+  } */
 }

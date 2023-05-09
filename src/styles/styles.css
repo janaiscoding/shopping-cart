@@ -3,22 +3,37 @@
   margin: 0;
   padding: 0;
 }
-
+@font-face {
+  font-family: "NightInTokyo";
+  src: url("../assets/fonts/NightinTokyo.ttf");
+}
 #root {
   position: relative;
+  --main-orange: #da533d;
+  --main-white: #fdfdfd;
+  --main-blue: #2e2b46;
+  --main-grey: #888888;
 }
-
+body {
+  background-color: var(--main-white);
+}
+.section-title {
+  font-family: "NightInTokyo";
+}
 /* GLOBAL SETTINGS */
 
 button:hover {
   cursor: pointer;
   transform: scale(1.01);
 }
-
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
 a,
 a:visited,
 a:focus {
-  color: #ecc19e;
   text-decoration: none;
 }
 
@@ -26,8 +41,8 @@ button {
   padding: 0.625em 1.25em;
   font-size: 1.2em;
   display: inline-block;
-  background-color: #0d09008c;
+  background-color: var(--main-orange);
   border-radius: 5px;
-  border: 1px solid #40361d;
-  color: #ecc19e;
+  border: 1px solid var(--main-orange);
+  color: var(--main-white);
 }

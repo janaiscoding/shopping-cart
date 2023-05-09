@@ -8,6 +8,7 @@ import Menu from "../pages/Menu";
 import Cart from "../pages/Cart";
 import Checkout from "../pages/Checkout";
 import MyFooter from "./MyFooter";
+import MenuMain from "../pages/Menu2";
 
 const App = () => {
   const [cart, setCart] = useState([]);
@@ -74,6 +75,7 @@ const App = () => {
       <Navbar totalQuant={totalQuant} />
       <Routes>
         <Route exact path="/" element={<Home />} />
+        <Route path="/#menumain" element={<MenuMain />} />
         <Route
           path="/menu"
           element={
