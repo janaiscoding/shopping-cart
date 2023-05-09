@@ -26,14 +26,19 @@
   font-family: "NightInTokyo";
   font-size: 2rem;
 }
-.cart-item {
+.cart-item-right {
   display: flex;
   gap: 5em;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid var(--main-grey);
   padding: 1em;
   font-size: 1.3rem;
+  font-weight: 800;
+}
+.cart-item {
+  border-bottom: 1px solid var(--main-grey);
+  display: flex;
+  font-weight: 800;
 }
 .product-name {
   min-width: 150px;
@@ -88,6 +93,7 @@ input {
   text-align: center;
   padding: 5px;
 }
+
 .cart-item-price {
   font-weight: 400;
   font-size: 1rem;
@@ -114,6 +120,15 @@ input[type="number"] {
 }
 
 @media (max-width: 600px) {
+  .cart-item {
+    flex-direction: column;
+  }
+  .cart-item-right {
+    margin: 10px;
+    gap: 10px;
+    padding: 0px;
+    font-size: large;
+  }
   .cart-section,
   .cart-main,
   .cart-items-wrapper {

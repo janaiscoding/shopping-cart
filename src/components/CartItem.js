@@ -39,6 +39,7 @@ const CartItem = ({
         <img src={cartItem.img} alt={cartItem.name} width={100} />
         <div className="product-name"> {cartItem.name}</div>
       </div>
+      <div className="cart-item-right">
       <div className="cart-handle-change">
         <div
           className="remove-one-cart-button"
@@ -69,6 +70,7 @@ const CartItem = ({
       </div>
       <div className="remove-button" onClick={() => handleCartRemove(cartItem)}>
         x
+      </div>
       </div>
     </div>
   );
