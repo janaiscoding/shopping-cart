@@ -17,7 +17,7 @@ const MyFooter = () => {
               <Link to="/#about">About</Link>
             </li>
             <li className="active">
-              <Link to="/#menu">Menu</Link>
+              <Link to="/#tradition">Tradition</Link>
             </li>
             <li className="active">
               <Link to="/#sushi">Sushi</Link>

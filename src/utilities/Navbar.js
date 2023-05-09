@@ -44,18 +44,23 @@ const Navbar = ({ totalQuant }) => {
             data-visible="false"
           >
             <li className="active">
+              <Link to="/" onClick={toggleNav}>
+                Home
+              </Link>
+            </li>
+            <li className="active">
               <Link to="/#about" onClick={toggleNav}>
                 About us
               </Link>
             </li>
             <li className="active">
-              <Link to="/#menu" onClick={toggleNav}>
-                Menu
+              <Link to="/#tradition" onClick={toggleNav}>
+                Tradition
               </Link>
             </li>
             <li className="active">
               <Link to="/#sushi" onClick={toggleNav}>
-                Sushi
+                Order Sushi
               </Link>
             </li>
             <li className="active contact-button">

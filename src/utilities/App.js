@@ -6,7 +6,7 @@ import Navbar from "./Navbar";
 import Home from "../pages/Home";
 // import Menu from "../pages/Menu";
 import MyFooter from "./MyFooter";
-import Menu from "../pages/Menu";
+import Tradition from "../pages/Tradition";
 import Sushi from "../pages/Sushi";
 import Cart from "../pages/Cart";
 import Contact from "../pages/Contact";
@@ -101,7 +101,7 @@ const App = () => {
             />
           }
         />
-        <Route path="/#menu" element={<Menu />} />
+        <Route path="/#tradition" element={<Tradition />} />
         <Route path="/#sushi" element={<Sushi />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
