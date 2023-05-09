@@ -10,7 +10,7 @@
 
 ### On Browser
 
-![Gif preview of the shopping cart](src/assets/shopping-cart-preview.gif)
+![Gif preview of the shopping cart](src/assets/previews/shopping-cart-preview.gif)
 
 ### On Mobile
 
