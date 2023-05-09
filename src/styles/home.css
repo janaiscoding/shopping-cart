@@ -149,7 +149,17 @@
   border: 1px solid var(--main-orange);
   color: var(--main-white);
 }
-
+.arrow-top {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  background-color: #da533d;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 10px;
+}
 @media (max-width: 600px) {
   .home-main,
   .section {

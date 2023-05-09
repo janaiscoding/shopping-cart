@@ -8,7 +8,7 @@ const MyFooter = () => {
     <>
       <footer>
         <div className="footer-flex-top">
-          <Link className="logo-wrapper flex" to="/#">
+          <Link className="logo-wrapper flex" to="/#home">
             <img className="logo" src={logo} alt="sushi logo" width={50} />
             <p className="logo-name">Oishī</p>
           </Link>
