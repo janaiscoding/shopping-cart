@@ -5,11 +5,10 @@ import dataSecond from "../assets/products/dataSecond";
 import Navbar from "./Navbar";
 import Home from "../pages/Home";
 // import Menu from "../pages/Menu";
-import Cart from "../pages/Cart";
-import Checkout from "../pages/Checkout";
 import MyFooter from "./MyFooter";
-import MenuMain from "../pages/Menu2";
-import DiscoverMenu from "../pages/DiscoverMenu";
+import Menu from "../pages/Menu";
+import Sushi from "../pages/Sushi";
+import Cart from "../pages/Cart";
 
 const App = () => {
   const [cart, setCart] = useState([]);
@@ -78,36 +77,31 @@ const App = () => {
         <Route
           exact
           path="/"
-          element={<Home products={products} handleCartAdd={handleCartAdd} />}
-        />
-        <Route path="/#menu" element={<MenuMain />} />
-        <Route path="/#discover" element={<DiscoverMenu />} />
-        {/* <Route
-          path="/menu"
           element={
-            <Menu
-              handleCartAdd={handleCartAdd}
+            <Home
               products={products}
+              cart={cart}
+              totalPrice={totalPrice}
+              handleCartAdd={handleCartAdd}
+              handleCartUpdate={handleCartUpdate}
               handleCartRemove={handleCartRemove}
             />
           }
-        /> */}
+        />
         <Route
           path="/cart"
           element={
             <Cart
               cart={cart}
+              totalPrice={totalPrice}
               handleCartAdd={handleCartAdd}
               handleCartUpdate={handleCartUpdate}
               handleCartRemove={handleCartRemove}
-              totalPrice={totalPrice}
             />
           }
         />
-        <Route
-          path="/checkout"
-          element={<Checkout cart={cart} totalPrice={totalPrice} />}
-        />
+        <Route path="/#menu" element={<Menu />} />
+        <Route path="/#sushi" element={<Sushi />} />
       </Routes>
       <MyFooter />
     </HashRouter>

@@ -2,7 +2,7 @@ import React from "react";
 import leftSectionTwoImage from "../assets/landingpage/left-side.png";
 import { HashLink as Link } from "react-router-hash-link";
 
-const AboutUs = () => {
+const About = () => {
   let title = "OISHī JAPANESE CUISINE AND SUSHI";
   let para =
     "Oishī Japanese cuisine (Kaiseki & Sushi) aims to reconceptualise `WASHOKU`(Japanese traditional dining concept)* by innovating and creating state-of-the-art dishes made with a modern twist. *In 2013, Japanese `WASHOKU` was awarded and officially listed as one of the UNESCO World Intangible Cultural Heritage.";
@@ -17,7 +17,7 @@ const AboutUs = () => {
         <h1 className="section-title">{title}</h1>
         <p className="section-paragraph">{para}</p>
         <button className="section-button">
-          <Link to="/#contact" className="store-button">
+          <Link to="/contact" className="store-button">
             Reservation
           </Link>
         </button>
@@ -25,4 +25,4 @@ const AboutUs = () => {
     </section>
   );
 };
-export default AboutUs;
+export default About;

@@ -4,8 +4,10 @@ header {
   background-color: var(--main-white);
   box-shadow: 4px 9px 7px -6px rgb(156 156 156 / 23%);
   height: 10vh;
-  padding: 0px 10px;
   z-index: 9999;
+  position: sticky;
+  top: 0;
+  width: 100%;
 }
 
 .header-left {
@@ -20,7 +22,6 @@ header {
   font-size: 2rem;
   color: var(--main-blue);
 }
-
 .cart-menu-icon {
   display: flex;
   gap: 10px;
@@ -28,7 +29,7 @@ header {
   font-weight: 700;
 }
 .cart-menu-icon > div {
-  color: white;
+  color: var(--main-orange);
 }
 .mobile-nav-toggle {
   display: none;
@@ -36,10 +37,6 @@ header {
 }
 
 @media (max-width: 35em) {
-  header {
-    position: sticky;
-    top: 0;
-  }
   .header-left {
     margin: 10px;
   }
@@ -50,7 +47,7 @@ header {
     --gap: 2.5em;
     flex-direction: column;
     padding: min(30vh, 10rem) 2em !important;
-    background: hsl(8.41deg 67.97% 54.71% / 73%);
+    background: hsl(8.41deg 16.93% 84.39% / 73%);
     backdrop-filter: blur(1rem);
     align-items: flex-start;
     transform: translateX(100%);
@@ -69,6 +66,8 @@ header {
     aspect-ratio: 1;
   }
   .primary-navigation > li > a {
+    font-weight: 600;
+    letter-spacing: 2px;
     font-size: 1.3rem;
     color: var(--main-blue);
   }

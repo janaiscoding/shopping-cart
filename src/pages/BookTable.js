@@ -1,6 +1,6 @@
 import React from "react";
 import { HashLink as Link } from "react-router-hash-link";
-import bookTableImageLeft from "../assets/landingpage/leftsidebanner.png";
+import bookTableImageLeft from "../assets/landingpage/leftbannerfix.png";
 import bookTableImageRight from "../assets/landingpage/rightbanner.png";
 const BookTable = () => {
   let title = "Book a Table for Dinner";
@@ -17,7 +17,7 @@ const BookTable = () => {
         <h1 className="section-title">{title}</h1>
         <p className="section-paragraph">{para}</p>
         <button className="section-button">
-          <Link to="/#contact" className="book-button">
+          <Link to="/contact" className="book-button">
             Contact Us Now
           </Link>
         </button>

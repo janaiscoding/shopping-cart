@@ -2,9 +2,9 @@ import React, { useState } from "react";
 
 const CartItem = ({
   cartItem,
-  handleCartRemove,
-  handleCartUpdate,
   handleCartAdd,
+  handleCartUpdate,
+  handleCartRemove,
 }) => {
   const [quantity, setQuantity] = useState(cartItem.quantity);
 
@@ -34,55 +34,41 @@ const CartItem = ({
   };
 
   return (
-    <div className="product-item">
-      <div className="product-info">
-        <div className="product-name">{cartItem.name}</div>
+    <div className="cart-item">
+      <div className="item-info">
+        <img src={cartItem.img} alt={cartItem.name} width={100} />
+        <div className="product-name"> {cartItem.name}</div>
       </div>
-      <div
-        className="product-preview"
-        style={{ backgroundImage: `url(${cartItem.img})` }}
-      ></div>
-      <div className="buttons-control">
-        <div className="increment-decrement">
-          <button onClick={handleRemoveSingular} className="minus-one">
-            -1
-          </button>
-          <input
-            type="number"
-            min={"1"}
-            max={"99"}
-            value={quantity}
-            aria-label="insert custom quantity"
-            onChange={(e) => {
-              handleQuantityChange(e);
-              console.log(quantity);
-            }}
-          />
-          <button onClick={handleAddSingular} className="plus-one">
-            +1
-          </button>
+      <div className="cart-handle-change">
+        <div
+          className="remove-one-cart-button"
+          onClick={() => handleRemoveSingular()}
+        >
+          -
         </div>
-        <div className="custom-input">
-          <button
-            onClick={() => handleCartRemove(cartItem)}
-            className="remove-button"
-          >
-            Remove
-          </button>
-          <div className="product-bottom-info">
-            <div className="product-price">
-              Price: $
-              {cartItem.quantity === 0
-                ? cartItem.price
-                : (cartItem.price * cartItem.quantity).toFixed(2)}
-            </div>
-            {cartItem.quantity === 0 ? (
-              ``
-            ) : (
-              <div>In bag: {cartItem.quantity}</div>
-            )}
-          </div>
+        <input
+          type="number"
+          min={"1"}
+          max={"99"}
+          value={quantity}
+          aria-label="insert custom quantity"
+          onChange={(e) => {
+            handleQuantityChange(e);
+            console.log(quantity);
+          }}
+        />
+        <div
+          className="add-one-cart-button"
+          onClick={() => handleAddSingular()}
+        >
+          +
         </div>
+      </div>
+      <div className="cart-item-price">
+        ¥{cartItem.price * cartItem.quantity}
+      </div>
+      <div className="remove-button" onClick={() => handleCartRemove(cartItem)}>
+        x
       </div>
     </div>
   );

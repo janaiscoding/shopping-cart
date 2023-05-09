@@ -8,19 +8,19 @@ const MyFooter = () => {
     <>
       <footer>
         <div className="footer-flex-top">
-          <Link className="logo-wrapper flex" to="/#home">
+          <Link className="logo-wrapper flex" to="/#">
             <img className="logo" src={logo} alt="sushi logo" width={50} />
             <p className="logo-name">Oishī</p>
           </Link>
           <ul className="footer-navigation flex" data-visible="false">
             <li className="active">
+              <Link to="/#about">About</Link>
+            </li>
+            <li className="active">
               <Link to="/#menu">Menu</Link>
             </li>
             <li className="active">
-              <Link to="/#discover">Foods</Link>
-            </li>
-            <li className="active">
-              <Link to="/#about">About</Link>
+              <Link to="/#sushi">Sushi</Link>
             </li>
             <li className="active">
               <Link to="/contact">Contact</Link>

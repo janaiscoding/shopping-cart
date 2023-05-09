@@ -1,38 +1,140 @@
-@media (min-width: 1500px) {
-  .cart-main {
-    padding: 20px 300px;
-  }
-}
-.cart-main {
-  color: #fbfbfb;
-  background-color: #b2b4ac;
-  min-height: 85vh;
+.cart-section {
   display: flex;
   flex-direction: column;
+  padding: 5em;
+  border-radius: 10px;
+  min-height: 60vh;
+  background-color: var(--main-white);
 }
-
-.remove-button {
-  background-color: #6c0f0f;
-}
-
-.cart-redirect {
+.cart-main {
   display: flex;
-  align-self: center;
-  display: inline-block;
-  border-radius: 5px;
-  border: 1px solid #40361d;
-  font-weight: 600;
+  justify-content: space-between;
+}
+.cart-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+.cart-items-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+.cart-title {
+  font-family: "NightInTokyo";
+  font-size: 2rem;
+}
+.cart-item {
+  display: flex;
+  gap: 7em;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--main-grey);
+  padding: 1em;
+  font-size: 1.3rem;
+}
+.product-name {
+  min-width: 150px;
+}
+.handle-checkout,
+.continue-shopping,
+.subtotal {
+  display: flex;
+  gap: 1em;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--main-grey);
+  font-size: 1.1rem;
 }
 
-.cart-redirect > a {
-  color: #0d0900 !important;
-  font-weight: 600;
+.subtotal {
+  align-items: flex-end;
 }
-.cart-redirect > a:hover {
-  transform: scale(1.03);
+.continue-shopping > a {
+  font-size: 1.1rem;
+  text-align: center;
+  display: flex;
+  color: var(--main-grey);
 }
-.bag-empty,
-.checkout {
-  background-color: #ecc19e;
-  padding: 0.625em 1.25em;
+.subtotal > h3 {
+  font-size: 1.5rem;
+  color: var(--main-orange);
+}
+.cart-handle-change {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 800;
+  font-size: 1.3rem;
+}
+.cart-item > .remove-button {
+  font-weight: 800;
+  font-size: 1.3rem;
+}
+.item-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1em;
+}
+input {
+  border: 1px solid var(--main-grey);
+  width: 2em;
+  height: 1.5em;
+  border-radius: 5px;
+  text-align: center;
+  padding: 5px;
+}
+.cart-item-price {
+  font-weight: 400;
+  font-size: 1rem;
+  font-style: italic;
+}
+.remove-button:hover,
+.add-one-cart-button:hover,
+.remove-one-cart-button:hover {
+  cursor: pointer;
+}
+
+/*hide arrows*/
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+@media (max-width: 600px) {
+  .cart-section,
+  .cart-main,
+  .cart-items-wrapper {
+    flex-direction: column;
+    margin: 10px;
+    gap: 10px;
+    padding: 0px;
+    font-size: large;
+  }
+  .cart-info,
+  .cart-item {
+    margin: 10px;
+    gap: 10px;
+    padding: 0px;
+  }
+  .item-info {
+    gap: 5px;
+    font-size: 1rem;
+  }
+  .item-info > img {
+    width: 70px;
+  }
+  .cart-main > img {
+    display: none;
+  }
 }

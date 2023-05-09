@@ -17,16 +17,15 @@ const Navbar = ({ totalQuant }) => {
       navToggle.setAttribute("aria-expanded", false);
     }
   };
-
   return (
     <>
       <header className="flex sticky">
         <div className="header-left flex">
-          <Link className="logo-wrapper flex" to="/#home">
+          <Link className="logo-wrapper flex" to="/">
             <img className="logo" src={logo} alt="sushi logo" width={50} />
             <p className="logo-name">Oishī</p>
           </Link>
-          <Link to="/cart" className="cart-menu-icon">
+          <Link to="/cart" className="cart-menu-icon" data-visible="false">
             <img src={cartIcon} alt="cart button" />
             {totalQuant === 0 ? "" : <div> {totalQuant}</div>}
           </Link>
@@ -45,8 +44,8 @@ const Navbar = ({ totalQuant }) => {
             data-visible="false"
           >
             <li className="active">
-              <Link to="/#home" onClick={toggleNav}>
-                Home
+              <Link to="/#about" onClick={toggleNav}>
+                About us
               </Link>
             </li>
             <li className="active">
@@ -55,18 +54,8 @@ const Navbar = ({ totalQuant }) => {
               </Link>
             </li>
             <li className="active">
-              <Link to="/#discover" onClick={toggleNav}>
-                Foods
-              </Link>
-            </li>
-            <li className="active">
-              <Link to="/#about" onClick={toggleNav}>
-                About us
-              </Link>
-            </li>
-            <li className="active">
-              <Link to="/checkout" onClick={toggleNav}>
-                Checkout
+              <Link to="/#sushi" onClick={toggleNav}>
+                Sushi
               </Link>
             </li>
             <li className="active contact-button">

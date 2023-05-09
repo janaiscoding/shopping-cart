@@ -45,11 +45,13 @@ a:focus {
 
 @media (max-width: 600px) {
   footer,
-  .footer-flex-bottom,
   .footer-navigation,
+  .footer-flex-top,
+  .footer-flex-bottom,
   .link-wrapper,
   .utility-pages-wrapper {
-    padding: 10px;
+    justify-content: center;
+    font-size: 10px;
     gap: 10px;
   }
 }

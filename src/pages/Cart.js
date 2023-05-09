@@ -1,42 +1,47 @@
 import React from "react";
 import CartItem from "../components/CartItem";
+import { HashLink as Link } from "react-router-hash-link";
 import "../styles/cart.css";
-import { Link } from "react-router-dom";
-
+import checkoutImg from "../assets/landingpage/right-sushi.png";
+import arrowIcon from "../assets/icons/right-arrow.png";
 const Cart = ({
   cart,
-  handleCartAdd,
-  handleCartRemove,
   totalPrice,
+  handleCartAdd,
   handleCartUpdate,
+  handleCartRemove,
 }) => {
-  const allCartItems = cart.map((cartItem) => (
+  let allCartItems = cart.map((cartItem) => (
     <CartItem
-      key={cartItem.id}
       cartItem={cartItem}
+      key={cartItem.id}
       handleCartAdd={handleCartAdd}
       handleCartUpdate={handleCartUpdate}
       handleCartRemove={handleCartRemove}
     />
   ));
-
   return (
-    <>
+    <section className="cart-section">
       <div className="cart-main">
-        <div className="cart-redirect">
-          {cart.length === 0 ? (
-            <Link to="/menu" className="cart-redirect bag-empty">
-              Bag empty. Check Store?
-            </Link>
-          ) : (
-            <Link to="/checkout" className="cart-redirect checkout">
-              Order Now: ${totalPrice.toFixed(2)}
-            </Link>
-          )}
+        <div className="cart-info">
+          <h1 className="cart-title">Shopping Cart</h1>
+          <div className="cart-items-wrapper">{allCartItems}</div>
+          <div className="handle-checkout">
+            <div className="continue-shopping">
+              <Link to="/#sushi">
+                <img src={arrowIcon} alt="icon to return to shopping menu" height={21} />
+              </Link>
+              <Link to="/#sushi">Continue Shopping</Link>
+            </div>
+            <div className="subtotal">
+              <p>Subtotal:</p>
+              <h3>¥ {totalPrice}</h3>
+            </div>
+          </div>
         </div>
-        <div className="all-cart-wrap">{allCartItems}</div>
+        <img src={checkoutImg} alt="checkout pic" width={300} />
       </div>
-    </>
+    </section>
   );
 };
 
