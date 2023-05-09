@@ -2,7 +2,7 @@ import React from "react";
 import CartItem from "../components/CartItem";
 import { HashLink as Link } from "react-router-hash-link";
 import "../styles/cart.css";
-import checkoutImg from "../assets/landingpage/right-sushi.png";
+import checkoutImg from "../assets/landingpage/right-side-tradition.png";
 import arrowIcon from "../assets/icons/right-arrow.png";
 import { motion } from "framer-motion";
 const Cart = ({
@@ -53,7 +53,7 @@ const Cart = ({
             )}
           </div>
         </div>
-        <img src={checkoutImg} alt="checkout pic" width={300} />
+        <img src={checkoutImg} alt="checkout pic" height={400} />
       </motion.div>
     </section>
   );
