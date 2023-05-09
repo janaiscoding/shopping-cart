@@ -1,12 +1,11 @@
 {
   "files": {
     "main.css": "/shopping-cart/static/css/main.0638b20e.css",
-    "main.js": "/shopping-cart/static/js/main.02b232dc.js",
+    "main.js": "/shopping-cart/static/js/main.7ce6ddae.js",
     "static/media/landing.png": "/shopping-cart/static/media/landing.86f534e4d50832b4b38f.png",
     "static/media/right-side-tradition.png": "/shopping-cart/static/media/right-side-tradition.4201f3ad3511467cd5e8.png",
     "static/media/rightbanner.png": "/shopping-cart/static/media/rightbanner.a69181977a0222e8148f.png",
     "static/media/left-side.png": "/shopping-cart/static/media/left-side.f041894a97e4c9540d33.png",
-    "static/media/logo.png": "/shopping-cart/static/media/logo.9649b626c357b9016b6b.png",
     "static/media/leftbannerfix.png": "/shopping-cart/static/media/leftbannerfix.24f6e66aac12626a55af.png",
     "static/media/tuna-sushi.png": "/shopping-cart/static/media/tuna-sushi.3aee29369806a3ac6ff8.png",
     "static/media/salmon-sushi.png": "/shopping-cart/static/media/salmon-sushi.05d33ce9bd75050c4514.png",
@@ -17,10 +16,10 @@
     "static/media/ikura-sushi.png": "/shopping-cart/static/media/ikura-sushi.e101511a59983065ce9a.png",
     "index.html": "/shopping-cart/index.html",
     "main.0638b20e.css.map": "/shopping-cart/static/css/main.0638b20e.css.map",
-    "main.02b232dc.js.map": "/shopping-cart/static/js/main.02b232dc.js.map"
+    "main.7ce6ddae.js.map": "/shopping-cart/static/js/main.7ce6ddae.js.map"
   },
   "entrypoints": [
     "static/css/main.0638b20e.css",
-    "static/js/main.02b232dc.js"
+    "static/js/main.7ce6ddae.js"
   ]
 }
