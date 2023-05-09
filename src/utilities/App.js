@@ -9,6 +9,7 @@ import MyFooter from "./MyFooter";
 import Menu from "../pages/Menu";
 import Sushi from "../pages/Sushi";
 import Cart from "../pages/Cart";
+import Contact from "../pages/Contact";
 
 const App = () => {
   const [cart, setCart] = useState([]);
@@ -102,6 +103,7 @@ const App = () => {
         />
         <Route path="/#menu" element={<Menu />} />
         <Route path="/#sushi" element={<Sushi />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
       <MyFooter />
     </HashRouter>

@@ -1,0 +1,51 @@
+.section-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+.form-group {
+  display: flex;
+  gap: 1em;
+}
+.form-label-group {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+  color: var(--main-white);
+}
+.form-group > label,
+.section-form > label {
+  font-size: 1.5rem;
+  color: var(--main-white);
+}
+
+.form-label-group > input {
+  width: 15em;
+  text-align: left;
+  padding: 1em;
+  gap: 1em;
+  font-size: 1.1rem;
+  color: var(--main-blue);
+}
+.right-img {
+  align-self: flex-end;
+}
+#notes {
+  text-align: left;
+  width: 33em;
+  height: 5em;
+  padding: 1em;
+}
+@media (max-width: 600px) {
+  form {
+    gap: 1em;
+    align-items: center;
+  }
+  .form-group {
+    flex-direction: column;
+  }
+  input,
+  #notes {
+    width: 15em;
+  }
+}

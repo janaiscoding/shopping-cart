@@ -163,9 +163,20 @@
   .menu-list-li {
     margin: 10px;
   }
-  .section > img {
-    width: auto;
+  .section-one > .content > .section-title {
+    text-align: left;
   }
+  .section-one > img {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 400px;
+    z-index: -5;
+  }
+  .section-two > .content > button {
+    align-self: flex-end;
+  }
+
   .section-three {
     align-items: flex-end;
   }
@@ -179,9 +190,13 @@
   .section-four-content {
     flex-direction: column;
   }
+  .section-five > img,
   .section-two > img,
   .section-three > img {
     width: 200px;
+  }
+  .section-five > .right-img {
+    align-self: flex-end;
   }
   .section-title {
     text-align: center;

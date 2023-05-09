@@ -8,7 +8,7 @@ const BookTable = () => {
     "Just one phone call and we will reserve a table for you also you can choose table according you requirements family members.";
   let breadcrumbs = "席を予約する";
   return (
-    <section className="section section-five" id="about">
+    <section className="section section-five" id="book">
       <img src={bookTableImageLeft} alt="animated sushi table" width={400} />
       <div className="content">
         <Link to="/#about">
@@ -22,7 +22,7 @@ const BookTable = () => {
           </Link>
         </button>
       </div>
-      <img src={bookTableImageRight} alt="animated sushi table" width={400} />
+      <img className="right-img" src={bookTableImageRight} alt="animated sushi table" width={400} />
     </section>
   );
 };
