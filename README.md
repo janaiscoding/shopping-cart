@@ -9,11 +9,12 @@
 ## Live Demo
 
 ### On Browser
+
 ![Gif preview of the shopping cart](src/assets/shopping-cart-v2-preview.gif)
 
 ### On Mobile
-![Gif preview of the shopping cart on mobile](src/assets/shopping-cart-mobile-preview.gif)
 
+![Gif preview of the shopping cart on mobile](src/assets/shopping-cart-mobile-preview.gif)
 
 ## Getting Started
 
@@ -53,13 +54,10 @@ npm start
 
 ### Future plans for this project
 
-- Better styling and mobile responsiveness (checked)
-- Contact form on the Contact page for Reservations
-- Fetch products from an API
-- Add localStorage for the products
+- Better styling and mobile responsiveness (checked & revamped design)
+- Contact form on the Contact page for Reservations (checked but form is just decorational for now)
 
-## Copyright
+## Sources, Materials, Copyright
 
 - This project is part of The Odin Project's [curriculum](https://www.theodinproject.com/lessons/node-path-javascript-shopping-cart).
-- The background image on the homepage: [source](https://unsplash.com/photos/3EzCJozHHL0) from Unsplash user's profile: [Gia Tu Tran](https://unsplash.com/@danielgia)
-- All product images were taken from copyright free sources, the links, in order on the Store page: [product 1](https://unsplash.com/photos/O2yNzXdqOu0), [product 2](https://unsplash.com/photos/InCMGusiAvA), [product 3](https://unsplash.com/photos/FBgCgJhPO2I), [product 4](https://unsplash.com/photos/-1GEAA8q3wk), [product 5](https://unsplash.com/photos/5KS7T3Gs3CA), [product 6](https://unsplash.com/photos/iy_MT2ifklc), [logo](https://www.flaticon.com/free-icon/sushi_2252076?related_id=2252075&origin=search), [hamburger icon and close icon](https://www.flaticon.com/)
+- The design inspiration comes from [Rizki's](https://dribbble.com/shots/19129666-Oish-Japanese-food-restaurant-landing-page/attachments/14288509?mode=media) Dribbble profile, and all other icons are from [Flaticon](https://www.flaticon.com/).
