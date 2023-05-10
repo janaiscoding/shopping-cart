@@ -1,7 +1,6 @@
 import React from "react";
 import { HashLink as Link } from "react-router-hash-link";
 import "../styles/navbar.css";
-import logo from "../assets/icons/logo.png";
 import cartIcon from "../assets/icons/shopping-cart.png";
 
 const Navbar = ({ totalQuant }) => {
@@ -22,8 +21,7 @@ const Navbar = ({ totalQuant }) => {
       <header className="flex sticky">
         <div className="header-left flex">
           <Link className="logo-wrapper flex" to="/">
-            <img className="logo" src={logo} alt="sushi logo" width={50} />
-            <p className="logo-name">Oishī</p>
+            <p className="logo-name">Umaī</p>
           </Link>
           <Link to="/cart" className="cart-menu-icon" data-visible="false">
             <img src={cartIcon} alt="cart button" />
@@ -49,8 +47,8 @@ const Navbar = ({ totalQuant }) => {
               </Link>
             </li>
             <li className="active">
-              <Link to="/#about" onClick={toggleNav}>
-                About us
+              <Link to="/#delivery" onClick={toggleNav}>
+                Delivery
               </Link>
             </li>
             <li className="active">
@@ -59,8 +57,8 @@ const Navbar = ({ totalQuant }) => {
               </Link>
             </li>
             <li className="active">
-              <Link to="/#sushi" onClick={toggleNav}>
-                Order Sushi
+              <Link to="/#reservation" onClick={toggleNav}>
+                Reservation
               </Link>
             </li>
             <li className="active contact-button">

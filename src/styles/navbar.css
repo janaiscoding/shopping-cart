@@ -3,7 +3,7 @@ header {
   overflow: hidden;
   background-color: var(--main-white);
   box-shadow: 4px 9px 7px -6px rgb(156 156 156 / 23%);
-  height: 10vh;
+  height: 8vh;
   z-index: 9999;
   position: sticky;
   top: 0;
@@ -109,18 +109,18 @@ nav {
   color: var(--main-grey);
 }
 .primary-navigation a:hover {
-  color: var(--main-orange);
-  border-bottom: 1px solid var(--main-orange);
+  color: var(--main-pink);
+  border-bottom: 1px solid var(--main-pink);
 }
 .primary-navigation .contact-button {
-  padding: 0.625em 1.25em;
+  padding: 0.525em 1.15em;
   font-size: 1.2em;
   display: inline-block;
   background-color: var(--main-white);
-  border-radius: 5px;
-  border: 1px solid var(--main-orange);
-  color: var(--main-orange);
+  border-radius: 0px 30px;
+  border: 1px solid var(--main-pink);
+  color: var(--main-pink);
 }
 .contact-button > a {
-  color: var(--main-orange);
+  color: var(--main-pink);
 }

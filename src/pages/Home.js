@@ -1,17 +1,18 @@
 import React from "react";
 import { HashLink as Link } from "react-router-hash-link";
 import "../styles/home.css";
-import LandingImg from "../assets/landingpage/landing.png";
-import About from "./About";
+import Ramen from "../assets/landingpage/ramen.jpg";
+import Reservation from "./Reservation";
 import Tradition from "./Tradition";
-import Sushi from "./Sushi";
-import BookTable from "./BookTable";
+import Delivery from "./Delivery";
+import Subscribe from "./Subscribe";
+import Testimonials from "./Testimonials";
 import { motion } from "framer-motion";
 
-const Home = ({ products, handleCartAdd, backToTop }) => {
-  let titleOne = "OISHī JAPANESE CUISINE AND SUSHI AT ITS FINEST";
+const Home = ({ products, handleCartAdd }) => {
+  let titleOne = "ENJOY THE TASTE OF UMAī FOOD";
   let paraOne =
-    "Oishi Japanese cuisine Kaiseki & Sushi Aims to reconceptualise `WASHOKU` by innovating and creating state of art dishes made with a modern twist.";
+    "We are a Japanese restaurant that has been serving authentic Japanese cuisine for over 50 years. Our restaurant has been a family tradition for generations, and we take great pride in continuing to provide our customers with the highest quality dishes and unparalleled service.";
   return (
     <>
       <motion.div
@@ -25,17 +26,23 @@ const Home = ({ products, handleCartAdd, backToTop }) => {
             <h1 className="section-title">{titleOne}</h1>
             <p className="section-paragraph">{paraOne}</p>
             <button className="section-button">
-              <Link to="/#discover" className="store-button">
+              <Link to="/#delivery" className="store-button">
                 Order Online
               </Link>
             </button>
           </div>
-          <img src={LandingImg} alt="animated sushi table" width={1000} />
+          <img
+            src={Ramen}
+            alt="animated sushi table"
+            // width={1000}
+            className="landing-img"
+          />
         </section>
-        <About />
+        <Delivery products={products} handleCartAdd={handleCartAdd} />
         <Tradition />
-        <Sushi products={products} handleCartAdd={handleCartAdd} />
-        <BookTable />
+        <Reservation />
+        <Testimonials />
+        <Subscribe />
       </motion.div>
     </>
   );

@@ -48,7 +48,7 @@
     flex-direction: column;
   }
   form > input,
-  form > #notes {
+  #notes {
     width: 15em;
   }
 }

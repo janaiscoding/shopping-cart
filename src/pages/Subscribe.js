@@ -3,13 +3,16 @@ import { HashLink as Link } from "react-router-hash-link";
 import bookTableImageLeft from "../assets/landingpage/leftbannerfix.png";
 import bookTableImageRight from "../assets/landingpage/rightbanner.png";
 import { motion } from "framer-motion";
-const BookTable = () => {
-  let title = "Book a Table for Dinner";
+import "../styles/subscribe.css"
+
+const Subscribe = () => {
+  let title = "Joīn Membershīp to get 25% off";
   let para =
-    "Just one phone call and we will reserve a table for you also you can choose table according you requirements family members.";
-  let breadcrumbs = "席を予約する";
+    "Sign up to stay notified with our latest news and promotions.";
+  let breadcrumbs = "購読 / Subscribe";
+  let floatingTitle="購読 / Subscribe";
   return (
-    <section className="section section-five" id="book">
+    <section className="section section-five" id="subscribe">
       <img src={bookTableImageLeft} alt="animated sushi table" width={400} />
       <motion.div
         initial={{ opacity: 0 }}
@@ -17,16 +20,18 @@ const BookTable = () => {
         viewport={{ once: true }}
         className="content"
       >
-        <Link to="/#about">
+        <Link to="/#subscribe">
           <h2 className="section-breadcrumbs">{breadcrumbs}</h2>
         </Link>
-        <h1 className="section-title">{title}</h1>
+        <h1 className="section-title">
+        <span className="floating-title">{floatingTitle}</span>
+        {title}</h1>
         <p className="section-paragraph">{para}</p>
-        <button className="section-button">
-          <Link to="/contact" className="book-button">
-            Contact Us Now
-          </Link>
-        </button>
+        <input 
+        type="text" 
+        name="email" 
+        id="subscribe-email"
+        placeholder="Enter your email address" />
       </motion.div>
       <img
         className="right-img"
@@ -37,4 +42,4 @@ const BookTable = () => {
     </section>
   );
 };
-export default BookTable;
+export default Subscribe;

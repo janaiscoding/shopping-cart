@@ -1,0 +1,16 @@
+#subscribe-email {
+  width: 15em;
+  border-radius: 2em 0em;
+  text-align: left;
+  padding: 1em;
+  font-size: 1.5em;
+}
+.subscribe-text {
+  color: var(--secondary-blue);
+}
+@media (max-width: 600px) {
+    #subscribe-email {
+        width: 10em;
+        font-size: 1em;
+    }
+}

@@ -10,11 +10,18 @@
   margin-bottom: 2em;
 }
 .section-one {
-  margin-top: 12vh;
+  margin: 5em;
 }
 .section-one > .content {
-  margin-top: 5em;
+  max-width: 50%;
 }
+.section-one > .content > .landing-img {
+  padding-right: 2em;
+}
+.section-one > .content > .section-title {
+  margin-top: 2em;
+}
+
 .section-two > .content {
   margin: 0em 15em;
 }
@@ -42,41 +49,39 @@
 .section-four {
   flex-direction: column;
   margin-right: 5em;
+  gap: 2em;
 }
 .section-four-content {
+  gap: 2em;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  margin-right: 5em;
-  margin-top: 8em;
 }
 .section-centered-title {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  margin-bottom: 2em;
   align-items: center;
   align-self: center;
 }
 .menu-list-li {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 2em;
-  color: var(--main-grey);
-  font-size: 1.5rem;
-  margin-top: 2em;
-  margin-left: 5em;
+  color: var(--main-blue);
+  font-size: 1.3rem;
+}
+.menu-list-li > li {
+  background-color: #fff;
+  box-shadow: 3px 3px 10px 3px rgba(217, 214, 217, 0.61);
+  border-radius: 0px 3em;
+  padding: 1em;
 }
 .menu-list-li > li:hover:not(li:nth-child(2)) {
   transform: scale(1.05);
-  color: var(--main-orange);
-  cursor: pointer;
-}
-.menu-list-li > .first-li {
-  margin-bottom: 10px;
-}
-.menu-list-li > li:nth-child(2) {
-  color: var(--main-orange);
-  font-size: 1.7rem;
-  font-weight: 600;
+  color: var(--main-pink);
   cursor: pointer;
 }
 
@@ -91,16 +96,20 @@
   flex-direction: column;
   align-items: center;
 }
-.products-wrapper-total > button {
+.products-go-to-cart-button {
+  padding: 0.625em 1.25em;
+  font-size: 1.2em;
+  display: inline-block;
+  border-radius: 0px 30px;
   background-color: var(--main-white);
-  border: 1px solid var(--main-orange);
-  color: var(--main-orange);
+  border: 1px solid var(--main-pink);
+  color: var(--main-pink);
   margin-top: 2em;
 }
 .section-five {
-  margin-left: 0;
+  margin: 0;
   background-color: var(--main-orange);
-  padding: 2em 0em;
+  padding-bottom: 5em;
 }
 .section-five > .content {
   display: flex;
@@ -127,7 +136,8 @@
   color: var(--main-white);
 }
 .section-breadcrumbs {
-  color: var(--main-orange);
+  margin-top: 5em;
+  color: var(--main-pink);
 }
 .content {
   display: flex;
@@ -136,6 +146,8 @@
   gap: 1em;
 }
 .section-title {
+  position: relative;
+  overflow: hidden;
   font-size: 3em;
   color: var(--main-blue);
 }
@@ -144,48 +156,51 @@
   line-height: 1.7;
 }
 .store-button {
-  background-color: var(--main-orange);
+  background-color: var(--main-pink);
   border-radius: 5px;
-  border: 1px solid var(--main-orange);
+  border: 1px solid var(--main-pink);
   color: var(--main-white);
 }
-.arrow-top {
-  display: none;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 99;
-  background-color: #da533d;
-  cursor: pointer;
-  padding: 10px;
-  border-radius: 10px;
-}
+
 .arrow-top[data-visible="true"] {
   display: block;
 }
+
+.floating-title {
+  font-size: 90px;
+  letter-spacing: 10px;
+  width: 150%;
+  position: absolute;
+  left: -25%;
+  top: -10px;
+  opacity: 0.1;
+}
+
 @media (max-width: 600px) {
+  .section-breadcrumbs {
+    margin-top: 1em;
+  }
   .home-main,
   .section {
     flex-direction: column;
     margin: 10px;
     font-size: large;
   }
+  .section-one > .content {
+    align-items: center;
+    min-width: 100%;
+  }
   .section-two > .content,
   .section-three > .content,
   .section-four-content,
   .menu-list-li {
+    align-items: center;
     margin: 10px;
   }
   .section-one > .content > .section-title {
     text-align: left;
   }
-  .section-one > img {
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 400px;
-    z-index: -5;
-  }
+
   .section-two > .content > button {
     align-self: flex-end;
   }
@@ -198,8 +213,8 @@
     align-self: flex-end;
   }
   .menu-list-li {
-    flex-direction: row;
-    overflow: auto;
+    grid-template-columns: repeat(3, 1fr);
+    display: grid;
   }
   .products-wrapper {
     grid-template-columns: auto;
@@ -211,13 +226,14 @@
   .section-two > img,
   .section-three > img,
   .section-five > img {
-    width: 200px;
+    width: 50%;
   }
 
   .section-five > .right-img {
     align-self: flex-end;
   }
   .section-title {
+    font-size: 20px;
     text-align: center;
   }
 }

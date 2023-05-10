@@ -10,7 +10,7 @@ const ItemCard = ({ product, handleAdd }) => {
       </div>
       <img
         src={product.img}
-        height={150}
+        height={100}
         alt={product.name}
         className="product-img"
       />

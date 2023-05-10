@@ -22,27 +22,26 @@ const Cart = ({
     />
   ));
   return (
-    <section className="cart-section">
+    <section className="cart-section" id="cart">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         className="cart-main"
-        id="cart"
       >
         <div className="cart-info">
           <h1 className="cart-title">Shopping Cart</h1>
           <div className="cart-items-wrapper">{allCartItems}</div>
           <div className="handle-checkout">
             <div className="continue-shopping">
-              <Link to="/#sushi">
+              <Link to="/#delivery">
                 <img
                   src={arrowIcon}
                   alt="icon to return to shopping menu"
                   height={21}
                 />
               </Link>
-              <Link to="/#sushi">Continue Shopping</Link>
+              <Link to="/#delivery">Continue Shopping</Link>
             </div>
             {totalPrice > 0 ? (
               <div className="subtotal">

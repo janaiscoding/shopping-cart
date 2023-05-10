@@ -1,0 +1,6 @@
+li[hover-visible="true"] {
+  color: var(--main-pink);
+  font-size: 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+}

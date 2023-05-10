@@ -5,16 +5,17 @@ import { HashLink as Link } from "react-router-hash-link";
 import { motion } from "framer-motion";
 
 const Tradition = () => {
-  let title = "SUSHI SALMON SPECIAL TRADITION OISHī";
+  let title = "OUR UMAī TRADīTīON";
   let para =
-    "Oishī Japanese cuisine (Kaiseki & Sushi) aims to reconceptualise `WASHOKU`(Japanese traditional dining concept)* by innovating and creating state-of-the-art dishes made with a modern twist. *In 2013, Japanese `WASHOKU` was awarded and officially listed as one of the UNESCO World Intangible Cultural Heritage.";
+    "Sushi, one of the most popular Japanese dishes, has a rich and fascinating history that dates back to the 8th century. Originally, sushi was created as a way to preserve fish by fermenting it with rice. However, over time, the preparation techniques evolved, and the dish became the beloved delicacy we know today. Interestingly, there are some lesser-known facts about sushi preparation that make it even more intriguing.";
   let breadcrumbs = "寿司の伝統 / Sushi Tradition";
+  let floatingTitle = "寿司の伝統 / Sushi Tradition";
   let listOne =
-    "Salmon is a saltwater fish that spawns in fresh water, it's a fish commonly eater in America and Europe, from salmon steak and smoked salmon to lax";
+    "Contrary to popular belief, sushi doesn't actually refer to raw fish. The word sushi actually refers to the vinegared rice used to make the dish, while raw fish is called sashimi.";
   let listTwo =
-    "At the first time, salmon sushi was primarily served at Oishī Restaurant, because it was cheap and delicious";
+    "Traditionally, sushi chefs would train for years to perfect the art of making sushi. They would start by learning how to properly cook the rice, then move on to selecting and preparing the fish, and finally learn how to shape the sushi into beautiful, bite-sized pieces.";
   let listThree =
-    "Given the long history of sushi, salmon sushi didn't exist until about 20 years ago. It didn't seem like there were any short cuts or growth hacks of process.";
+    "In Japan, there is a special type of sushi called fugu that is made with the potentially deadly pufferfish. Chefs who prepare fugu must undergo rigorous training and certification to ensure they can safely remove the toxic parts of the fish and serve it without harming diners.";
   return (
     <section className="section section-three">
       <motion.div
@@ -27,7 +28,10 @@ const Tradition = () => {
         <Link to="/#tradition">
           <h2 className="section-breadcrumbs">{breadcrumbs}</h2>
         </Link>
-        <h1 className="section-title">{title}</h1>
+        <h1 className="section-title">
+          <span className="floating-title">{floatingTitle}</span>
+          {title}
+        </h1>
         <p className="section-paragraph">{para}</p>
         <ul className="menu-list">
           <li>

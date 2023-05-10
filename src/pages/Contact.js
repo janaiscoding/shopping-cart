@@ -6,9 +6,10 @@ import "../styles/contact.css";
 import { motion } from "framer-motion";
 const Contact = () => {
   let title = "Book a Table for Dinner";
-  let breadcrumbs = "席を予約する";
+  let breadcrumbs = "席を予約する / Book Table";
+  let floatingTitle = "席を予約する / Book Table"
   return (
-    <section className="section section-five section-contact" id="about">
+    <section className="section section-five section-contact" id="contact">
       <img src={bookTableImageLeft} alt="animated sushi table" height={400} />
       <motion.div
         initial={{ opacity: 0 }}
@@ -16,10 +17,12 @@ const Contact = () => {
         viewport={{ once: true }}
         className="content"
       >
-        <Link to="/#about">
+        <Link to="/contact">
           <h2 className="section-breadcrumbs">{breadcrumbs}</h2>
         </Link>
-        <h1 className="section-title">{title}</h1>
+        <h1 className="section-title">
+        <span className="floating-title">{floatingTitle}</span>
+        {title}</h1>
         <form className="section-form">
           <div className="form-group">
             <div className="form-label-group">

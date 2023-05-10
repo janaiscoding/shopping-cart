@@ -1,21 +1,20 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from "react";
 import { Route, Routes, HashRouter } from "react-router-dom";
-import dataSecond from "../assets/products/dataSecond";
+import dataSet from "../assets/products/dataSet.js";
 import Navbar from "./Navbar";
 import Home from "../pages/Home";
 // import Menu from "../pages/Menu";
 import MyFooter from "./MyFooter";
 import Tradition from "../pages/Tradition";
-import Sushi from "../pages/Sushi";
+import Delivery from "../pages/Delivery";
 import Cart from "../pages/Cart";
 import Contact from "../pages/Contact";
-import arrowTopIcon from "../assets/icons/arrowhead-up.png";
 
 const App = () => {
   const [cart, setCart] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
-  const [products] = useState(dataSecond);
+  const [products] = useState(dataSet);
   const [totalQuant, setTotalQuant] = useState(0);
 
   // Used on store page and cart
@@ -67,37 +66,12 @@ const App = () => {
     setTotalPrice(sumPrice);
     setTotalQuant(sumQuantity);
   };
-  //my handler for scrolling 
-  const scrollFunction = () => {
-    let arrowTop = document.querySelector(".arrow-top");
-    if (
-      document.body.scrollTop > 20 ||
-      document.documentElement.scrollTop > 20
-    ) {
-      arrowTop.setAttribute("data-visible", true);
-    } else {
-      arrowTop.setAttribute("data-visible", false);
-    }
-  };
-  const backToTop = () => {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-  };
-  window.onscroll = scrollFunction;
   useEffect(() => {
     addTotal();
   }, [cart]);
   return (
     <HashRouter>
       <Navbar totalQuant={totalQuant} />
-      <img
-        src={arrowTopIcon}
-        className="arrow-top"
-        data-visible="false"
-        width={32}
-        alt="scroll back to top arrow"
-        onClick={backToTop}
-      />
       <Routes>
         <Route
           exact
@@ -126,7 +100,7 @@ const App = () => {
           }
         />
         <Route path="/#tradition" element={<Tradition />} />
-        <Route path="/#sushi" element={<Sushi />} />
+        <Route path="/#delivery" element={<Delivery />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
       <MyFooter />
