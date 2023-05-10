@@ -1,5 +1,5 @@
 import React from "react";
-import TraditionImg from "../assets/landingpage/tradition.jpg"
+import TraditionImg from "../assets/landingpage/tradition.jpg";
 import flowerIcon from "../assets/icons/flowericon.png";
 import { HashLink as Link } from "react-router-hash-link";
 import { motion } from "framer-motion";
@@ -29,7 +29,7 @@ const Tradition = () => {
         </Link>
         <h1 className="section-title">
           <span className="floating-title">{floatingTitle}</span>
-          OUR UMAī <span className="title-highlight">TRADīTīON</span> 
+          OUR UMAī <span className="title-highlight">TRADīTīON</span>
         </h1>
         <p className="section-paragraph">{para}</p>
         <ul className="menu-list">
@@ -46,7 +46,13 @@ const Tradition = () => {
         </ul>
       </motion.div>
       <a href="https://unsplash.com/photos/NVX55qVyEkE">
-      <img className="tradition-img" src={TraditionImg} alt="japanese restaurant outdoors" height={700} />
+        <img
+          className="tradition-img"
+          src={TraditionImg}
+          alt="japanese restaurant outdoors"
+          height={700}
+          loading="lazy"
+        />
       </a>
     </section>
   );

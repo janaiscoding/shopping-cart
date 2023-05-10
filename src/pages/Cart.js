@@ -60,6 +60,7 @@ const Cart = ({
           alt="source for image"
         >
           <img
+            loading="lazy"
             className="checkout-img"
             src={checkoutImg}
             alt="checkout pic"

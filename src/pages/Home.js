@@ -33,8 +33,8 @@ const Home = ({ products, handleCartAdd }) => {
           </div>
           <img
             src={Ramen}
+            loading="lazy"
             alt="animated sushi table"
-            // width={1000}
             className="landing-img"
           />
         </section>

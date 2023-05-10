@@ -17,6 +17,7 @@ const Reservation = () => {
           src={leftSectionTwoImage}
           alt="restaurant pic with lightbulbs outside"
           height={700}
+          loading="lazy"
         />
       </a>
       <motion.div

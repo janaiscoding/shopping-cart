@@ -14,6 +14,7 @@ const Testimonials = () => {
       <div className="testimonial-message">
         <img
           src={profilePic}
+          loading="lazy"
           alt="testimonial person"
           width={100}
           className="testimonial-pic"

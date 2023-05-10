@@ -7,10 +7,15 @@ import { motion } from "framer-motion";
 const Contact = () => {
   let title = "Book a Table for Dinner";
   let breadcrumbs = "席を予約する / Book Table";
-  let floatingTitle = "席を予約する / Book Table"
+  let floatingTitle = "席を予約する / Book Table";
   return (
     <section className="section section-five section-contact" id="contact">
-      <img src={bookTableImageLeft} alt="animated sushi table" height={400} />
+      <img
+        src={bookTableImageLeft}
+        alt="animated sushi table"
+        height={400}
+        loading="lazy"
+      />
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -21,8 +26,9 @@ const Contact = () => {
           <h2 className="section-breadcrumbs">{breadcrumbs}</h2>
         </Link>
         <h1 className="section-title">
-        <span className="floating-title">{floatingTitle}</span>
-        {title}</h1>
+          <span className="floating-title">{floatingTitle}</span>
+          {title}
+        </h1>
         <form className="section-form">
           <div className="form-group">
             <div className="form-label-group">
@@ -60,6 +66,7 @@ const Contact = () => {
         src={bookTableImageRight}
         alt="animated sushi table"
         height={400}
+        loading="lazy"
       />
     </section>
   );

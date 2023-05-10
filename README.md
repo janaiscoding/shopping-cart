@@ -60,4 +60,4 @@ npm start
 ## Sources, Materials, Copyright
 
 - This project is part of The Odin Project's [curriculum](https://www.theodinproject.com/lessons/node-path-javascript-shopping-cart).
-- The design inspiration comes from [Rizki's](https://dribbble.com/shots/19129666-Oish-Japanese-food-restaurant-landing-page/attachments/14288509?mode=media) Dribbble profile, and all other icons are from [Flaticon](https://www.flaticon.com/).
+- The design images are linked with source, and all other icons are from [Flaticon](https://www.flaticon.com/).
