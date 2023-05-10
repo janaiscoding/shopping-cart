@@ -1,13 +1,19 @@
 {
   "files": {
-    "main.css": "/shopping-cart/static/css/main.22acb881.css",
-    "main.js": "/shopping-cart/static/js/main.22a34ab0.js",
-    "static/media/landing.png": "/shopping-cart/static/media/landing.86f534e4d50832b4b38f.png",
-    "static/media/right-side-tradition.png": "/shopping-cart/static/media/right-side-tradition.4201f3ad3511467cd5e8.png",
+    "main.css": "/shopping-cart/static/css/main.33382593.css",
+    "main.js": "/shopping-cart/static/js/main.73771bdb.js",
+    "static/media/tradition.jpg": "/shopping-cart/static/media/tradition.c79def937d227dc35308.jpg",
+    "static/media/deliver.jpg": "/shopping-cart/static/media/deliver.8ff6a2cb46f18a3d8b53.jpg",
+    "static/media/alexander-hipp.jpg": "/shopping-cart/static/media/alexander-hipp.8e47360fb8a28e41c441.jpg",
+    "static/media/restaurant.jpg": "/shopping-cart/static/media/restaurant.6b351db9f5a10e6e9920.jpg",
+    "static/media/takoyaki.png": "/shopping-cart/static/media/takoyaki.e6dcc9c645ddeac7c201.png",
+    "static/media/ramen.png": "/shopping-cart/static/media/ramen.60b3d9234e9439d68919.png",
+    "static/media/rice.png": "/shopping-cart/static/media/rice.73be778f83bb123a049f.png",
+    "static/media/dango.png": "/shopping-cart/static/media/dango.1afa751493ed1080f1c6.png",
     "static/media/rightbanner.png": "/shopping-cart/static/media/rightbanner.a69181977a0222e8148f.png",
-    "static/media/left-side.png": "/shopping-cart/static/media/left-side.f041894a97e4c9540d33.png",
     "static/media/leftbannerfix.png": "/shopping-cart/static/media/leftbannerfix.24f6e66aac12626a55af.png",
     "static/media/tuna-sushi.png": "/shopping-cart/static/media/tuna-sushi.3aee29369806a3ac6ff8.png",
+    "static/media/ramen.jpg": "/shopping-cart/static/media/ramen.2c4412a04da36bbb6462.jpg",
     "static/media/salmon-sushi.png": "/shopping-cart/static/media/salmon-sushi.05d33ce9bd75050c4514.png",
     "static/media/tekka-sushi.png": "/shopping-cart/static/media/tekka-sushi.9595d8aa5290c401b914.png",
     "static/media/shrimp-sushi.png": "/shopping-cart/static/media/shrimp-sushi.ce7386c44a249e036443.png",
@@ -15,11 +21,11 @@
     "static/media/egg-sushi.png": "/shopping-cart/static/media/egg-sushi.7b81664abc72766a0153.png",
     "static/media/ikura-sushi.png": "/shopping-cart/static/media/ikura-sushi.e101511a59983065ce9a.png",
     "index.html": "/shopping-cart/index.html",
-    "main.22acb881.css.map": "/shopping-cart/static/css/main.22acb881.css.map",
-    "main.22a34ab0.js.map": "/shopping-cart/static/js/main.22a34ab0.js.map"
+    "main.33382593.css.map": "/shopping-cart/static/css/main.33382593.css.map",
+    "main.73771bdb.js.map": "/shopping-cart/static/js/main.73771bdb.js.map"
   },
   "entrypoints": [
-    "static/css/main.22acb881.css",
-    "static/js/main.22a34ab0.js"
+    "static/css/main.33382593.css",
+    "static/js/main.73771bdb.js"
   ]
 }
