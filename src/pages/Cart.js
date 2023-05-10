@@ -2,7 +2,7 @@ import React from "react";
 import CartItem from "../components/CartItem";
 import { HashLink as Link } from "react-router-hash-link";
 import "../styles/cart.css";
-import checkoutImg from "../assets/landingpage/right-side-tradition.png";
+import checkoutImg from "../assets/landingpage/deliver.jpg";
 import arrowIcon from "../assets/icons/right-arrow.png";
 import { motion } from "framer-motion";
 const Cart = ({
@@ -47,13 +47,25 @@ const Cart = ({
               <div className="subtotal">
                 <p>Subtotal:</p>
                 <h3>¥ {totalPrice}</h3>
+                <button className="place-order">Place order</button>
               </div>
             ) : (
               ""
             )}
           </div>
         </div>
-        <img src={checkoutImg} alt="checkout pic" height={400} />
+
+        <a
+          href="https://unsplash.com/photos/9Cwg1ym3SCs"
+          alt="source for image"
+        >
+          <img
+            className="checkout-img"
+            src={checkoutImg}
+            alt="checkout pic"
+            width={500}
+          />
+        </a>
       </motion.div>
     </section>
   );

@@ -29,7 +29,7 @@ header {
   font-weight: 700;
 }
 .cart-menu-icon > div {
-  color: var(--main-orange);
+  color: var(--main-pink);
 }
 .mobile-nav-toggle {
   display: none;
@@ -106,7 +106,7 @@ nav {
 .primary-navigation a {
   text-decoration: none;
   font-size: 1.1rem;
-  color: var(--main-grey);
+  color: var(--main-blue);
 }
 .primary-navigation a:hover {
   color: var(--main-pink);

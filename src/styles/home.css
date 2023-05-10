@@ -18,10 +18,13 @@
 .section-one > .content > .landing-img {
   padding-right: 2em;
 }
+
 .section-one > .content > .section-title {
   margin-top: 2em;
 }
-
+.title-highlight {
+  color: var(--main-pink);
+}
 .section-two > .content {
   margin: 0em 15em;
 }
@@ -56,6 +59,10 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+.reservation-img,
+.tradition-img {
+  border-radius: 5%;
 }
 .section-centered-title {
   display: flex;

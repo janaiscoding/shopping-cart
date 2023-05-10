@@ -10,7 +10,7 @@ import Testimonials from "./Testimonials";
 import { motion } from "framer-motion";
 
 const Home = ({ products, handleCartAdd }) => {
-  let titleOne = "ENJOY THE TASTE OF UMAī FOOD";
+
   let paraOne =
     "We are a Japanese restaurant that has been serving authentic Japanese cuisine for over 50 years. Our restaurant has been a family tradition for generations, and we take great pride in continuing to provide our customers with the highest quality dishes and unparalleled service.";
   return (
@@ -23,7 +23,7 @@ const Home = ({ products, handleCartAdd }) => {
       >
         <section className="section section-one" id="home">
           <div className="content">
-            <h1 className="section-title">{titleOne}</h1>
+            <h1 className="section-title">ENJOY THE TASTE OF <span className="title-highlight">UMAī</span> FOOD</h1>
             <p className="section-paragraph">{paraOne}</p>
             <button className="section-button">
               <Link to="/#delivery" className="store-button">

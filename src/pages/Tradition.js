@@ -1,5 +1,5 @@
 import React from "react";
-import menuImage from "../assets/landingpage/right-side-tradition.png";
+import TraditionImg from "../assets/landingpage/tradition.jpg"
 import flowerIcon from "../assets/icons/flowericon.png";
 import { HashLink as Link } from "react-router-hash-link";
 import { motion } from "framer-motion";
@@ -46,7 +46,9 @@ const Tradition = () => {
           </li>
         </ul>
       </motion.div>
-      <img src={menuImage} alt="animated sushi table" height={500} />
+      <a href="https://unsplash.com/photos/NVX55qVyEkE">
+      <img className="tradition-img" src={TraditionImg} alt="japanese restaurant outdoors" height={700} />
+      </a>
     </section>
   );
 };
