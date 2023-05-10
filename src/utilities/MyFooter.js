@@ -12,11 +12,11 @@ const MyFooter = () => {
             className="footer-link"
             rel="noopener noreferrer"
           >
-            Developed by ©JanaIsCoding
+            ©JanaIsCoding
           </a>
 
           <ul className="footer-navigation flex" data-visible="false">
-          <li className="active">
+            <li className="active">
               <Link to="/#home">Home</Link>
             </li>
             <li className="active">

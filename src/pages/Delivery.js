@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { HashLink as Link } from "react-router-hash-link";
 import ItemCard from "../components/ItemCard";
 import { motion } from "framer-motion";
@@ -33,7 +33,10 @@ const Delivery = ({ products, handleCartAdd, handleSwapProducts }) => {
   const shownProducts = selectedProducts.map((product) => (
     <ItemCard product={product} key={product.id} handleAdd={handleCartAdd} />
   ));
-
+  useEffect(() => {
+    let initialId = document.getElementById("sushi");
+    initialId.setAttribute("hover-visible", "true");
+  }, []);
   return (
     <section className="section section-four" id="delivery">
       <motion.div

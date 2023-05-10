@@ -11,7 +11,7 @@
   display: flex;
   justify-content: space-evenly;
 }
-.checkout-img{
+.checkout-img {
   border-radius: 5%;
 }
 .cart-info {
@@ -116,6 +116,14 @@ input::-webkit-inner-spin-button {
 input[type="number"] {
   -moz-appearance: textfield;
   appearance: textfield;
+}
+@media (max-width: 1300px) {
+  .cart-main {
+    gap: 10px;
+  }
+  .checkout-img {
+    width: 350px;
+  }
 }
 
 @media (max-width: 600px) {
