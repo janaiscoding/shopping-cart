@@ -5,7 +5,6 @@ import { HashLink as Link } from "react-router-hash-link";
 import { motion } from "framer-motion";
 
 const Tradition = () => {
-  let title = "OUR UMAī TRADīTīON";
   let para =
     "Sushi, one of the most popular Japanese dishes, has a rich and fascinating history that dates back to the 8th century. Originally, sushi was created as a way to preserve fish by fermenting it with rice. However, over time, the preparation techniques evolved, and the dish became the beloved delicacy we know today. Interestingly, there are some lesser-known facts about sushi preparation that make it even more intriguing.";
   let breadcrumbs = "寿司の伝統 / Sushi Tradition";
@@ -30,7 +29,7 @@ const Tradition = () => {
         </Link>
         <h1 className="section-title">
           <span className="floating-title">{floatingTitle}</span>
-          {title}
+          OUR UMAī <span className="title-highlight">TRADīTīON</span> 
         </h1>
         <p className="section-paragraph">{para}</p>
         <ul className="menu-list">

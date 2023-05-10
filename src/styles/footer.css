@@ -34,12 +34,17 @@ a:focus {
 @media (max-width: 600px) {
   footer,
   .footer-navigation,
-  .footer-flex-top,
   .footer-flex-bottom,
   .link-wrapper,
   .utility-pages-wrapper {
     justify-content: center;
     font-size: 10px;
     gap: 10px;
+  }
+  .footer-flex-top{
+    justify-content: space-evenly;
+  }
+  .footer-navigation{
+    flex-direction: column;
   }
 }
