@@ -188,7 +188,7 @@
   .section-breadcrumbs {
     margin-top: 1em;
   }
-  .section-three > .content{
+  .section-three > .content {
     margin: 5em 0em;
   }
   .home-main,
@@ -201,7 +201,7 @@
     margin: 1em 0em;
   }
   .products-wrapper {
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .section-two > .content,
@@ -231,11 +231,11 @@
     flex-direction: column;
   }
 
-  .section-two > a> img,
-  .section-three > a>  img{
+  .section-two > a > img,
+  .section-three > a > img {
     height: 500px;
   }
-  .section-five{
+  .section-five {
     margin-top: 0;
   }
   .section-five > img {
@@ -247,7 +247,6 @@
     text-align: center;
   }
 }
-
 
 @media (max-width: 600px) {
   .section-breadcrumbs {
@@ -276,7 +275,7 @@
   }
 
   .section-two > .content > button {
-    align-self: flex-end;
+    align-self: center;
   }
 
   .section-three {
@@ -298,20 +297,20 @@
     flex-direction: column;
   }
 
-  .section-two > a> img,
-  .section-three > a> img,
   .section-five img {
     width: 50%;
   }
-  .section-five{
+  .section-five {
     margin-top: 0;
   }
 
   .section-five > .right-img {
     align-self: flex-end;
   }
-  .section-title {
-    font-size: 20px;
+
+  .section-one > .content > .section-title {
+    margin-top:1em;
+    padding: 5px;
     text-align: center;
   }
 }

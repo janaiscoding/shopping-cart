@@ -22,7 +22,7 @@ const Cart = ({
     />
   ));
   return (
-    <section className="cart-section" id="cart">
+    <section className="cart-section">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -30,7 +30,7 @@ const Cart = ({
         className="cart-main"
       >
         <div className="cart-info">
-          <h1 className="cart-title">Shopping Cart</h1>
+          <h1 className="cart-title" id="cart">Shopping Cart</h1>
           <div className="cart-items-wrapper">{allCartItems}</div>
           <div className="handle-checkout">
             <div className="continue-shopping">

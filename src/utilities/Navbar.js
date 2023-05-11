@@ -20,7 +20,7 @@ const Navbar = ({ totalQuant }) => {
     <>
       <header className="flex sticky">
         <div className="header-left flex">
-          <Link className="logo-wrapper flex" to="/">
+          <Link className="logo-wrapper flex" to="/#home">
             <p className="logo-name">Umaī</p>
           </Link>
           <Link to="/cart" className="cart-menu-icon" data-visible="false">

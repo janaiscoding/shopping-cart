@@ -50,8 +50,9 @@
   .form-group {
     flex-direction: column;
   }
-  form > input,
+  .form-label-group > input,
   #notes {
+    padding: 10px;
     width: 15em;
   }
 }

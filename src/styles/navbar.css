@@ -38,7 +38,7 @@ header {
 
 @media (max-width: 35em) {
   .header-left {
-    margin: 10px;
+    margin-left: 2em;
   }
   .primary-navigation {
     position: fixed;

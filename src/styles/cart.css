@@ -136,6 +136,9 @@ input[type="number"] {
     padding: 0px;
     font-size: large;
   }
+  .cart-main{
+    margin-top: 10vh;
+  }
   .cart-section,
   .cart-main,
   .cart-items-wrapper {
