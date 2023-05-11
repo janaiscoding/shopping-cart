@@ -60,3 +60,4 @@ npm run start
 
 - This project is part of The Odin Project's [curriculum](https://www.theodinproject.com/lessons/node-path-javascript-shopping-cart).
 - The images used in my project are linked with source, and all other icons are from [Flaticon](https://www.flaticon.com/).
+- All of the written content is AI generated based on my prompts.
