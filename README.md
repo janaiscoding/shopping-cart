@@ -1,10 +1,10 @@
-# Jana's Shopping Cart
+# Shopping Cart - Umaī Japanese Restaurant
 
 ## Project's Scope
 
-- The scope of this project was to build **my third application in React using react-router-dom**.
-- Using Router, I created a SPA Sushi Restaurant (Shopping Cart/Order Online).
-- See the full live preview on the GitHub Pages deploy [Jana's Shopping Cart](https://janaiscoding.github.io/shopping-cart/).
+- The scope of this project was to build a shopping cart in React, also using React Router.
+- I've decided to create a **fully responsive** fictive Restaurant with a **Shopping Cart** functionability for ordering food online.
+- See the full live preview on the GitHub Pages deploy [Umaī - Japanese Restaurant](https://janaiscoding.github.io/shopping-cart/).
 
 ## Live Demo
 
@@ -29,13 +29,12 @@ npm start
 
 ## Project Details & Description
 
-- This is a SPA (Single Page Application) made with React Router.
-- In this shop, we have a list of products and a cart. In the Navigation Bar you can see how many items are in the cart(if any).
-- You can click once on + or - to add or remove single cart items, or you can input custom in addition to what you have in the cart.
-- On the Cart page, you can modify the quantity of each element, remove entirely, see the total costs.
-- On the Store page, if you press the minus button when you only have 1 item of that type in the cart, it will remove it entirely from the cart.
-- If you press on the minus button with 0 items in the cart, nothing will happen.
-- On the Contact Page I currently added some conditional rendering and more use of state and passed props.
+- This is a SPA (Single Page Application) of a fictive Japanese Restaurant made with React and React Router.
+- In this restaurant, we have a landing page, a contact page(for booking a dinner), the menu with items (filtered by food type).
+- In the Navigation Bar you can see how many items are in the bag.
+- On the Shopping Cart page, you can modify your order (add one, remove one, add custom quantity) and see all the costs.
+- Pressing minus until 0 will automatically remove the meal from your order.
+
 
 # Built with
 
@@ -60,4 +59,4 @@ npm start
 ## Sources, Materials, Copyright
 
 - This project is part of The Odin Project's [curriculum](https://www.theodinproject.com/lessons/node-path-javascript-shopping-cart).
-- The design images are linked with source, and all other icons are from [Flaticon](https://www.flaticon.com/).
+- The images used in my project are linked with source, and all other icons are from [Flaticon](https://www.flaticon.com/).
