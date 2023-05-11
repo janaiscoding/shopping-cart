@@ -14,7 +14,7 @@
 
 ### On Mobile
 
-![Gif preview of the shopping cart on mobile](src/assets/shopping-cart-mobile-preview.gif)
+![Gif preview of the shopping cart on mobile](src/assets/previews/japanese-restaurant-mobile.gif)
 
 ## Getting Started
 
