@@ -24,7 +24,7 @@
 git clone https://github.com/janaiscoding/shopping-cart.git
 cd shopping-cart
 npm install
-npm start
+npm run start
 ```
 
 ## Project Details & Description
