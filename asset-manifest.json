@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/shopping-cart/static/css/main.fae104e5.css",
-    "main.js": "/shopping-cart/static/js/main.397e4573.js",
+    "main.css": "/shopping-cart/static/css/main.3a72bca3.css",
+    "main.js": "/shopping-cart/static/js/main.93bc7f57.js",
     "static/media/tradition.jpg": "/shopping-cart/static/media/tradition.c79def937d227dc35308.jpg",
     "static/media/deliver.jpg": "/shopping-cart/static/media/deliver.8ff6a2cb46f18a3d8b53.jpg",
     "static/media/alexander-hipp.jpg": "/shopping-cart/static/media/alexander-hipp.8e47360fb8a28e41c441.jpg",
@@ -21,11 +21,11 @@
     "static/media/egg-sushi.png": "/shopping-cart/static/media/egg-sushi.7b81664abc72766a0153.png",
     "static/media/ikura-sushi.png": "/shopping-cart/static/media/ikura-sushi.e101511a59983065ce9a.png",
     "index.html": "/shopping-cart/index.html",
-    "main.fae104e5.css.map": "/shopping-cart/static/css/main.fae104e5.css.map",
-    "main.397e4573.js.map": "/shopping-cart/static/js/main.397e4573.js.map"
+    "main.3a72bca3.css.map": "/shopping-cart/static/css/main.3a72bca3.css.map",
+    "main.93bc7f57.js.map": "/shopping-cart/static/js/main.93bc7f57.js.map"
   },
   "entrypoints": [
-    "static/css/main.fae104e5.css",
-    "static/js/main.397e4573.js"
+    "static/css/main.3a72bca3.css",
+    "static/js/main.93bc7f57.js"
   ]
 }
