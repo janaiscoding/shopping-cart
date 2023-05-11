@@ -9,7 +9,7 @@ const Testimonials = () => {
     <div className="section-testimonials">
       <div className="customers-number">
         <div className="number"> 20k+</div>
-        <p className="description">Happy Customers in 50+ years</p>
+        <p className="description">Happy Customers</p>
       </div>
       <div className="testimonial-message">
         <img
