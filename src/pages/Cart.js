@@ -39,6 +39,7 @@ const Cart = ({
                   src={arrowIcon}
                   alt="icon to return to shopping menu"
                   height={21}
+                  width="auto"
                 />
               </Link>
               <Link to="/#delivery">Continue Shopping</Link>

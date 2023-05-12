@@ -17,6 +17,7 @@ const Testimonials = () => {
           loading="lazy"
           alt="testimonial person"
           width={100}
+          height="auto"
           className="testimonial-pic"
         />
         <div className="testimonial-message-text">{testimonial}</div>

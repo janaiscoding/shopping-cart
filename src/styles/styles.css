@@ -5,7 +5,8 @@
 }
 @font-face {
   font-family: "NightInTokyo";
-  src: url("../assets/fonts/NightinTokyo.ttf");
+  src: local('NightInTokyo'), url("../assets/fonts/NightinTokyo.ttf") format('woff2');
+  font-display: swap;
 }
 #root {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,

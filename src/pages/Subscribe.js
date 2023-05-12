@@ -44,6 +44,7 @@ const Subscribe = () => {
         src={bookTableImageRight}
         alt="animated sushi table"
         width={400}
+        height="auto"
         loading="lazy"
       />
     </section>

@@ -66,6 +66,7 @@ const Contact = () => {
         src={bookTableImageRight}
         alt="animated sushi table"
         height={400}
+        width="auto"
         loading="lazy"
       />
     </section>

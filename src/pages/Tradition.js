@@ -34,13 +34,13 @@ const Tradition = () => {
         <p className="section-paragraph">{para}</p>
         <ul className="menu-list">
           <li>
-            <img src={flowerIcon} alt="flower list icon" width={25} /> {listOne}
+            <img src={flowerIcon} alt="flower list icon" width={25} height="auto" /> {listOne}
           </li>
           <li>
-            <img src={flowerIcon} alt="flower list icon" width={25} /> {listTwo}
+            <img src={flowerIcon} alt="flower list icon" width={25} height="auto" /> {listTwo}
           </li>
           <li>
-            <img src={flowerIcon} alt="flower list icon" width={25} />{" "}
+            <img src={flowerIcon} alt="flower list icon" width={25} height="auto" />{" "}
             {listThree}
           </li>
         </ul>

@@ -5,11 +5,12 @@ const ItemCard = ({ product, handleAdd }) => {
   return (
     <div className="product-card">
       <div className="banner">
-        <img src={Banner} width={250} alt="banner" />
+        <img src={Banner} width={250} height="auto" alt="banner" />
         <p className="centered">{product.japanese}</p>
       </div>
       <img
         src={product.img}
+        width="auto"
         height={100}
         alt={product.name}
         className="product-img"
