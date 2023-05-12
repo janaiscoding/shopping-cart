@@ -25,7 +25,7 @@ const Home = ({ products, handleCartAdd }) => {
           <div className="content">
             <h1 className="section-title">ENJOY THE TASTE OF <span className="title-highlight">UMAī</span> FOOD</h1>
             <p className="section-paragraph">{paraOne}</p>
-            <button className="section-button">
+            <button className="section-button" aria-label="Go to Order Food">
               <Link to="/#delivery" className="store-button">
                 Order Online
               </Link>

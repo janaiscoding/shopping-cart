@@ -17,7 +17,7 @@ const ItemCard = ({ product, handleAdd }) => {
       />
       <p className="product-name">{product.name}</p>
       <p className="product-price"> ¥ {product.price}</p>
-      <button className="order-button" onClick={() => handleAdd(product, 1)}>Add to Cart</button>
+      <button className="order-button" aria-label="add product in your cart" onClick={() => handleAdd(product, 1)}>Add to Cart</button>
     </div>
   );
 };

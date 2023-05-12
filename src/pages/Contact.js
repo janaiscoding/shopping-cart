@@ -57,7 +57,7 @@ const Contact = () => {
             </div>
           </div>
         </form>
-        <button className="section-button book-button">
+        <button className="section-button book-button" aria-label="Submit reservation">
           Submit Reservation
         </button>
       </motion.div>

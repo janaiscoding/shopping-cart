@@ -36,41 +36,46 @@ const CartItem = ({
   return (
     <div className="cart-item">
       <div className="item-info">
-        <img src={cartItem.img} alt={cartItem.name} width={100} height="auto"/>
+        <img src={cartItem.img} alt={cartItem.name} width={100} height="auto" />
         <div className="product-name"> {cartItem.name}</div>
       </div>
       <div className="cart-item-right">
-      <div className="cart-handle-change">
-        <div
-          className="remove-one-cart-button"
-          onClick={() => handleRemoveSingular()}
-        >
-          -
+        <div className="cart-handle-change">
+          <div
+            aria-label="remove one product"
+            className="remove-one-cart-button"
+            onClick={() => handleRemoveSingular()}
+          >
+            -
+          </div>
+          <input
+            type="number"
+            min={"1"}
+            max={"99"}
+            value={quantity}
+            aria-label="insert custom quantity"
+            onChange={(e) => {
+              handleQuantityChange(e);
+              console.log(quantity);
+            }}
+          />
+          <div
+            aria-label="add one product"
+            className="add-one-cart-button"
+            onClick={() => handleAddSingular()}
+          >
+            +
+          </div>
         </div>
-        <input
-          type="number"
-          min={"1"}
-          max={"99"}
-          value={quantity}
-          aria-label="insert custom quantity"
-          onChange={(e) => {
-            handleQuantityChange(e);
-            console.log(quantity);
-          }}
-        />
-        <div
-          className="add-one-cart-button"
-          onClick={() => handleAddSingular()}
-        >
-          +
+        <div className="cart-item-price">
+          ¥{cartItem.price * cartItem.quantity}
         </div>
-      </div>
-      <div className="cart-item-price">
-        ¥{cartItem.price * cartItem.quantity}
-      </div>
-      <div className="remove-button" onClick={() => handleCartRemove(cartItem)}>
-        x
-      </div>
+        <div
+          className="remove-button"
+          onClick={() => handleCartRemove(cartItem)}
+        >
+          x
+        </div>
       </div>
     </div>
   );

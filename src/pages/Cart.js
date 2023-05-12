@@ -48,7 +48,7 @@ const Cart = ({
               <div className="subtotal">
                 <p>Subtotal:</p>
                 <h3>¥ {totalPrice}</h3>
-                <button className="place-order">Place order</button>
+                <button className="place-order" aria-label="place your order">Place order</button>
               </div>
             ) : (
               ""
