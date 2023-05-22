@@ -7,6 +7,7 @@ import arrowIcon from "../assets/icons/right-arrow.png";
 import { motion } from "framer-motion";
 const Cart = ({
   cart,
+  setCart,
   totalPrice,
   handleCartAdd,
   handleCartUpdate,
@@ -21,6 +22,16 @@ const Cart = ({
       handleCartRemove={handleCartRemove}
     />
   ));
+  const createPopup = ()=>{
+    const popupAlert = document.createElement("div");
+    popupAlert.classList.add("popup");
+    popupAlert.innerText = `Your order has been placed!`;
+    document.querySelector('.cart-section').append(popupAlert);
+    setCart([])
+    setTimeout(() => {
+      popupAlert.remove();
+    }, 1000);
+  }
   return (
     <section className="cart-section">
       <motion.div
@@ -48,7 +59,7 @@ const Cart = ({
               <div className="subtotal">
                 <p>Subtotal:</p>
                 <h3>¥ {totalPrice}</h3>
-                <button className="place-order" aria-label="place your order">Place order</button>
+                <button className="place-order" aria-label="place your order" onClick={createPopup}>Place order</button>
               </div>
             ) : (
               ""

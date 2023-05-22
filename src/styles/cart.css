@@ -117,6 +117,20 @@ input[type="number"] {
   -moz-appearance: textfield;
   appearance: textfield;
 }
+.popup {
+  position: fixed;
+  background-color: var(--main-pink);
+  color: white;
+  border-radius: 0px 30px;
+  padding: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  transform: translate(-50%, -50%);
+  top: 20%;
+  left: 50%;
+  font-size: large;
+  z-index:1000;
+}
 @media (max-width: 1300px) {
   .cart-main {
     gap: 10px;
@@ -127,6 +141,10 @@ input[type="number"] {
 }
 
 @media (max-width: 600px) {
+  .popup {
+    top: 25%;
+    left: 50%;
+  }
   .cart-item {
     flex-direction: column;
   }
@@ -164,4 +182,9 @@ input[type="number"] {
   .cart-main > img {
     display: none;
   }
+  .handle-checkout,
+  .subtotal{
+    flex-direction: column;
+  }
+  
 }

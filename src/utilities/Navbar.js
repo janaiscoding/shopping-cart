@@ -20,7 +20,9 @@ const Navbar = ({ totalQuant }) => {
     <>
       <header className="flex sticky">
         <div className="header-left flex">
-          <Link className="logo-wrapper flex" to="/#home">
+          <Link className="logo-wrapper flex" to="/" onClick={()=>{
+             window.scrollTo(0, 0)
+          }}> 
             <p className="logo-name">Umaī</p>
           </Link>
           <Link to="/cart" className="cart-menu-icon" data-visible="false">
@@ -42,7 +44,10 @@ const Navbar = ({ totalQuant }) => {
             data-visible="false"
           >
             <li className="active">
-              <Link to="/#home" onClick={toggleNav}>
+              <Link to="/" onClick={()=>{
+                    window.scrollTo(0, 0);
+                    toggleNav()
+              }}>
                 Home
               </Link>
             </li>
