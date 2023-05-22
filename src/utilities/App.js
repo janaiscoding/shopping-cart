@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from "react";
-import { Route, Routes, BrowserRouter } from "react-router-dom";
+import { Route, Routes, BrowserRouter, HashRouter } from "react-router-dom";
 import dataSet from "../assets/products/dataSet.js";
 import Navbar from "./Navbar";
 import Home from "../pages/Home";
@@ -71,7 +71,7 @@ const App = () => {
     addTotal();
   }, [cart]);
   return (
-    <BrowserRouter>
+    <HashRouter>
     <ScrollToTop/>
       <Navbar totalQuant={totalQuant} />
       <Routes>
@@ -107,7 +107,7 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
       </Routes>
       <MyFooter />
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
