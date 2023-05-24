@@ -2,8 +2,9 @@
 
 ## Project's Scope
 
-- The scope of this project was to build a shopping cart in React, also using React Router.
-- I've decided to create a **fully responsive** fictive Restaurant with a **Shopping Cart** functionability for ordering food online.
+- This project aims to be a **Shopping Cart App**, but I personalised it around my favourite food!
+- I've decided to create a fictive Restaurant for ordering food online with React and React Router.
+- Mobile Responsiveness was created with plain CSS3, for a better understanding of the responsiveness concept and media queries. Currently I am using TailwindCSS in my projects.
 - See the full live preview on the GitHub Pages deploy [Umaī - Japanese Restaurant](https://janaiscoding.github.io/shopping-cart/).
 
 ## Live Demo
