@@ -37,13 +37,14 @@ const Home = ({
     sections.forEach((section) => {
       observer.current.observe(section);
     });
+    console.log(activeSection)
     return () => {
       sections.forEach((section) => {
         observer.current.unobserve(section);
       });
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [activeSection]);
+  }, []);
   return (
     <>
       <motion.div
