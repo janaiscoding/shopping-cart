@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useState, useEffect } from "react";
-import { Route, Routes, BrowserRouter, HashRouter } from "react-router-dom";
+import React, { useState, useEffect, useRef } from "react";
+import { Route, Routes, BrowserRouter } from "react-router-dom";
 import dataSet from "../assets/products/dataSet.js";
 import Navbar from "./Navbar";
 import Home from "../pages/Home";
@@ -67,13 +67,14 @@ const App = () => {
     setTotalPrice(sumPrice);
     setTotalQuant(sumQuantity);
   };
+  const [activeSection, setActiveSection] = useState(null);
   useEffect(() => {
     addTotal();
   }, [cart]);
   return (
-    <HashRouter>
-    <ScrollToTop/>
-      <Navbar totalQuant={totalQuant} />
+    <BrowserRouter>
+      <ScrollToTop />
+      <Navbar totalQuant={totalQuant} activeSection={activeSection} />
       <Routes>
         <Route
           exact
@@ -82,7 +83,8 @@ const App = () => {
             <Home
               products={products}
               cart={cart}
-              totalPrice={totalPrice}
+              activeSection={activeSection}
+              setActiveSection={setActiveSection}
               handleCartAdd={handleCartAdd}
               handleCartUpdate={handleCartUpdate}
               handleCartRemove={handleCartRemove}
@@ -94,6 +96,7 @@ const App = () => {
           element={
             <Cart
               cart={cart}
+              setActiveSection={setActiveSection}
               setCart={setCart}
               totalPrice={totalPrice}
               handleCartAdd={handleCartAdd}
@@ -102,12 +105,13 @@ const App = () => {
             />
           }
         />
-        <Route path="/#tradition" element={<Tradition />} />
-        <Route path="/#delivery" element={<Delivery />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route
+          path="/contact"
+          element={<Contact setActiveSection={setActiveSection} />}
+        />
       </Routes>
       <MyFooter />
-    </HashRouter>
+    </BrowserRouter>
   );
 };
 

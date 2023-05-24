@@ -12,7 +12,7 @@
   justify-content: space-evenly;
 }
 .checkout-img {
-  border-radius: 5%;
+  border-radius: 0px 5em;
 }
 .cart-info {
   display: flex;
@@ -27,6 +27,7 @@
 .cart-title {
   font-family: "NightInTokyo";
   font-size: 2rem;
+  text-align: center;
 }
 .cart-item-right {
   display: flex;
@@ -186,5 +187,7 @@ input[type="number"] {
   .subtotal{
     flex-direction: column;
   }
-  
+  .cart-section{
+    min-height: 90vh;
+  }
 }

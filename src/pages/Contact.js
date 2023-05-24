@@ -1,15 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { HashLink as Link } from "react-router-hash-link";
 import bookTableImageLeft from "../assets/landingpage/leftbannerfix.png";
 import bookTableImageRight from "../assets/landingpage/rightbanner.png";
 import "../styles/contact.css";
 import { motion } from "framer-motion";
-const Contact = () => {
+const Contact = ({ setActiveSection }) => {
   let title = "Book a Table for Dinner";
   let breadcrumbs = "席を予約する / Book Table";
   let floatingTitle = "席を予約する / Book Table";
+  useEffect(() => {
+    setActiveSection(null);
+  }, []);
   return (
-    <section className="section section-five section-contact" id="contact">
+    <section
+      className=" section section-subscribe section-contact"
+      id="contact"
+    >
       <img
         src={bookTableImageLeft}
         alt="animated sushi table"
@@ -57,7 +63,10 @@ const Contact = () => {
             </div>
           </div>
         </form>
-        <button className="section-button book-button" aria-label="Submit reservation">
+        <button
+          className="section-button book-button"
+          aria-label="Submit reservation"
+        >
           Submit Reservation
         </button>
       </motion.div>

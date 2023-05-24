@@ -29,6 +29,7 @@ npm run start
 
 ## Project Details & Description
 
+- Upon further reviewing, I added: **better content and page spacing**, **active anchor links styling**, **better mobile nav sidebar handling(it now closes when it has to)**
 - This is a SPA (Single Page Application) of a fictive Japanese Restaurant made with React and React Router.
 - In this restaurant, we have a landing page, a contact page(for booking a dinner), the menu with items (filtered by food type).
 - In the Navigation Bar you can see how many items are in the bag.

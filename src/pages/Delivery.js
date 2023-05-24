@@ -38,7 +38,7 @@ const Delivery = ({ products, handleCartAdd, handleSwapProducts }) => {
     initialId.setAttribute("hover-visible", "true");
   }, []);
   return (
-    <section className="section section-four" id="delivery">
+    <section className="section section-delivery " id="delivery">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -57,14 +57,22 @@ const Delivery = ({ products, handleCartAdd, handleSwapProducts }) => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
-        className="section-four-content"
+        className="section-delivery-content"
       >
         <ul className="menu-list-li">{allLists}</ul>
         <div className="products-wrapper-total">
           <div className="products-wrapper">{shownProducts}</div>
-          <Link to="/cart" className="products-go-to-cart-button">
-            Go To Cart
-          </Link>
+          <div className="delivery-buttons-wrapper">
+            <Link to="/cart" className="products-go-to-cart-button">
+              Go To Cart
+            </Link>
+            <a
+              href="https://www.freepik.com/free-vector/asia-food-icon-set_1531439.htm#query=sushi&position=1&from_view=search&track=sph"
+              className="products-go-to-cart-button"
+            >
+              View Icons Source
+            </a>
+          </div>
         </div>
       </motion.div>
     </section>

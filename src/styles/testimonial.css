@@ -1,12 +1,16 @@
+.testimonials-helper {
+  width: 100%;
+  background-color: var(--main-yellow);
+}
 .section-testimonials {
   display: flex;
-  background-color: var(--main-yellow);
   color: var(--main-blue);
   line-height: 1.7;
-  padding: 5em;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   gap: 2em;
+  max-width: 1300px;
+  margin: 3em auto;
 }
 
 .customers-number {
@@ -36,10 +40,13 @@
   letter-spacing: 1px;
 }
 @media (max-width: 600px) {
+  .testimonials-helper{
+    margin: 10px -10px;
+    padding:20px;
+    background-color: var(--main-yellow);
+  }
   .section-testimonials {
     flex-direction: column;
-    margin: 0px 10px;
-    padding: 10px;
     justify-content: space-between;
     align-items: center;
   }

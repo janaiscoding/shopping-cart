@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import CartItem from "../components/CartItem";
 import { HashLink as Link } from "react-router-hash-link";
 import "../styles/cart.css";
@@ -12,6 +12,7 @@ const Cart = ({
   handleCartAdd,
   handleCartUpdate,
   handleCartRemove,
+  setActiveSection,
 }) => {
   let allCartItems = cart.map((cartItem) => (
     <CartItem
@@ -22,18 +23,21 @@ const Cart = ({
       handleCartRemove={handleCartRemove}
     />
   ));
-  const createPopup = ()=>{
+  const createPopup = () => {
     const popupAlert = document.createElement("div");
     popupAlert.classList.add("popup");
     popupAlert.innerText = `Your order has been placed!`;
-    document.querySelector('.cart-section').append(popupAlert);
-    setCart([])
+    document.querySelector(".cart-section").append(popupAlert);
     setTimeout(() => {
       popupAlert.remove();
+      setCart([]);
     }, 1000);
-  }
+  };
+  useEffect(() => {
+    setActiveSection(null);
+  }, []);
   return (
-    <section className="cart-section">
+    <section className="cart-section" id="cart">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -41,7 +45,7 @@ const Cart = ({
         className="cart-main"
       >
         <div className="cart-info">
-          <h1 className="cart-title" id="cart">Shopping Cart</h1>
+          <h1 className="cart-title">Shopping Cart</h1>
           <div className="cart-items-wrapper">{allCartItems}</div>
           <div className="handle-checkout">
             <div className="continue-shopping">
@@ -59,7 +63,13 @@ const Cart = ({
               <div className="subtotal">
                 <p>Subtotal:</p>
                 <h3>¥ {totalPrice}</h3>
-                <button className="place-order" aria-label="place your order" onClick={createPopup}>Place order</button>
+                <button
+                  className="place-order"
+                  aria-label="place your order"
+                  onClick={createPopup}
+                >
+                  Place order
+                </button>
               </div>
             ) : (
               ""

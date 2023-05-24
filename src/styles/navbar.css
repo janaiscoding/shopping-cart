@@ -1,19 +1,24 @@
 header {
   justify-content: space-between;
   overflow: hidden;
-  background-color: var(--main-white);
-  box-shadow: 4px 9px 7px -6px rgb(156 156 156 / 23%);
   height: 8vh;
+  max-width: 1300px;
+  margin: auto;
+}
+
+.header-handler {
+  box-shadow: 4px 9px 7px -6px rgb(156 156 156 / 23%);
+  width: 100%;
+  background-color: var(--main-white);
+  margin-bottom: 1em;
   z-index: 9999;
   position: sticky;
   top: 0;
-  width: 100%;
 }
 
 .header-left {
   justify-content: flex-start;
   --gap: 20px;
-  margin-left: 5em;
 }
 .logo-wrapper {
   --gap: 0px;
@@ -35,8 +40,14 @@ header {
   display: none;
   padding: 0;
 }
-
+@media (min-width: 800px) {
+  .primary-navigation .active a {
+    color: var(--main-pink);
+    border-bottom: 1px solid var(--main-pink);
+  }
+}
 @media (max-width: 35em) {
+
   .header-left {
     margin-left: 2em;
   }
@@ -94,7 +105,7 @@ header {
 .flex {
   display: flex;
   align-items: center;
-  gap: var(--gap, 4rem);
+  gap: var(--gap, 2rem);
 }
 nav {
   margin-right: 5em;
@@ -114,14 +125,18 @@ nav {
   color: var(--main-pink);
   border-bottom: 1px solid var(--main-pink);
 }
+
 .primary-navigation .contact-button {
-  padding: 0.525em 1.15em;
+  padding: 0.3em 1em;
   font-size: 1.2em;
   display: inline-block;
   background-color: var(--main-white);
   border-radius: 0px 30px;
   border: 1px solid var(--main-pink);
   color: var(--main-pink);
+}
+.contact-button:hover {
+  border-bottom: 1px solid var(--main-pink);
 }
 .contact-button > a {
   color: var(--main-pink);

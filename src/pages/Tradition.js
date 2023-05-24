@@ -1,28 +1,28 @@
 import React from "react";
 import TraditionImg from "../assets/landingpage/tradition.jpg";
-import flowerIcon from "../assets/icons/flowericon.png";
 import { HashLink as Link } from "react-router-hash-link";
 import { motion } from "framer-motion";
 
 const Tradition = () => {
-  let para =
-    "Sushi, one of the most popular Japanese dishes, has a rich and fascinating history that dates back to the 8th century. Originally, sushi was created as a way to preserve fish by fermenting it with rice. However, over time, the preparation techniques evolved, and the dish became the beloved delicacy we know today. Interestingly, there are some lesser-known facts about sushi preparation that make it even more intriguing.";
   let breadcrumbs = "寿司の伝統 / Sushi Tradition";
   let floatingTitle = "寿司の伝統 / Sushi Tradition";
-  let listOne =
-    "Contrary to popular belief, sushi doesn't actually refer to raw fish. The word sushi actually refers to the vinegared rice used to make the dish, while raw fish is called sashimi.";
-  let listTwo =
-    "Traditionally, sushi chefs would train for years to perfect the art of making sushi. They would start by learning how to properly cook the rice, then move on to selecting and preparing the fish, and finally learn how to shape the sushi into beautiful, bite-sized pieces.";
-  let listThree =
-    "In Japan, there is a special type of sushi called fugu that is made with the potentially deadly pufferfish. Chefs who prepare fugu must undergo rigorous training and certification to ensure they can safely remove the toxic parts of the fish and serve it without harming diners.";
   return (
-    <section className="section section-three">
+    <section className="section section-tradition" id="tradition">
+      <a href="https://unsplash.com/photos/9sM53e9wTTY">
+        <img
+          className="tradition-img"
+          src={TraditionImg}
+          alt="japanese restaurant outdoors"
+          height={600}
+          width={400}
+          loading="lazy"
+        />
+      </a>
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         className="content"
-        id="tradition"
       >
         <Link to="/#tradition">
           <h2 className="section-breadcrumbs">{breadcrumbs}</h2>
@@ -31,29 +31,22 @@ const Tradition = () => {
           <span className="floating-title">{floatingTitle}</span>
           OUR UMAī <span className="title-highlight">TRADīTīON</span>
         </h1>
-        <p className="section-paragraph">{para}</p>
-        <ul className="menu-list">
-          <li>
-            <img src={flowerIcon} alt="flower list icon" width={25} height="auto" /> {listOne}
-          </li>
-          <li>
-            <img src={flowerIcon} alt="flower list icon" width={25} height="auto" /> {listTwo}
-          </li>
-          <li>
-            <img src={flowerIcon} alt="flower list icon" width={25} height="auto" />{" "}
-            {listThree}
-          </li>
-        </ul>
+        <p className="section-tradition-paragraph section-paragraph">
+          We are a Japanese restaurant that has been serving authentic Japanese
+          cuisine for over 50 years. Our restaurant has been a
+          <span className="title-highlight"> family tradition </span>
+          for generations, and we take great pride in continuing to provide our
+          customers with the{" "}
+          <span className="title-highlight">
+            highest quality dishes and unparalleled service.
+          </span>
+        </p>
+        <button className="section-button" aria-label="Go to Order Food">
+          <Link to="/#delivery" className="store-button">
+            Order Online
+          </Link>
+        </button>
       </motion.div>
-      <a href="https://unsplash.com/photos/NVX55qVyEkE">
-        <img
-          className="tradition-img"
-          src={TraditionImg}
-          alt="japanese restaurant outdoors"
-          height={700}
-          loading="lazy"
-        />
-      </a>
     </section>
   );
 };

@@ -1,3 +1,7 @@
+.section-contact{
+  background-color: var(--main-orange);
+  display: flex;
+}
 .section-form {
   display: flex;
   flex-direction: column;

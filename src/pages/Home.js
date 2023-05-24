@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { HashLink as Link } from "react-router-hash-link";
 import "../styles/home.css";
-import Ramen from "../assets/landingpage/ramen.jpg";
+import TraditionImg from "../assets/landingpage/homeimg.jpg";
+import flowerIcon from "../assets/icons/flowericon.png";
 import Reservation from "./Reservation";
 import Tradition from "./Tradition";
 import Delivery from "./Delivery";
@@ -9,10 +10,29 @@ import Subscribe from "./Subscribe";
 import Testimonials from "./Testimonials";
 import { motion } from "framer-motion";
 
-const Home = ({ products, handleCartAdd }) => {
+const Home = ({ products, handleCartAdd, activeSection, setActiveSection }) => {
+  const observer = useRef(null);
 
-  let paraOne =
-    "We are a Japanese restaurant that has been serving authentic Japanese cuisine for over 50 years. Our restaurant has been a family tradition for generations, and we take great pride in continuing to provide our customers with the highest quality dishes and unparalleled service.";
+  useEffect(() => {
+    observer.current = new IntersectionObserver((entries) => {
+      const visibleSection = entries.find(
+        (entry) => entry.isIntersecting
+      )?.target;
+      if (visibleSection) {
+        setActiveSection(visibleSection.id);
+      }
+    });
+    const sections = document.querySelectorAll(".section");
+    sections.forEach((section) => {
+      observer.current.observe(section);
+    });
+    console.log(activeSection);
+    return () => {
+      sections.forEach((section) => {
+        observer.current.unobserve(section);
+      });
+    };
+  }, []);
   return (
     <>
       <motion.div
@@ -21,27 +41,79 @@ const Home = ({ products, handleCartAdd }) => {
         viewport={{ once: true }}
         className="home-main"
       >
-        <section className="section section-one" id="home">
+        <section className="section section-home" id="home">
           <div className="content">
-            <h1 className="section-title">ENJOY THE TASTE OF <span className="title-highlight">UMAī</span> FOOD</h1>
-            <p className="section-paragraph">{paraOne}</p>
+            <h1 className="section-title">
+              ENJOY THE TASTE OF <span className="title-highlight">UMAī</span>{" "}
+              FOOD
+            </h1>
+            <p className="section-paragraph">
+              Sushi, one of the most popular Japanese dishes, has a rich and
+              fascinating history that dates back to the 8th century.
+              <span className="title-highlight">
+                {" "}
+                Fun facts about this project:
+              </span>
+            </p>
+            <ul className="menu-list">
+              <li>
+                <p>
+                  This project aims to be a shopping cart app, but I
+                  personalised it around my{" "}
+                  <span className="title-highlight">favourite food!</span>
+                </p>
+                <img
+                  src={flowerIcon}
+                  width={25}
+                  height={25}
+                  alt="flower icon"
+                />
+              </li>
+              <li>
+                <p>
+                  All of the text content in this site was
+                  <span className="title-highlight"> AI generated </span> based
+                  on my prompts about a family-owned sushi business in Japan.
+                </p>
+                <img
+                  src={flowerIcon}
+                  width={25}
+                  height={25}
+                  alt="flower icon"
+                />
+              </li>
+              <li>
+                <p>
+                  Umaī means <span className="title-highlight">delicious</span>{" "}
+                  in Japanese.
+                </p>
+                <img
+                  src={flowerIcon}
+                  width={25}
+                  height={25}
+                  alt="flower icon"
+                />
+              </li>
+            </ul>
             <button className="section-button" aria-label="Go to Order Food">
               <Link to="/#delivery" className="store-button">
                 Order Online
               </Link>
             </button>
           </div>
-          <img
-            src={Ramen}
-            height="auto"
-            width="auto"
-            loading="lazy"
-            alt="animated sushi table"
-            className="landing-img"
-          />
+          <a href="https://unsplash.com/photos/NVX55qVyEkE">
+            <img
+              className="tradition-img"
+              src={TraditionImg}
+              alt="japanese restaurant outdoors"
+              height={600}
+              width={400}
+              loading="lazy"
+            />
+          </a>
         </section>
-        <Delivery products={products} handleCartAdd={handleCartAdd} />
         <Tradition />
+        <Delivery products={products} handleCartAdd={handleCartAdd} />
         <Reservation />
         <Testimonials />
         <Subscribe />

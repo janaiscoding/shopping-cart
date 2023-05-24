@@ -11,11 +11,11 @@ const Subscribe = () => {
   let breadcrumbs = "購読 / Subscribe";
   let floatingTitle = "購読 / Subscribe";
   return (
-    <section className="section section-five" id="subscribe">
+    <section className="section section-subscribe" id="subscribe">
       <img
         src={bookTableImageLeft}
         alt="animated sushi table"
-        width={400}
+        width={300}
         loading="lazy"
       />
       <motion.div
@@ -43,7 +43,7 @@ const Subscribe = () => {
         className="right-img"
         src={bookTableImageRight}
         alt="animated sushi table"
-        width={400}
+        width={300}
         height="auto"
         loading="lazy"
       />
