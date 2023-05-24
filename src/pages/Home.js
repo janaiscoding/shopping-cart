@@ -10,7 +10,13 @@ import Subscribe from "./Subscribe";
 import Testimonials from "./Testimonials";
 import { motion } from "framer-motion";
 
-const Home = ({ products, handleCartAdd, activeSection, setActiveSection }) => {
+const Home = ({
+  products,
+  handleCartAdd,
+  activeSection,
+  setActiveSection,
+  applyDiscount,
+}) => {
   const observer = useRef(null);
 
   useEffect(() => {
@@ -49,8 +55,8 @@ const Home = ({ products, handleCartAdd, activeSection, setActiveSection }) => {
         <section className="section section-home" id="home">
           <div className="content">
             <h1 className="section-title">
-              ENJOY THE TASTE OF <span className="title-highlight">UMAī</span>{" "}
-              FOOD
+              ENJOY THE TASTE OF
+              <br /> <span className="title-highlight">UMAī</span> FOOD
             </h1>
             <p className="section-paragraph">
               Sushi, one of the most popular Japanese dishes, has a rich and
@@ -121,7 +127,7 @@ const Home = ({ products, handleCartAdd, activeSection, setActiveSection }) => {
         <Delivery products={products} handleCartAdd={handleCartAdd} />
         <Reservation />
         <Testimonials />
-        <Subscribe />
+        <Subscribe applyDiscount={applyDiscount} />
       </motion.div>
     </>
   );

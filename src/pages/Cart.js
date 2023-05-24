@@ -2,11 +2,12 @@ import React, { useEffect } from "react";
 import CartItem from "../components/CartItem";
 import { HashLink as Link } from "react-router-hash-link";
 import "../styles/cart.css";
-import checkoutImg from "../assets/landingpage/deliver.jpg";
 import arrowIcon from "../assets/icons/right-arrow.png";
 import { motion } from "framer-motion";
 const Cart = ({
   cart,
+  useDiscounted,
+  discounted,
   setCart,
   totalPrice,
   handleCartAdd,
@@ -35,6 +36,7 @@ const Cart = ({
   };
   useEffect(() => {
     setActiveSection(null);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
     <section className="cart-section" id="cart">
@@ -59,7 +61,31 @@ const Cart = ({
               </Link>
               <Link to="/#delivery">Continue Shopping</Link>
             </div>
-            {totalPrice > 0 ? (
+            {useDiscounted ? (
+              discounted > 0 ? (
+                <div className="subtotal-discounted">
+                  <div className="left">
+                    <div className="strike">
+                      <p>Subtotal:</p>
+                      <h3>¥ {totalPrice}</h3>
+                    </div>
+                    <div className="real">
+                      <p>After Discount:</p>
+                      <h3>¥ {discounted}</h3>
+                    </div>
+                  </div>
+                  <button
+                    className="place-order"
+                    aria-label="place your order"
+                    onClick={createPopup}
+                  >
+                    Place order
+                  </button>
+                </div>
+              ) : (
+                ""
+              )
+            ) : totalPrice > 0 ? (
               <div className="subtotal">
                 <p>Subtotal:</p>
                 <h3>¥ {totalPrice}</h3>
@@ -76,19 +102,6 @@ const Cart = ({
             )}
           </div>
         </div>
-
-        <a
-          href="https://unsplash.com/photos/9Cwg1ym3SCs"
-          alt="source for image"
-        >
-          <img
-            loading="lazy"
-            className="checkout-img"
-            src={checkoutImg}
-            alt="checkout pic"
-            width={500}
-          />
-        </a>
       </motion.div>
     </section>
   );

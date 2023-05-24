@@ -12,7 +12,8 @@
   display: flex;
   gap: 1em;
 }
-.book-button {
+.submit-reservation-button {
+  align-self: center;
   border-radius: 0px 30px;
 }
 .form-label-group {

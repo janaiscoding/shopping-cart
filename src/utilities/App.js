@@ -15,7 +15,8 @@ const App = () => {
   const [totalPrice, setTotalPrice] = useState(0);
   const [products] = useState(dataSet);
   const [totalQuant, setTotalQuant] = useState(0);
-
+  const [discounted, setDiscounted] = useState(0);
+  const [useDiscounted, setUseDiscounted] = useState(false);
   // Used on store page and cart
   const handleCartAdd = (product, quantity) => {
     //Check if it exists in current cart
@@ -64,6 +65,11 @@ const App = () => {
 
     setTotalPrice(sumPrice);
     setTotalQuant(sumQuantity);
+    let discountedPrice = sumPrice - (sumPrice * 25) / 100;
+    setDiscounted(discountedPrice);
+  };
+  const applyDiscount = () => {
+    setUseDiscounted(true);
   };
   const [activeSection, setActiveSection] = useState(null);
   useEffect(() => {
@@ -86,6 +92,7 @@ const App = () => {
               handleCartAdd={handleCartAdd}
               handleCartUpdate={handleCartUpdate}
               handleCartRemove={handleCartRemove}
+              applyDiscount={applyDiscount}
             />
           }
         />
@@ -97,6 +104,8 @@ const App = () => {
               setActiveSection={setActiveSection}
               setCart={setCart}
               totalPrice={totalPrice}
+              useDiscounted={useDiscounted}
+              discounted={discounted}
               handleCartAdd={handleCartAdd}
               handleCartUpdate={handleCartUpdate}
               handleCartRemove={handleCartRemove}

@@ -1,7 +1,7 @@
 header {
   justify-content: space-between;
   overflow: hidden;
-  height: 8vh;
+  min-height: 8vh;
   max-width: 1300px;
   margin: auto;
 }

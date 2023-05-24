@@ -9,10 +9,10 @@ footer {
   justify-content: space-between;
   letter-spacing: 1px;
   gap: 2em;
-  padding: 3em;
   max-width: 1300px;
+  min-height: 8vh;
   margin: auto;
-  /* background-color: var(--main-yellow); */
+  place-content: center;
 }
 
 .footer-navigation a {
