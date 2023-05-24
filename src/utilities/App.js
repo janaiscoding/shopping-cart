@@ -1,13 +1,11 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { Route, Routes, BrowserRouter } from "react-router-dom";
 import dataSet from "../assets/products/dataSet.js";
 import Navbar from "./Navbar";
 import Home from "../pages/Home";
 // import Menu from "../pages/Menu";
 import MyFooter from "./MyFooter";
-import Tradition from "../pages/Tradition";
-import Delivery from "../pages/Delivery";
 import Cart from "../pages/Cart";
 import Contact from "../pages/Contact";
 import ScrollToTop from "./ScrollToTop.js";

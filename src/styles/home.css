@@ -196,6 +196,7 @@
   left: -25%;
   top: -10px;
   opacity: 0.1;
+  pointer-events: none;
 }
 /*ANCHOR HELPERS*/
 .section-breadcrumbs {
