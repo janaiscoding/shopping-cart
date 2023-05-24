@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { HashLink as Link } from "react-router-hash-link";
-import bookTableImageLeft from "../assets/landingpage/leftbannerfix.png";
-import bookTableImageRight from "../assets/landingpage/rightbanner.png";
+import bookTableImageLeft from "../assets/images/leftbannerfix.png";
+import bookTableImageRight from "../assets/images/rightbanner.png";
 import "../styles/contact.css";
 import { motion } from "framer-motion";
 const Contact = ({ setActiveSection }) => {

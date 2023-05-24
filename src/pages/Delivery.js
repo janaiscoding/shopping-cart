@@ -4,7 +4,8 @@ import ItemCard from "../components/ItemCard";
 import { motion } from "framer-motion";
 import "../styles/delivery.css";
 import { useState } from "react";
-const Delivery = ({ products, handleCartAdd, handleSwapProducts }) => {
+
+const Delivery = ({ products, handleCartAdd }) => {
   const [selected, setSelected] = useState("sushi");
   let lists = [
     { name: "Umaī Sushi", data: "sushi" },

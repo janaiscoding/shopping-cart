@@ -1,5 +1,5 @@
 import React from "react";
-import TraditionImg from "../assets/landingpage/tradition.jpg";
+import TraditionImg from "../assets/images/tradition.webp"
 import { HashLink as Link } from "react-router-hash-link";
 import { motion } from "framer-motion";
 

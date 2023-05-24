@@ -24,6 +24,9 @@
 .section-tradition > .content {
   max-width: 60%;
 }
+.section-home > .content > .section-paragraph{
+  width: 80%;
+}
 .section-home > .content > .section-button {
   margin-top: 2em;
 }
@@ -302,7 +305,7 @@
     margin: 1em;
   }
   .section-delivery-content,
-  .menu-list-li{
+  .menu-list-li {
     align-items: center;
     margin: 1em;
   }
@@ -320,16 +323,20 @@
   }
   .section-tradition > .content,
   .section-reservation > .content,
-  .section-tradition-paragraph, 
-  .section-reservation-paragraph  {
+  .section-tradition-paragraph,
+  .section-reservation-paragraph,
+  .section-home > .content > .section-paragraph {
+    align-self: flex-start;
     max-width: 100%;
+    padding:5px;
+    text-align: left;
   }
   .section-tradition > img {
     /* align-self: flex-end; */
     width: 400px;
   }
-  .products-go-to-cart-button{
-    font-size:1em;
+  .products-go-to-cart-button {
+    font-size: 1em;
     text-align: center;
   }
   .menu-list-li {
@@ -346,17 +353,15 @@
   .section-subscribe img {
     width: 50%;
   }
-  .section-subscribe {
+  .section-subscribe{
     margin: -10px;
   }
-
   .section-subscribe > .right-img {
     align-self: flex-end;
   }
 
   .section-home > .content > .section-title {
     padding: 5px;
-    text-align: center;
+    text-align: left;
   }
-  
 }

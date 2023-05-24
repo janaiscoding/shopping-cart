@@ -205,6 +205,6 @@ input[type="number"] {
     flex-direction: column;
   }
   .cart-section {
-    min-height: 90vh;
+    min-height: 78vh;
   }
 }

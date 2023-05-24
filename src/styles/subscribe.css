@@ -19,4 +19,8 @@
         width: 10em;
         font-size: 1em;
     }
+    .sub-event-wrapper{
+      flex-direction: column;
+      margin-bottom:0;
+    }
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import leftSectionTwoImage from "../assets/landingpage/restaurant.jpg";
+import leftSectionTwoImage from "../assets/images/restaurant.webp";
 import { HashLink as Link } from "react-router-hash-link";
 import { motion } from "framer-motion";
 

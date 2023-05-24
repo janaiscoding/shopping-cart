@@ -5,13 +5,17 @@ li[hover-visible="true"] {
   font-size: 1.5rem;
   cursor: pointer;
 }
-.delivery-buttons-wrapper{
-  display:flex;
-  gap:3em;
+.delivery-buttons-wrapper {
+  display: flex;
+  gap: 3em;
 }
-@media (max-width: 600px){
-    li[hover-visible="true"] {
-        font-size: 1.2rem;
-        font-weight: 600;
-    }
+@media (max-width: 600px) {
+  li[hover-visible="true"] {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  .delivery-buttons-wrapper {
+    flex-direction: column;
+    gap: 0;
+  }
 }

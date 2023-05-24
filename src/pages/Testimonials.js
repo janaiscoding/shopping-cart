@@ -1,10 +1,10 @@
 import React from "react";
-import profilePic from "../assets/landingpage/alexander-hipp.jpg";
+import profilePic from "../assets/images/alexander-hipp.webp"
 import "../styles/testimonial.css";
 
 const Testimonials = () => {
   return (
-    <div className="testimonials-helper">
+
       <div className="section-testimonials">
         <div className="customers-number">
           <div className="number"> 20k+</div>
@@ -32,7 +32,7 @@ const Testimonials = () => {
           </div>
         </div>
       </div>
-    </div>
+
   );
 };
 

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { HashLink as Link } from "react-router-hash-link";
 import "../styles/home.css";
-import TraditionImg from "../assets/landingpage/homeimg.jpg";
+import HomeImg from "../assets/images/homeimg.webp"
 import flowerIcon from "../assets/icons/flowericon.png";
 import Reservation from "./Reservation";
 import Tradition from "./Tradition";
@@ -69,7 +69,7 @@ const Home = ({
             <ul className="menu-list">
               <li>
                 <p>
-                  This project aims to be a shopping cart app, but I
+                  This project aims to be a shopping cart, but I
                   personalised it around my{" "}
                   <span className="title-highlight">favourite food!</span>
                 </p>
@@ -84,7 +84,7 @@ const Home = ({
                 <p>
                   All of the text content in this site was
                   <span className="title-highlight"> AI generated </span> based
-                  on my prompts about a family-owned sushi business in Japan.
+                  on my prompts.
                 </p>
                 <img
                   src={flowerIcon}
@@ -115,7 +115,7 @@ const Home = ({
           <a href="https://unsplash.com/photos/NVX55qVyEkE">
             <img
               className="tradition-img"
-              src={TraditionImg}
+              src={HomeImg}
               alt="japanese restaurant outdoors"
               height={600}
               width={400}

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { HashLink as Link } from "react-router-hash-link";
-import bookTableImageLeft from "../assets/landingpage/leftbannerfix.png";
-import bookTableImageRight from "../assets/landingpage/rightbanner.png";
+import bookTableImageLeft from "../assets/images/leftbannerfix.png";
+import bookTableImageRight from "../assets/images/rightbanner.png";
 import { motion } from "framer-motion";
 import "../styles/subscribe.css";
 
@@ -31,12 +31,14 @@ const Subscribe = ({ applyDiscount }) => {
     }, 1000);
   };
   return (
+
     <section className="section section-subscribe" id="subscribe">
       <img
         src={bookTableImageLeft}
         alt="animated sushi table"
         width={300}
         loading="lazy"
+        style={{ height: "100%" }}
       />
       <motion.div
         initial={{ opacity: 0 }}
@@ -83,6 +85,7 @@ const Subscribe = ({ applyDiscount }) => {
         loading="lazy"
       />
     </section>
+
   );
 };
 export default Subscribe;
