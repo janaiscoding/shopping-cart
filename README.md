@@ -11,11 +11,11 @@
 
 ### On Browser
 
-![Gif preview of the shopping cart](src/assets/previews/japanese-restaurant-preview.gif)
+![Gif preview of the shopping cart](src/assets/previews/umai-preview-desktop.gif)
 
 ### On Mobile
 
-![Gif preview of the shopping cart on mobile](src/assets/previews/japanese-restaurant-mobile.gif)
+![Gif preview of the shopping cart on mobile](src/assets/previews/umai-preview-mobile.gif)
 
 ## Getting Started
 

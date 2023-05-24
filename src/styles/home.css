@@ -306,7 +306,7 @@
   .section-reservation > .content,
   .section-tradition > .content {
     align-items: center;
-    margin: 1em;
+    margin:0;
   }
   .section-delivery-content,
   .menu-list-li {
@@ -331,7 +331,7 @@
   .section-reservation-paragraph,
   .section-home > .content > .section-paragraph {
     align-self: flex-start;
-    max-width: 100%;
+    min-width: 100%;
     padding:5px;
     text-align: left;
   }
