@@ -4,7 +4,7 @@ import bookTableImageLeft from "../assets/images/leftbannerfix.png";
 import bookTableImageRight from "../assets/images/rightbanner.png";
 import "../styles/contact.css";
 import { motion } from "framer-motion";
-const Contact = ({ setActiveSection }) => {
+const Reservation = ({ setActiveSection }) => {
   let title = "Make a Reservation at Umaī";
   let breadcrumbs = "席を予約する / Book Table";
   let floatingTitle = "席を予約する / Book Table";
@@ -38,7 +38,7 @@ const Contact = ({ setActiveSection }) => {
   return (
     <section
       className=" section section-subscribe section-contact"
-      id="contact"
+      id="reservation"
     >
       <img
         src={bookTableImageLeft}
@@ -147,4 +147,4 @@ const Contact = ({ setActiveSection }) => {
     </section>
   );
 };
-export default Contact;
+export default Reservation;

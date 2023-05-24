@@ -7,7 +7,7 @@ import Home from "../pages/Home";
 // import Menu from "../pages/Menu";
 import MyFooter from "./MyFooter";
 import Cart from "../pages/Cart";
-import Contact from "../pages/Contact";
+import Reservation from "../pages/Reservation";
 import ScrollToTop from "./ScrollToTop.js";
 
 const App = () => {
@@ -114,8 +114,8 @@ const App = () => {
           }
         />
         <Route
-          path="/contact"
-          element={<Contact setActiveSection={setActiveSection} />}
+          path="/reservation"
+          element={<Reservation setActiveSection={setActiveSection} />}
         />
       </Routes>
       <MyFooter />

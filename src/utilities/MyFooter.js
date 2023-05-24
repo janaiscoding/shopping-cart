@@ -30,7 +30,7 @@ const MyFooter = () => {
                 <Link to="/#dining">Dining</Link>
               </li>
               <li>
-                <Link to="/contact">Contact</Link>
+                <Link to="/reservation">Book Table</Link>
               </li>
             </ul>
           </div>
