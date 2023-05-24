@@ -31,7 +31,6 @@ const Home = ({ products, handleCartAdd, activeSection, setActiveSection }) => {
     sections.forEach((section) => {
       observer.current.observe(section);
     });
-    console.log(activeSection);
     return () => {
       sections.forEach((section) => {
         observer.current.unobserve(section);
