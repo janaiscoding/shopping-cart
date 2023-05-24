@@ -2,8 +2,10 @@ import React, { useEffect, useRef } from "react";
 import { HashLink as Link } from "react-router-hash-link";
 import "../styles/navbar.css";
 import cartIcon from "../assets/icons/shopping-cart.png";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = ({ totalQuant, activeSection }) => {
+  let navigate = useNavigate()
   let navRef = useRef();
   const toggleNav = () => {
     const primaryNav = document.querySelector(".primary-navigation");
@@ -102,18 +104,18 @@ const Navbar = ({ totalQuant, activeSection }) => {
                   Delivery
                 </Link>
               </li>
-              <li className={activeSection === "reservation" ? "active" : ""}>
+              <li className={activeSection === "dining" ? "active" : ""}>
                 <Link
-                  to="/#reservation"
-                  className={activeSection === "reservation" ? "active" : ""}
+                  to="/#dining"
+                  className={activeSection === "dining" ? "active" : ""}
                   onClick={toggleNav}
                 >
-                  Reservation
+                  Dining
                 </Link>
               </li>
-              <li className="contact-button">
-                <Link to="/contact" onClick={toggleNav}>
-                  Contact Us
+              <li className="contact-button" onClick={() => navigate('/contact')}>
+                <Link to="/reservation" onClick={toggleNav}>
+                  Book Table
                 </Link>
               </li>
             </ul>

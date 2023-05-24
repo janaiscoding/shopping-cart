@@ -3,19 +3,19 @@ import leftSectionTwoImage from "../assets/images/restaurant.webp";
 import { HashLink as Link } from "react-router-hash-link";
 import { motion } from "framer-motion";
 
-const Reservation = () => {
+const Dining = () => {
   let title = "Book your table today";
-  let breadcrumbs = "予約 / Reservation";
-  let floatingTitle = "予約 / Reservation";
+  let breadcrumbs = "予約 / Dining";
+  let floatingTitle = "予約 / Dining";
   return (
-    <section className="section section-reservation" id="reservation">
+    <section className="section section-dining" id="dining">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         className="content"
       >
-        <Link to="/#reservation">
+        <Link to="/#dining">
           <h2 className="section-breadcrumbs">{breadcrumbs}</h2>
         </Link>
         <h1 className="section-title">
@@ -34,11 +34,9 @@ const Reservation = () => {
             hassle-free dining experience.
           </span>
         </p>
-        <button className="section-button">
-          <Link to="/contact" className="store-button">
+          <Link to="/reservation" className="section-button store-button">
             Reservation
           </Link>
-        </button>
       </motion.div>
       <a href="https://unsplash.com/photos/HvhinFxq4_s">
         <img
@@ -53,4 +51,4 @@ const Reservation = () => {
     </section>
   );
 };
-export default Reservation;
+export default Dining;

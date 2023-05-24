@@ -27,7 +27,7 @@ const MyFooter = () => {
                 <Link to="/#delivery">Delivery</Link>
               </li>
               <li>
-                <Link to="/#reservation">Reservation</Link>
+                <Link to="/#dining">Dining</Link>
               </li>
               <li>
                 <Link to="/contact">Contact</Link>

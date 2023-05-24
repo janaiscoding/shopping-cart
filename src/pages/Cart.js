@@ -14,6 +14,7 @@ const Cart = ({
   handleCartUpdate,
   handleCartRemove,
   setActiveSection,
+  applyDiscount
 }) => {
   let allCartItems = cart.map((cartItem) => (
     <CartItem
@@ -101,6 +102,11 @@ const Cart = ({
               ""
             )}
           </div>
+          {totalPrice>0? (
+          <div>Click checkbox for 25% discount(replace with redirect to subscribe)
+          <input type="checkbox" onClick={applyDiscount} />
+          </div>
+          )  : ""}
         </div>
       </motion.div>
     </section>

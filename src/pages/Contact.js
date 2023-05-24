@@ -5,7 +5,7 @@ import bookTableImageRight from "../assets/images/rightbanner.png";
 import "../styles/contact.css";
 import { motion } from "framer-motion";
 const Contact = ({ setActiveSection }) => {
-  let title = "Book a Table for Dinner";
+  let title = "Make a Reservation at Umaī";
   let breadcrumbs = "席を予約する / Book Table";
   let floatingTitle = "席を予約する / Book Table";
   const [name, setName] = useState("");
@@ -59,9 +59,9 @@ const Contact = ({ setActiveSection }) => {
           <span className="floating-title">{floatingTitle}</span>
           {title}
         </h1>
-        <p className="section-paragraph">
+        {/* <p className="section-paragraph">
           This reservation form works.
-        </p>
+        </p> */}
         <form className="section-form" onSubmit={(e) => handleSubmit(e)}>
           <div className="form-group">
             <div className="form-label-group">
@@ -70,6 +70,7 @@ const Contact = ({ setActiveSection }) => {
                 type="text"
                 name="name"
                 id="name"
+                placeholder="John Doe"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 required
@@ -81,6 +82,7 @@ const Contact = ({ setActiveSection }) => {
                 type="email"
                 name="email"
                 id="email"
+                placeholder="john.doe@mail.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
@@ -94,6 +96,7 @@ const Contact = ({ setActiveSection }) => {
                 type="tel"
                 name="phone"
                 id="phone"
+                placeholder="0012-345-567"
                 required
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
@@ -117,6 +120,7 @@ const Contact = ({ setActiveSection }) => {
               <input
                 type="text"
                 name="notes"
+                placeholder="Optional preferences, table size.."
                 id="notes"
                 value={notes}
                 onChange={(e) => setNotes(e.target.value)}

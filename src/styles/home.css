@@ -13,7 +13,7 @@
   justify-content: space-between;
 }
 .section-home,
-.section-reservation,
+.section-dining,
 .section-tradition {
   max-width: 1300px;
   margin: 3em auto;
@@ -24,7 +24,7 @@
   box-shadow: 3px 3px 10px 3px rgba(217, 214, 217, 0.61);
 }
 .section-home > .content,
-.section-reservation > .content,
+.section-dining > .content,
 .section-tradition > .content {
   max-width: 60%;
 }
@@ -69,7 +69,7 @@
 }
 /*SECTION TRADITION*/
 .section-tradition-paragraph,
-.section-reservation-paragraph {
+.section-dining-paragraph {
   max-width: 70%;
 }
 /* SECTION DELIVERY */
@@ -210,7 +210,7 @@
   color: var(--main-pink);
   margin-top: 3em;
 }
-.section-reservation > a > img,
+.section-dining > a > img,
 .section-tradition > a > img {
   margin-top: 5em;
 }
@@ -234,7 +234,7 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .section-reservation > .content,
+  .section-dining > .content,
   .section-tradition > .content,
   .section-delivery-content {
     align-items: center;
@@ -244,7 +244,7 @@
     text-align: left;
   }
 
-  .section-reservation > .content > button {
+  .section-dining > .content > button {
     align-self: flex-end;
   }
 
@@ -261,7 +261,7 @@
     flex-direction: column;
   }
 
-  .section-reservation > a > img,
+  .section-dining > a > img,
   .section-tradition > a > img {
     height: 500px;
   }
@@ -303,7 +303,7 @@
   .section-home > .content > .section-button {
     margin-top: 0em;
   }
-  .section-reservation > .content,
+  .section-dining > .content,
   .section-tradition > .content {
     align-items: center;
     margin:0;
@@ -317,7 +317,7 @@
     text-align: left;
   }
 
-  .section-reservation > .content > button {
+  .section-dining > .content > button {
     align-self: center;
   }
 
@@ -326,9 +326,9 @@
     align-items: flex-end;
   }
   .section-tradition > .content,
-  .section-reservation > .content,
+  .section-dining > .content,
   .section-tradition-paragraph,
-  .section-reservation-paragraph,
+  .section-dining-paragraph,
   .section-home > .content > .section-paragraph {
     align-self: flex-start;
     min-width: 100%;

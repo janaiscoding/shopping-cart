@@ -3,12 +3,13 @@ import { HashLink as Link } from "react-router-hash-link";
 import "../styles/home.css";
 import HomeImg from "../assets/images/homeimg.webp"
 import flowerIcon from "../assets/icons/flowericon.png";
-import Reservation from "./Reservation";
+import Dining from "./Dining";
 import Tradition from "./Tradition";
 import Delivery from "./Delivery";
 import Subscribe from "./Subscribe";
 import Testimonials from "./Testimonials";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const Home = ({
   products,
@@ -18,7 +19,7 @@ const Home = ({
   applyDiscount,
 }) => {
   const observer = useRef(null);
-
+  const navigate = useNavigate()
   useEffect(() => {
     observer.current = new IntersectionObserver(
       (entries) => {
@@ -106,11 +107,9 @@ const Home = ({
                 />
               </li>
             </ul>
-            <button className="section-button" aria-label="Go to Order Food">
-              <Link to="/#delivery" className="store-button">
+            <Link to="/#delivery" className="section-button store-button" aria-label="Go to Order Food">
                 Order Online
-              </Link>
-            </button>
+            </Link>
           </div>
           <a href="https://unsplash.com/photos/NVX55qVyEkE">
             <img
@@ -125,7 +124,7 @@ const Home = ({
         </section>
         <Tradition />
         <Delivery products={products} handleCartAdd={handleCartAdd} />
-        <Reservation />
+        <Dining />
         <Testimonials />
         <Subscribe applyDiscount={applyDiscount} />
       </motion.div>

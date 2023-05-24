@@ -102,6 +102,7 @@ const App = () => {
             <Cart
               cart={cart}
               setActiveSection={setActiveSection}
+              applyDiscount={applyDiscount}
               setCart={setCart}
               totalPrice={totalPrice}
               useDiscounted={useDiscounted}

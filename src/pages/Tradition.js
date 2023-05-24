@@ -41,11 +41,10 @@ const Tradition = () => {
             highest quality dishes and unparalleled service.
           </span>
         </p>
-        <button className="section-button" aria-label="Go to Order Food">
-          <Link to="/#delivery" className="store-button">
+          <Link to="/#delivery" className=" section-button store-button" aria-label="Go to Order Food">
             Order Online
           </Link>
-        </button>
+
       </motion.div>
     </section>
   );

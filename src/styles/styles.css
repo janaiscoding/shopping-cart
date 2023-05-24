@@ -43,7 +43,8 @@ a:focus {
   text-decoration: none;
 }
 
-button {
+button,
+.store-button {
   padding: 0.625em 1.25em;
   font-size: 1.2em;
   display: inline-block;
@@ -52,7 +53,7 @@ button {
   border: 1px solid var(--main-pink);
   color: var(--main-white);
 }
-button.section-button,
+.section-button,
 .order-button,
 .products-go-to-cart-button,
 .contact-button,

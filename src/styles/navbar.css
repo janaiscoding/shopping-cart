@@ -121,7 +121,7 @@ header {
 }
 
 .primary-navigation .contact-button {
-  padding: 0.3em 1em;
+  padding: 0.625em 1.25em;
   font-size: 1.2em;
   display: inline-block;
   background-color: var(--main-white);
