@@ -1,4 +1,7 @@
-
+.section-testimonials-handler {
+  width: 100%;
+  background-color: var(--main-yellow);
+}
 .section-testimonials {
   display: flex;
   color: var(--main-blue);
@@ -39,10 +42,13 @@
   letter-spacing: 1px;
 }
 @media (max-width: 600px) {
-
-  .section-testimonials {
+  .section-testimonials-handler{
     margin: 10px -10px;
     padding:1em;
+    width: fit-content;
+  }
+  .section-testimonials {
+    padding: 1em;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;

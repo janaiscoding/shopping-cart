@@ -2,6 +2,14 @@ import React from "react";
 import Banner from "../assets/products/banner.png";
 import "../styles/cardstyle.css";
 const ItemCard = ({ product, handleAdd }) => {
+  const handleCartAnimation = (e) => {
+    const image = e.target.parentNode.childNodes[1];
+    image.style.transform = "scale(1.1)";
+    setTimeout(() => {
+      image.style.transform = "scale(1)";
+    }, 100);
+  };
+
   return (
     <div className="product-card">
       <div className="banner">
@@ -17,7 +25,16 @@ const ItemCard = ({ product, handleAdd }) => {
       />
       <p className="product-name">{product.name}</p>
       <p className="product-price"> ¥ {product.price}</p>
-      <button className="order-button" aria-label="add product in your cart" onClick={() => handleAdd(product, 1)}>Add to Cart</button>
+      <button
+        className="order-button"
+        aria-label="add product in your cart"
+        onClick={(e) => {
+          handleAdd(product, 1);
+          handleCartAnimation(e);
+        }}
+      >
+        Add to Cart
+      </button>
     </div>
   );
 };
