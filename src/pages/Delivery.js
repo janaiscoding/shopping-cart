@@ -38,7 +38,7 @@ const Delivery = ({ products, handleCartAdd, handleSwapProducts }) => {
     initialId.setAttribute("hover-visible", "true");
   }, []);
   return (
-    <section className="section section-delivery " id="delivery">
+    <section className="section section-delivery" id="delivery">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}

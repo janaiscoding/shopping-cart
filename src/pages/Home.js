@@ -14,14 +14,19 @@ const Home = ({ products, handleCartAdd, activeSection, setActiveSection }) => {
   const observer = useRef(null);
 
   useEffect(() => {
-    observer.current = new IntersectionObserver((entries) => {
-      const visibleSection = entries.find(
-        (entry) => entry.isIntersecting
-      )?.target;
-      if (visibleSection) {
-        setActiveSection(visibleSection.id);
+    observer.current = new IntersectionObserver(
+      (entries) => {
+        const visibleSection = entries.find(
+          (entry) => entry.isIntersecting
+        )?.target;
+        if (visibleSection) {
+          setActiveSection(visibleSection.id);
+        }
+      },
+      {
+        threshold: 0.5,
       }
-    });
+    );
     const sections = document.querySelectorAll(".section");
     sections.forEach((section) => {
       observer.current.observe(section);
@@ -32,7 +37,8 @@ const Home = ({ products, handleCartAdd, activeSection, setActiveSection }) => {
         observer.current.unobserve(section);
       });
     };
-  }, []);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [activeSection]);
   return (
     <>
       <motion.div
