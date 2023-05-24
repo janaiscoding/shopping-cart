@@ -104,9 +104,6 @@ header {
   align-items: center;
   gap: var(--gap, 2rem);
 }
-nav {
-  margin-right: 5em;
-}
 .primary-navigation {
   align-items: center;
   list-style: none;
