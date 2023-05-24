@@ -352,6 +352,7 @@
 
   .section-subscribe img {
     width: 50%;
+    height: auto;
   }
   .section-subscribe{
     margin: -10px;
