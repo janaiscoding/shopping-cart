@@ -8,6 +8,10 @@
   justify-content: space-between;
 }
 /* SECTION HOME */
+.section-home{
+  display: flex;
+  justify-content: space-between;
+}
 .section-home,
 .section-reservation,
 .section-tradition {
@@ -25,7 +29,7 @@
   max-width: 60%;
 }
 .section-home > .content > .section-paragraph{
-  width: 80%;
+  width: 60%;
 }
 .section-home > .content > .section-button {
   margin-top: 2em;

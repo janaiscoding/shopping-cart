@@ -37,7 +37,6 @@ const Home = ({
     sections.forEach((section) => {
       observer.current.observe(section);
     });
-    console.log(activeSection)
     return () => {
       sections.forEach((section) => {
         observer.current.unobserve(section);
@@ -53,7 +52,7 @@ const Home = ({
         viewport={{ once: true }}
         className="home-main"
       >
-        <section className="section section-home" id="home">
+        <section className="section section-home">
           <div className="content">
             <h1 className="section-title">
               ENJOY THE TASTE OF
@@ -61,7 +60,7 @@ const Home = ({
             </h1>
             <p className="section-paragraph">
               Sushi, one of the most popular Japanese dishes, has a rich and
-              fascinating history that dates back to the 8th century.
+              fascinating history that dates back to the 8th century.   <br />
               <span className="title-highlight">
                 {" "}
                 Fun facts about this project:
@@ -72,7 +71,7 @@ const Home = ({
                 <p>
                   This project aims to be a shopping cart, but I
                   personalised it around my{" "}
-                  <span className="title-highlight">favourite food!</span>
+                  <span className="title-highlight">favorite food!</span>
                 </p>
                 <img
                   src={flowerIcon}

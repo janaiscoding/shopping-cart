@@ -73,10 +73,9 @@ const Navbar = ({ totalQuant, activeSection }) => {
               className="primary-navigation flex"
               data-visible="false"
             >
-              <li className={activeSection === "home" ? "active" : ""}>
+              <li>
                 <Link
                   to="/"
-                  className={activeSection === "home" ? "active" : ""}
                   onClick={() => {
                     window.scrollTo(0, 0);
                     toggleNav();
