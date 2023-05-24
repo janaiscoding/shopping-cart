@@ -113,7 +113,8 @@ const Navbar = ({ totalQuant, activeSection }) => {
                   Dining
                 </Link>
               </li>
-              <li className="contact-button" onClick={() => navigate('/reservation')}>
+              <li className="contact-button" onClick={() =>{ navigate('/reservation')
+            toggleNav()}}>
                 <Link to="/reservation" onClick={toggleNav}>
                   Book Table
                 </Link>
