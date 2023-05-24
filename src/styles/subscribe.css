@@ -1,5 +1,5 @@
 #subscribe-email {
-  width: 15em;
+  width: 14em;
   border-radius: 2em 0em;
   text-align: left;
   padding: 1em;
@@ -11,6 +11,17 @@
   margin-bottom:5em;
   align-items: center;
 }
+.subscribe-button{
+  color: var(--secondary-blue);
+  background-color: var(--main-white);
+  padding: 1em;
+  width: 6em;
+  font-size: 1.2em;
+  display: inline-block;
+  border-radius: 0px 30px;
+  border: 1px solid var(--main-pink);
+}
+
 .subscribe-text {
   color: var(--secondary-blue);
 }

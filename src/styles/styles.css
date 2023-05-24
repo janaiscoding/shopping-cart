@@ -56,13 +56,15 @@ button.section-button,
 .order-button,
 .products-go-to-cart-button,
 .contact-button,
-.place-order {
+.place-order,
+.subscribe-button {
   box-shadow: 0 3px var(--main-blue);
 }
 button.section-button:active,
 .order-button:active,
 .products-go-to-cart-button:active,
-.place-order:active {
+.place-order:active,
+.subscribe-button:active {
   transform: scale(1.01);
   box-shadow: 0 2px var(--main-blue);
   transform: translateY(4px);

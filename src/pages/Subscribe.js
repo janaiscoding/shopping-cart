@@ -71,7 +71,7 @@ const Subscribe = ({ applyDiscount }) => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-          <button type="submit" className="products-go-to-cart-button">
+          <button type="submit" className="subscribe-button">
             Submit
           </button>
         </form>
