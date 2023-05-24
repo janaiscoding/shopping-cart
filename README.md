@@ -5,7 +5,7 @@
 - This project aims to be a **Shopping Cart App**, but I personalised it around my favourite food!
 - I've decided to create a fictive Restaurant for ordering food online with React and React Router.
 - Mobile Responsiveness was created with plain CSS3, for a better understanding of the responsiveness concept and media queries. Currently I am using TailwindCSS in my projects.
-- See the full live preview on the GitHub Pages deploy [Umaī - Japanese Restaurant](https://janaiscoding.github.io/shopping-cart/).
+- See the full live preview on the Firebase Hosting [Umaī - Japanese Restaurant](https://umai-restaurant.web.app/).
 
 ## Live Demo
 
