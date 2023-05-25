@@ -50,13 +50,13 @@ const Home = ({ products, handleCartAdd, setActiveSection, applyDiscount }) => {
               ENJOY THE TASTE OF
               <br /> <span className="text-pink">UMAī</span> FOOD
             </h1>
-            <p className="text-grey text-xl md:text-base">
+            <p className="text-grey text-xl md:text-base md:max-w-[70%]">
               Sushi, one of the most popular Japanese dishes, has a rich and
               fascinating history that dates back to the 8th century. <br />
               <span className="text-pink"> Fun facts about this project:</span>
             </p>
             <ul className="flex flex-col gap-2 text-grey text-lg md:flex-row md:items-start md:text-base">
-              <li className="flex w-full justify-between p-3 bg-white border-b-2 border-solid border-pink drop-shadow md:h-40 ">
+              <li className="flex w-full justify-between p-3 bg-white border-b-2 border-solid border-pink drop-shadow md:h-40 hover:cursor-pointer hover:translate-y-[-10px]">
                 <p className="self-start">
                   This project aims to be a shopping cart, but I personalised it
                   around my{" "}
@@ -70,7 +70,7 @@ const Home = ({ products, handleCartAdd, setActiveSection, applyDiscount }) => {
                   className="md:self-end"
                 />
               </li>
-              <li className="flex w-full justify-between p-3 bg-white border-b-2 border-solid border-pink drop-shadow md:h-40">
+              <li className="flex w-full justify-between p-3 bg-white border-b-2 border-solid border-pink drop-shadow md:h-40 hover:cursor-pointer hover:translate-y-[-10px]">
                 <p className="self-start">
                   All of the text content in this site was
                   <span className="text-pink"> AI generated </span> based
@@ -84,7 +84,7 @@ const Home = ({ products, handleCartAdd, setActiveSection, applyDiscount }) => {
                   className="md:self-end"
                 />
               </li>
-              <li className="flex w-full justify-between p-3 bg-white border-b-2 border-solid border-pink drop-shadow md:h-40">
+              <li className="flex w-full justify-between p-3 bg-white border-b-2 border-solid border-pink drop-shadow md:h-40 hover:cursor-pointer hover:translate-y-[-10px]">
                 <p className="self-start">
                   Umaī means <span className="text-pink">delicious</span>{" "}
                   in Japanese.
