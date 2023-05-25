@@ -4,7 +4,6 @@
 
 - This project aims to be a **Shopping Cart App**, but I personalised it around my favourite food!
 - I've decided to create a fictive Restaurant for ordering food online with React and React Router.
-- Mobile Responsiveness was created with plain CSS3, for a better understanding of the responsiveness concept and media queries. Currently I am using TailwindCSS in my projects.
 - See the full live preview on the Firebase Hosting [Umaī - Japanese Restaurant](https://umai-restaurant.web.app/).
 
 ## Live Demo
@@ -31,6 +30,7 @@ npm run start
 ## Project Details & Description
 
 - Upon further reviewing, I added: **better content and page spacing**, **active anchor links styling**, **better mobile nav sidebar handling(it now closes when it has to)**
+- Mobile Responsiveness was created with plain CSS3, for a better understanding of the responsiveness concept and media queries, and then I switched to TailwindCSS.
 - This is a SPA (Single Page Application) of a fictive Japanese Restaurant made with React and React Router.
 - In this restaurant, we have a landing page, a contact page(for booking a dinner), the menu with items (filtered by food type).
 - In the Navigation Bar you can see how many items are in the bag.

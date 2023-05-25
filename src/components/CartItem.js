@@ -34,16 +34,16 @@ const CartItem = ({
   };
 
   return (
-    <div className="cart-item">
-      <div className="item-info">
-        <img src={cartItem.img} alt={cartItem.name} width={100} height="auto" />
-        <div className="product-name"> {cartItem.name}</div>
+    <div className="flex flex-col gap-2 py-2 md:flex-row md:gap-10">
+      <div className="flex gap-24 md:gap-1">
+        <img src={cartItem.img} alt={cartItem.name} width={80} height="auto" />
+        <div className="font-bold text-xl text-blue"> {cartItem.name}</div>
       </div>
-      <div className="cart-item-right">
-        <div className="cart-handle-change">
+      <div className="flex justify-between gap-20 md:gap-[5em]">
+        <div className="flex items-center justify-center gap-2">
           <div
             aria-label="remove one product"
-            className="remove-one-cart-button"
+            className="font-bold text-2xl hover:cursor-pointer"
             onClick={() => handleRemoveSingular()}
           >
             -
@@ -54,6 +54,7 @@ const CartItem = ({
             max={"99"}
             value={quantity}
             aria-label="insert custom quantity"
+            className="rounded h-[2.5em] w-[2.5em] border border-solid text-center p-[5px]"
             onChange={(e) => {
               handleQuantityChange(e);
               console.log(quantity);
@@ -61,17 +62,17 @@ const CartItem = ({
           />
           <div
             aria-label="add one product"
-            className="add-one-cart-button"
+            className="font-bold text-2xl hover:cursor-pointer"
             onClick={() => handleAddSingular()}
           >
             +
           </div>
         </div>
-        <div className="cart-item-price">
+        <div className="italic text-blue text-lg">
           ¥{cartItem.price * cartItem.quantity}
         </div>
         <div
-          className="remove-button"
+          className="font-bold text-xl hover:cursor-pointer"
           onClick={() => handleCartRemove(cartItem)}
         >
           x

@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
 import CartItem from "../components/CartItem";
 import { HashLink as Link } from "react-router-hash-link";
-import "../styles/cart.css";
 import arrowIcon from "../assets/icons/right-arrow.png";
 import { motion } from "framer-motion";
+import Subscribe from "./Subscribe";
+import '../index.css'
 const Cart = ({
   cart,
   useDiscounted,
@@ -45,13 +46,12 @@ const Cart = ({
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
-        className="cart-main"
       >
-        <div className="cart-info">
-          <h1 className="cart-title">Shopping Cart</h1>
-          <div className="cart-items-wrapper">{allCartItems}</div>
-          <div className="handle-checkout">
-            <div className="continue-shopping">
+        <div className="flex flex-col justify-center items-center my-10">
+          <h1 className="font-tokyo text-4xl font-bold text-blue">Shopping Cart</h1>
+          <div className="flex flex-col border-b border-grey border-solid">{allCartItems}</div>
+          <div className="flex flex-col items-center md:flex-row md:items-end">
+            <div className="flex items-center gap-2 text-grey hover:cursor-pointer">
               <Link to="/#delivery">
                 <img
                   src={arrowIcon}
@@ -64,19 +64,19 @@ const Cart = ({
             </div>
             {useDiscounted ? (
               discounted > 0 ? (
-                <div className="subtotal-discounted">
-                  <div className="left">
-                    <div className="strike">
+                <div className="flex">
+                  <div className="flex flex-col items-start gap-1 md:items-end">
+                    <div className="text-grey line-through text-sm">
                       <p>Subtotal:</p>
-                      <h3>¥ {totalPrice}</h3>
+                      <h3 className="font-bold">¥ {totalPrice}</h3>
                     </div>
-                    <div className="real">
-                      <p>After Discount:</p>
-                      <h3>¥ {discounted}</h3>
+                    <div className="text-grey text-right">
+                      <p className="text-xl md:text-base">After Discount:</p>
+                      <h3 className="text-orange font-bold text-3xl md:text-xl">¥ {discounted}</h3>
                     </div>
                   </div>
                   <button
-                    className="place-order"
+                    className="section-button self-end"
                     aria-label="place your order"
                     onClick={createPopup}
                   >
@@ -87,11 +87,11 @@ const Cart = ({
                 ""
               )
             ) : totalPrice > 0 ? (
-              <div className="subtotal">
-                <p>Subtotal:</p>
-                <h3>¥ {totalPrice}</h3>
+              <div className="flex md:items-end gap-1">
+                <p className="text-grey">Subtotal:</p>
+                <h3 className="font-bold text-3xl text-orange">¥ {totalPrice}</h3>
                 <button
-                  className="place-order"
+                  className="section-button"
                   aria-label="place your order"
                   onClick={createPopup}
                 >
@@ -102,12 +102,8 @@ const Cart = ({
               ""
             )}
           </div>
-          {totalPrice>0? (
-          <div>Click checkbox for 25% discount(replace with redirect to subscribe)
-          <input type="checkbox" onClick={applyDiscount} />
-          </div>
-          )  : ""}
         </div>
+        <Subscribe applyDiscount={applyDiscount}/>
       </motion.div>
     </section>
   );

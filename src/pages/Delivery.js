@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { HashLink as Link } from "react-router-hash-link";
 import ItemCard from "../components/ItemCard";
 import { motion } from "framer-motion";
-import "../styles/delivery.css";
 import { useState } from "react";
 
 const Delivery = ({ products, handleCartAdd }) => {
@@ -26,7 +25,12 @@ const Delivery = ({ products, handleCartAdd }) => {
   };
 
   const allLists = lists.map((list, index) => (
-    <li key={index} id={list.data} onClick={(e) => handleSelected(e)}>
+    <li
+      key={index}
+      id={list.data}
+      onClick={(e) => handleSelected(e)}
+      className="text-blue text-2xl p-4 rounded-ee-[2em] rounded-ss-[2em] bg-white drop-shadow hover:text-pink hover:scale-110 active:scale-110 hover:cursor-pointer"
+    >
       {list.name}
     </li>
   ));
@@ -39,17 +43,22 @@ const Delivery = ({ products, handleCartAdd }) => {
     initialId.setAttribute("hover-visible", "true");
   }, []);
   return (
-    <section className="section section-delivery" id="delivery">
+    <section
+      className="section section-delivery  my-8 flex flex-col"
+      id="delivery"
+    >
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
-        className="section-centered-title"
+        className="my-8 flex flex-col gap-4 px-5 text-center"
       >
         <Link to="/#delivery">
-          <h2 className="section-breadcrumbs">{breadcrumbs}</h2>
+          <h2 className="text-xl font-bold text-pink text-center md:mt-20">
+            {breadcrumbs}
+          </h2>
         </Link>
-        <h1 className="section-title">
+        <h1 className="font-tokyo text-6xl font-semibold text-blue relative overflow-hidden">
           <span className="floating-title">{floatingTitle}</span>
           {title}
         </h1>
@@ -58,18 +67,18 @@ const Delivery = ({ products, handleCartAdd }) => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
-        className="section-delivery-content"
+        className="flex flex-col px-2"
       >
-        <ul className="menu-list-li">{allLists}</ul>
-        <div className="products-wrapper-total">
-          <div className="products-wrapper">{shownProducts}</div>
-          <div className="delivery-buttons-wrapper">
-            <Link to="/cart" className="products-go-to-cart-button">
+        <ul className="grid grid-cols-2 gap-4 md:flex">{allLists}</ul>
+        <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-4 md:grid md:grid-cols-3">{shownProducts}</div>
+          <div className="flex flex-col gap-2 md:flex-row">
+            <Link to="/cart" className="section-button">
               Go To Cart
             </Link>
             <a
               href="https://www.freepik.com/free-vector/asia-food-icon-set_1531439.htm#query=sushi&position=1&from_view=search&track=sph"
-              className="products-go-to-cart-button"
+              className="section-button"
             >
               View Icons Source
             </a>

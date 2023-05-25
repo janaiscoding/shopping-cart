@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-import { HashLink as Link } from "react-router-hash-link";
 import bookTableImageLeft from "../assets/images/leftbannerfix.png";
 import bookTableImageRight from "../assets/images/rightbanner.png";
 import { motion } from "framer-motion";
-import "../styles/subscribe.css";
 
 const Subscribe = ({ applyDiscount }) => {
   const [email, setEmail] = useState("");
@@ -32,35 +30,33 @@ const Subscribe = ({ applyDiscount }) => {
   };
   return (
 
-    <section className="section section-subscribe" id="subscribe">
+    <section className="section section-subscribe bg-orange flex flex-col md:flex-row md:justify-between md:py-10 " id="subscribe">
       <img
         src={bookTableImageLeft}
         alt="animated sushi table"
-        width={300}
         loading="lazy"
+        className="max-w-[100px] self-start md:max-w-[300px]"
         style={{ height: "100%" }}
       />
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
-        className="content"
+        className="flex flex-col gap-2 px-2"
       >
-        <Link to="/#subscribe">
-          <h2 className="section-breadcrumbs">{breadcrumbs}</h2>
-        </Link>
-        <h1 className="section-title">
-          <span className="floating-title">{floatingTitle}</span>
+          <h2 className="text-xl font-bold text-white text-center hover:cursor-pointer">{breadcrumbs}</h2>
+        <h1 className="text-6xl font-bold text-white text-center font-tokyo relative overflow-hidden">
+          <span className=" floating-title">{floatingTitle}</span>
           Joīn Membershīp to get
           <br /> 25% off
         </h1>
-        <p className="section-paragraph">
+        <p className="text-xl font-bold text-white text-center">
           Insert an email address to get a discount.
           <br />
           This works in the shopping cart.
         </p>
         <form
-          className="sub-event-wrapper"
+          className="flex gap-1"
           onSubmit={(e) => handleSubscription(e)}
         >
           <input
@@ -70,17 +66,17 @@ const Subscribe = ({ applyDiscount }) => {
             placeholder="Enter your email address"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            className="rounded-ee-[5em] rounded-ss-[5em] w-[15em] h-14 p-4 text-left focus:outline-pink"
           />
-          <button type="submit" className="subscribe-button">
+          <button type="submit" className="section-button bg-white">
             Submit
           </button>
         </form>
       </motion.div>
       <img
-        className="right-img"
+        className="max-w-[100px] self-end md:max-w-[300px]"
         src={bookTableImageRight}
         alt="animated sushi table"
-        width={300}
         height="auto"
         loading="lazy"
       />

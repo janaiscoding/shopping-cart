@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 import { HashLink as Link } from "react-router-hash-link";
 import bookTableImageLeft from "../assets/images/leftbannerfix.png";
 import bookTableImageRight from "../assets/images/rightbanner.png";
-import "../styles/contact.css";
 import { motion } from "framer-motion";
+import '../styles/contact.css'
+
 const Reservation = ({ setActiveSection }) => {
   let title = "Make a Reservation at Umaī";
   let breadcrumbs = "席を予約する / Book Table";
@@ -37,25 +38,25 @@ const Reservation = ({ setActiveSection }) => {
   }, []);
   return (
     <section
-      className=" section section-subscribe section-contact"
+      className=" section section-subscribe section-contact flex flex-col md:flex-row md:justify-between md:min-h-[87vh]"
       id="reservation"
     >
       <img
         src={bookTableImageLeft}
         alt="animated sushi table"
-        height={400}
+        className="max-w-[100px] self-start md:max-w-[300px]"
         loading="lazy"
       />
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
-        className="content"
+        className="flex flex-col md:self-center"
       >
         <Link to="/contact">
-          <h2 className="section-breadcrumbs">{breadcrumbs}</h2>
+          <h2 className="text-xl font-bold text-white text-center hover:cursor-pointer">{breadcrumbs}</h2>
         </Link>
-        <h1 className="section-title">
+        <h1 className="text-6xl font-bold text-white text-center font-tokyo relative overflow-hidden">
           <span className="floating-title">{floatingTitle}</span>
           {title}
         </h1>
@@ -137,11 +138,9 @@ const Reservation = ({ setActiveSection }) => {
         </form>
       </motion.div>
       <img
-        className="right-img"
+        className="max-w-[100px] self-end md:max-w-[300px]"
         src={bookTableImageRight}
         alt="animated sushi table"
-        height={400}
-        width="auto"
         loading="lazy"
       />
     </section>
