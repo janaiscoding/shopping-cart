@@ -34,12 +34,12 @@ const CartItem = ({
   };
 
   return (
-    <div className="flex flex-col gap-2 py-2 md:flex-row md:gap-10">
-      <div className="flex gap-24 md:gap-1">
-        <img src={cartItem.img} alt={cartItem.name} width={80} height="auto" />
+    <div className="grid gap-2 py-2 md:grid-cols-2 md:gap-20">
+      <div className="flex items-center px-2 justify-start gap-24 md:gap-2 ">
+        <img src={cartItem.img} alt={cartItem.name} className="max-w-[50px]" />
         <div className="font-bold text-xl text-blue"> {cartItem.name}</div>
       </div>
-      <div className="flex justify-between gap-20 md:gap-[5em]">
+      <div className="flex justify-between">
         <div className="flex items-center justify-center gap-2">
           <div
             aria-label="remove one product"

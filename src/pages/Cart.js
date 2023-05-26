@@ -47,9 +47,9 @@ const Cart = ({
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
       >
-        <div className="flex flex-col justify-center items-center my-10">
+        <div className="flex flex-col justify-center items-center my-10 min-h-[70vh]">
           <h1 className="font-tokyo text-4xl font-bold text-blue">Shopping Cart</h1>
-          <div className="flex flex-col border-b border-grey border-solid">{allCartItems}</div>
+          <div className="flex flex-col items-stretch md:items-start border-b border-grey border-solid ">{allCartItems}</div>
           <div className="flex flex-col items-center md:flex-row md:items-end">
             <div className="flex items-center gap-2 text-grey hover:cursor-pointer">
               <Link to="/#delivery">
