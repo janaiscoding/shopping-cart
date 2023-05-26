@@ -29,14 +29,16 @@ const Subscribe = ({ applyDiscount }) => {
     }, 1000);
   };
   return (
-
-    <section className="section section-subscribe bg-orange flex flex-col md:flex-row md:justify-between md:py-10 " id="subscribe">
+    <section
+      className="section section-subscribe bg-orange flex flex-col md:flex-row md:justify-between md:py-10 "
+      id="subscribe"
+    >
       <img
         src={bookTableImageLeft}
         alt="animated sushi table"
         loading="lazy"
-        className="max-w-[100px] self-start md:max-w-[300px]"
-        style={{ height: "100%" }}
+        className="max-w-[100px] self-start md:min-w-[200px]"
+        height="auto"
       />
       <motion.div
         initial={{ opacity: 0 }}
@@ -44,7 +46,9 @@ const Subscribe = ({ applyDiscount }) => {
         viewport={{ once: true }}
         className="flex flex-col gap-2 px-2"
       >
-          <h2 className="text-xl font-bold text-white text-center hover:cursor-pointer">{breadcrumbs}</h2>
+        <h2 className="text-xl font-bold text-white text-center hover:cursor-pointer">
+          {breadcrumbs}
+        </h2>
         <h1 className="text-6xl font-bold text-white text-center font-tokyo relative overflow-hidden">
           <span className=" floating-title">{floatingTitle}</span>
           Joīn Membershīp to get
@@ -55,10 +59,7 @@ const Subscribe = ({ applyDiscount }) => {
           <br />
           This works in the shopping cart.
         </p>
-        <form
-          className="flex gap-1"
-          onSubmit={(e) => handleSubscription(e)}
-        >
+        <form className="flex gap-1" onSubmit={(e) => handleSubscription(e)}>
           <input
             type="email"
             name="email"
@@ -74,14 +75,13 @@ const Subscribe = ({ applyDiscount }) => {
         </form>
       </motion.div>
       <img
-        className="max-w-[100px] self-end md:max-w-[300px]"
+        className="max-w-[100px] self-end md:min-w-[200px]"
         src={bookTableImageRight}
         alt="animated sushi table"
         height="auto"
         loading="lazy"
       />
     </section>
-
   );
 };
 export default Subscribe;

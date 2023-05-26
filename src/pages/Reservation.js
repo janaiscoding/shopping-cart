@@ -3,7 +3,7 @@ import { HashLink as Link } from "react-router-hash-link";
 import bookTableImageLeft from "../assets/images/leftbannerfix.png";
 import bookTableImageRight from "../assets/images/rightbanner.png";
 import { motion } from "framer-motion";
-import '../styles/contact.css'
+import "../styles/contact.css";
 
 const Reservation = ({ setActiveSection }) => {
   let title = "Make a Reservation at Umaī";
@@ -44,7 +44,8 @@ const Reservation = ({ setActiveSection }) => {
       <img
         src={bookTableImageLeft}
         alt="animated sushi table"
-        className="max-w-[100px] self-start md:max-w-[300px]"
+        className="max-w-[100px] self-start md:min-w-[200px]"
+        height="auto"
         loading="lazy"
       />
       <motion.div
@@ -54,7 +55,9 @@ const Reservation = ({ setActiveSection }) => {
         className="flex flex-col md:self-center"
       >
         <Link to="/contact">
-          <h2 className="text-xl font-bold text-white text-center hover:cursor-pointer">{breadcrumbs}</h2>
+          <h2 className="text-xl font-bold text-white text-center hover:cursor-pointer">
+            {breadcrumbs}
+          </h2>
         </Link>
         <h1 className="text-6xl font-bold text-white text-center font-tokyo relative overflow-hidden">
           <span className="floating-title">{floatingTitle}</span>
@@ -138,7 +141,7 @@ const Reservation = ({ setActiveSection }) => {
         </form>
       </motion.div>
       <img
-        className="max-w-[100px] self-end md:max-w-[300px]"
+        className="max-w-[100px] self-end md:min-w-[200px]"
         src={bookTableImageRight}
         alt="animated sushi table"
         loading="lazy"
